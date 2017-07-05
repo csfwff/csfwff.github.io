@@ -10,7 +10,7 @@ menu:
 # SubNav
 subnav:
   #github: "#"
-  weibo: "http://weibo.com/u/5058322670"
+  weibo: "http://weibo.com/5058322670"
   #rss: "#"
   zhihu: "https://www.zhihu.com/people/xia-mo-29-55/activities"
   #qq: "#"
@@ -48,13 +48,13 @@ open_in_new: false
 # 请在需要打赏的文章的md文件头部，设置属性reward: true
 
 # 打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
-reward_type: 0
+reward_type: 2
 # 打赏wording
-reward_wording: '谢谢你请我吃糖果'
+reward_wording: '谢谢你请我吃果冻'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
 alipay:
 # 微信二维码图片地址
-weixin:
+weixin: /img/wechat.jpg
 
 # Miscellaneous
 baidu_analytics: ''
