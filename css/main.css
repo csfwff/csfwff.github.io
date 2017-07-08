@@ -1799,7 +1799,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4f6ee9;
+  background: #09a3ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2851,6 +2851,12 @@ body {
   -webkit-box-shadow: none;
   width: 300px;
   border-radius: 5px;
+}
+.site-author-name {
+  color: #555;
+}
+.tag-cloud-title {
+  color: #fff;
 }
 @media (max-width: 767px) {
   .post-body .highlight {
