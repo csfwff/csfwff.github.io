@@ -1,7 +1,10 @@
 ---
 title: 你觉得快速公交BRT系统有没有为出行带来比较大的便利？
 date: 2017-07-05 09:41:43
-tags: 论道
+tags: 
+- 快速公交
+- BRT
+categories: 论道
 ---
 ## 你觉得快速公交BRT系统有没有为出行带来比较大的便利？
 这是在论道上的一个回答，点<a href="https://www.lundao.com/question/2277?answer_id=4128#answer_4128">这里</a>查看。

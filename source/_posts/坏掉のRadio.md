@@ -2,6 +2,7 @@
 title: 坏掉のRadio
 date: 2017-07-04 16:03:56
 tags: 坏掉のRadio
+categories: 坏掉のRadio
 ---
  ## 壊れかけのRadio
  
