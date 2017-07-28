@@ -42,6 +42,7 @@ menu:
   about: /about
   archives: /archives
   tags: /tags
+  bless: /blessingwall
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -62,6 +63,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
+  bless: leaf
 
 
 
