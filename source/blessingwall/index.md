@@ -22,6 +22,9 @@ date: 2017-07-28 15:19:14
 	
 5. 吊篮
 	<img src="http://ww1.sinaimg.cn/large/005wkcNwgy1fhzoipsf4yj308c08cjsl.jpg" width="300"/>
+
+6. Lumia 950
+	<img src="http://ww1.sinaimg.cn/large/005wkcNwgy1fi8ko13mvdj30mx0e0dnm.jpg" width="300"/>
 ---
 ### 已完成
 
