@@ -1,0 +1,41 @@
+title: 光明旅者Hyper Light Drifter
+date: '2020-03-13 14:30:26'
+updated: '2021-01-05 16:57:22'
+tags: [游戏, 光明旅者]
+permalink: /articles/2020/03/13/1584081025904.html
+cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104172951365.jpg
+categories: 
+- 默世随想录
+---
+![psc.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104172951365.jpg)
+
+一开始玩的时候，一脸懵逼，游戏没有中文，剧情全靠动画和插图，虽然开场很震撼，但是有点不知道剧情是什么。主角一直在吐血，大地被黑暗吞没。而后面了解了，才发现游戏的制作人患有先天性心脏病，在生命是一个不可控的倒计时状态下，选择为自己，为世界留下一部属于他自己的作品。
+
+游戏分为东南西北四个方向，四个区域，每个区域特色鲜明，东边的水域，南边的荒漠，西边的红树林，北方的雪山。看似一片生机盎然，实则建立在一片废土之上。仔细观察各个场景，到处各种骷髅。另外每个区域入口都有一个守卫石像，每个区域都有一个融入场景的巨人（骷髅）
+
+每个区域都有8个碎片，玩家通过不断探索，收集碎片，打败boss，升起这一方的石柱，每当有柱子升起的时候，主角都回忆起在黑暗中苦苦挣扎缺不得解脱。升起了4方的柱子，就可以回到中心城镇，坐电梯打败这一切的罪魁祸首，= = 好吧 这个boss我打了7 8遍才过，打到后面心脏一直在砰砰跳，那个紧张哟~最终，主角似乎死去了，但是他也看到了恢复正常的世界。
+
+游戏中隐藏要素有点多，隐藏的道路，隐藏的碎片，隐藏的钥匙，隐藏的服装，隐藏的石碑。还有一些操作上的挑战，各种连续冲刺，对于我这种手残玩家来说，只能放弃。当然，这些并不影响主线通关。这些只能后面慢慢收集了。噢，对了，游戏并没有沙盒游戏那种概念，打完最终boss还能继续，这个打完最终boss就结束了，即使之前没收集齐的也不能再收集了，所以就只能玩那个最终boss前的存档，一直不去打boss……
+
+![psc1.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173051834.jpg)
+<br/>
+![psc2.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173152600.jpg)
+<br/>
+![psc3.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173253350.jpg)
+<br/>
+![psc4.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173353787.jpg)
+<br/>
+![psc5.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173454178.jpg)
+<br/>
+![psc6.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173554646.jpg)
+<br/>
+![psc7.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173655037.jpg)
+<br/>
+![psc8.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173755240.jpg)
+<br/>
+![psc9.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173855709.jpg)
+<br/>
+![psc10.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104173956053.jpg)
+<br/>
+![psc11.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104174056303.jpg)
+
