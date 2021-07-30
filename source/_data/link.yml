@@ -1,5 +1,5 @@
 - class_name: 友情鏈接
-  class_desc: 那些人，那些事
+  class_desc: 我的小伙伴们
   link_list:
     - name: 贼拉正经的技术博客
       link: https://www.stackoverflow.wiki
@@ -22,6 +22,14 @@
       avatar: https://avatars2.githubusercontent.com/u/24471999?v=4
       descr: 静以修身，俭以养德
     - name: 殆己
-      link: https://www.heycmm.cn
+      link: https://heycmm.cn
       avatar: https://img.hacpai.com/avatar/1547633760829_1554865237301.jpeg
       descr: 好看的皮囊扫黄打非，有趣的灵魂涉嫌违规。
+    - name: 傅皮蛋儿
+      link: https://blog.fpdan.cn/
+      avatar: https://b3logfile.com/avatar/1590022388205_1590060052984.jpeg
+      descr: 无人问津的自留地》》》
+    - name: 糖醋鱼的小破站
+      link: https://expoli.tech
+      avatar: https://oss.expoli.tech/img/HEE_favicon.png
+      descr: 🐠生成长记
