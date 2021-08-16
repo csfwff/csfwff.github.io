@@ -11,6 +11,7 @@ comments: 'false'
 <script>
 new Artitalk({
     appId: 'sxM27aiIaPbf7Lr70hQm6xaq-MdYXbMMI', // Your LeanCloud appId
-    appKey: 'lBxwLUbQjn1o42hQoWl6tTDM' // Your LeanCloud appKey
+    appKey: 'lBxwLUbQjn1o42hQoWl6tTDM', // Your LeanCloud appKey
+    pageSize: 15
 })
 </script>
