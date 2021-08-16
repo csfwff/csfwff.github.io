@@ -24,7 +24,7 @@ NAS是啥不用多说，其实我一直想整一个，白群晖这种是不错�
 最终选择OpenmediaVault，要求不高，树莓派也能跑，支持S.M.A.R.T.，Raid，安排上
 
 ## 下载
-去官网[www.openmediavault.org](www.openmediavault.org)下载最新版本
+去官网[www.openmediavault.org](https://www.openmediavault.org)下载最新版本
 随便找个U盘，制作镜像（我就找了我专门放pe的U盘格式化做的，两个G多点的空间）
 制作镜像，我用的[rufus](http://rufus.ie/zh/)，简单好用，不会给你塞乱七八糟的东西进去
 
