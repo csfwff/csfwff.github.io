@@ -1,7 +1,7 @@
 title: Kotlin大法好-->"_"下划线的妙用
 date: '2019-03-21 18:54:47'
 updated: '2021-01-05 16:39:53'
-tags: [Kotlin, Andorid]
+tags: [Kotlin, Android]
 permalink: /articles/2019/03/21/1553165686993.html
 cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104153805943.jpg
 categories: 

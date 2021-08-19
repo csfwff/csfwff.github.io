@@ -1,7 +1,7 @@
 title: butter knife 常用注解记录
 date: '2019-11-14 10:26:02'
 updated: '2021-01-05 16:52:11'
-tags: [butterknife, Andorid]
+tags: [butterknife, Android]
 permalink: /articles/2019/11/14/1573698361728.html
 cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104114351583.jpg
 categories: 

@@ -1,7 +1,7 @@
 title: Gradle编译 Faile to resolve:support-media-compat
 date: '2019-04-09 13:41:48'
 updated: '2021-01-05 16:41:02'
-tags: [Gradle, Andorid]
+tags: [Gradle, Android]
 permalink: /articles/2019/04/09/1554788508900.html
 cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104154310834.jpg
 categories: 

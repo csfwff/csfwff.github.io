@@ -1,7 +1,7 @@
 title: ATab----仿爱奇艺tabbar
 date: '2020-03-09 11:46:37'
 updated: '2021-01-05 16:55:57'
-tags: [Andorid, Java]
+tags: [Android, Java]
 permalink: /articles/2020/03/09/1583725597624.html
 cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104171732287.jpg
 categories: 

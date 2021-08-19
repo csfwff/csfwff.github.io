@@ -1,7 +1,7 @@
 title: React Native debug正常，release闪退
 date: '2019-03-14 20:35:49'
 updated: '2021-01-05 16:39:41'
-tags: [ReactNative, Andorid]
+tags: [ReactNative, Android]
 permalink: /articles/2019/03/14/1552566949418.html
 cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104153441506.jpg
 categories: 

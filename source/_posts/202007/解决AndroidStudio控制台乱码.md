@@ -1,7 +1,7 @@
 title: 解决Android Studio控制台乱码
 date: '2020-07-03 13:04:07'
 updated: '2021-01-05 17:00:03'
-tags: [Andorid]
+tags: [Android]
 permalink: /articles/2020/07/03/1593752646951.html
 cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210105091240660.jpg
 categories: 
