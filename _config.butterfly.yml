@@ -437,11 +437,11 @@ baidu_analytics:
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
-google_analytics:
+google_analytics: G-L2FFP00RKZ
 
 # Tencent Analytics ID
 # https://mta.qq.com
-tencent_analytics: 500629663
+tencent_analytics: 
 
 # CNZZ Analytics
 # https://www.umeng.com/
