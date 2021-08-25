@@ -445,7 +445,7 @@ tencent_analytics:
 
 # CNZZ Analytics
 # https://www.umeng.com/
-cnzz_analytics:
+cnzz_analytics: 1280246701
 
 # Cloudflare Analytics
 # https://www.cloudflare.com/zh-tw/web-analytics/
