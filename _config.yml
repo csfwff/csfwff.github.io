@@ -102,4 +102,8 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:csfwff/csfwff.github.io.git
+  branch: gh-pages
+  name: csfwff
+  email: csfwff@163.com
