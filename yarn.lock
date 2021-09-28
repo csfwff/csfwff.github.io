@@ -663,12 +663,12 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hexo-butterfly-artitalk@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/hexo-butterfly-artitalk/-/hexo-butterfly-artitalk-1.0.3.tgz#532b93b26e332156b67146c4e773ab7d0046c063"
-  integrity sha512-9FoufZRKz9Vx2BkVYvICephk8b/nJMjW2+1rblprkx6buw4euJgheh11DumaYfeKupXvxlaqmGo3q2A6u44x0w==
+hexo-butterfly-artitalk@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/hexo-butterfly-artitalk/-/hexo-butterfly-artitalk-1.0.4.tgz#8d90a930b68d742ffc1e20ae475828b071cba818"
+  integrity sha512-/tdSPT3jF6X+ut+WX5teC1iX6MsnWCWJAo/rQTP11wKy7x56X5u34e3RFxQk14dFp2C8AQlaNj0CJHRQo9WQ/w==
   dependencies:
-    pug "^3.0.0"
+    pug "^3.0.2"
 
 hexo-cli@^4.0.0:
   version "4.3.0"
@@ -809,10 +809,10 @@ hexo-server@^2.0.0:
     open "^7.0.0"
     serve-static "^1.14.1"
 
-hexo-theme-butterfly@^3.8.3:
-  version "3.8.3"
-  resolved "https://registry.yarnpkg.com/hexo-theme-butterfly/-/hexo-theme-butterfly-3.8.3.tgz#4527783e79e518f72f7a27ecbe638f18a62ff51c"
-  integrity sha512-s+o4NfFq+chpYdpNelpLSt+b8ga/sCZCtl51UTP8pDxjCNUKPKA04wAL0+GVx/VnDGpcWWxYTfrgnsPKo+GbPQ==
+hexo-theme-butterfly@^3.8.4:
+  version "3.8.4"
+  resolved "https://registry.yarnpkg.com/hexo-theme-butterfly/-/hexo-theme-butterfly-3.8.4.tgz#b4cfe313e77fafc0586b8f4e6985a7f69082846b"
+  integrity sha512-d7S3LVVxmpWhL0YEYhMUejLMHbbTTosB8yLDkAnbe04HA4IoYiZTlE5zYdmLEcxIiNzyjW5Va4tnn4CNggR0Vg==
   dependencies:
     hexo-renderer-pug "^2.0.0"
     hexo-renderer-stylus "^2.0.1"
@@ -1350,9 +1350,9 @@ pretty-hrtime@^1.0.3:
   integrity sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
 
 prismjs@^1.17.1:
-  version "1.24.1"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.24.1.tgz#c4d7895c4d6500289482fa8936d9cdd192684036"
-  integrity sha512-mNPsedLuk90RVJioIky8ANZEwYm5w9LcvCXrxHlwf4fNVSn8jEipMybMkWUyyF0JhnC+C4VcOVSBuHRKs1L5Ow==
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.25.0.tgz#6f822df1bdad965734b310b315a23315cf999756"
+  integrity sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg==
 
 promise@^7.0.1:
   version "7.3.1"
@@ -1455,7 +1455,7 @@ pug-walk@^2.0.0:
   resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-2.0.0.tgz#417aabc29232bb4499b5b5069a2b2d2a24d5f5fe"
   integrity sha512-yYELe9Q5q9IQhuvqsZNwA5hfPkMJ8u92bQLIMcsMxf/VADjNtEYptU+inlufAFYcWdHlwNfZOEnOOQrZrcyJCQ==
 
-pug@^3.0.0, pug@^3.0.2:
+pug@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/pug/-/pug-3.0.2.tgz#f35c7107343454e43bc27ae0ff76c731b78ea535"
   integrity sha512-bp0I/hiK1D1vChHh6EfDxtndHji55XP/ZJKwsRqrz6lRia6ZC2OZbdAymlxdVFwd1L70ebrVJw4/eZ79skrIaw==
