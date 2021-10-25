@@ -425,7 +425,7 @@ footer:
   owner:
     enable: true
     since: 2017
-  custom_text: 我是不慎落入世界的一滴水墨
+  custom_text: 我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
