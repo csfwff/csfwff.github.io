@@ -45,7 +45,7 @@ copy:
 social:
    fab fa-github: https://github.com/csfwff || Github
    fas fa-envelope: mailto:csfwff@163.com || Email
-   iconfont icon-bilibili-fill: https://space.bilibili.com/27540375 || Bilibili
+   #iconfont icon-bilibili-fill: https://space.bilibili.com/27540375 || Bilibili
    iconfont icon-netease-cloud-music-fill: https://music.163.com/#/user/home?id=40898262 || 网易云
    fab fa-qq: tencent://message/?uin=873997011 || QQ
    fab fa-weixin: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/add_weixin.jpg || 微信
