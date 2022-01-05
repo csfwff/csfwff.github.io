@@ -3,13 +3,13 @@ date: '2019-08-19 12:03:32'
 updated: '2021-01-06 11:17:24'
 tags: [Node.Js, JavaScript, 签到]
 permalink: /articles/2019/08/19/1566187412149.html
-cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210105091946770.jpg
+cover: http://tmx.fishpi.cn/img/20210105091946770.jpg
 categories: 
 - 菜鸡修炼手册
 
 
 ---
-![201904091554817060329835.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210105091946770.jpg)
+![201904091554817060329835.jpg](http://tmx.fishpi.cn/img/20210105091946770.jpg)
 
 身为一个菜鸡，也没啥好水的，就写下自动签到吧
 这个签到程序，跟着社区升级，更新了好几版，从最开始只要带着cookie请求签到页面就行，到后来需要先获取token，再到现在的需要更新cookie，中途踩了几个小坑，随便看看吧

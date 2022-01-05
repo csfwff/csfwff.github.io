@@ -3,18 +3,18 @@ date: '2019-05-13 21:47:53'
 updated: '2021-01-06 11:03:37'
 tags: [Node.Js, JavaScript]
 permalink: /articles/2019/05/13/1557755273356.html
-cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104113544568.jpg
+cover: http://tmx.fishpi.cn/img/20210104113544568.jpg
 categories: 
 - 菜鸡修炼手册
 ---
-![201904091554816947676263.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104113544568.jpg)
+![201904091554816947676263.jpg](http://tmx.fishpi.cn/img/20210104113544568.jpg)
 
 ### intro
 
 &emsp;&emsp;一直在玩一款叫《云裳羽衣》的换装手游（不要问我为什么一个糙汉子玩换装游戏，只是比较喜欢古风和收集元素而已，所有非常合适）
 &emsp;&emsp;然而游戏中有一个的日常叫评选赛，就是点评别人的搭配。本来也没什么，奖励是固定的，随便点评就是了，问题出在数量上，一天一共要点评60次，再加上难熬加载的时间，使得这个日常烦人且无趣。
 
-<img src="https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/RYw_Screenshot20190513212630-05aacbfa.jpg" width='30%'/>
+<img src="http://tmx.fishpi.cn/img/RYw_Screenshot20190513212630-05aacbfa.jpg" width='30%'/>
 
 ### 分析
 

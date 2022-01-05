@@ -3,11 +3,11 @@ date: '2020-09-02 16:56:40'
 updated: '2021-01-05 17:00:28'
 tags: [ReactNative, Android]
 permalink: /articles/2020/09/02/1599037000020.html
-cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210105092047567.jpg
+cover: http://tmx.fishpi.cn/img/20210105092047567.jpg
 categories: 
 - 菜鸡修炼手册
 ---
-![201904081554727887493902.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210105092047567.jpg)
+![201904081554727887493902.jpg](http://tmx.fishpi.cn/img/20210105092047567.jpg)
 
 有时候不得不承认，码代码也是个充满玄学的东西
 
