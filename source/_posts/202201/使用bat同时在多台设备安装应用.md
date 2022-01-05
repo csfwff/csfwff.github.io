@@ -59,8 +59,8 @@ exit
 使用方法
 1. 编辑`adb_connect.bat`，输入要安装的设备ip
 2. 复制apk到当前目录下
-3. poewershell运行`.\adb_connect.bat`连接设备
-4. poewershell运行`.\multi.bat .\test.apk com.xiamo.text/.MainActivity`安装并启动(第一个参数apk路径，第二个为启动的Activity)
+3. powershell运行`.\adb_connect.bat`连接设备
+4. powershell运行`.\multi.bat .\test.apk com.xiamo.text/.MainActivity`安装并启动(第一个参数apk路径，第二个为启动的Activity)
 5. 弹出一堆黑框，各自安装，安装完退出，全部退出表示全部安装完成
 6. 后面是我凑字数的，不用看了
 
