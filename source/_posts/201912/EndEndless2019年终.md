@@ -3,12 +3,12 @@ date: '2019-12-17 13:00:18'
 updated: '2021-01-05 16:54:41'
 tags: [总结]
 permalink: /articles/2019/12/17/1576558818186.html
-cover: http://tmx.fishpi.cn/img/20210104120056646.jpg
+cover: https://tmx.fishpi.cn/img/20210104120056646.jpg
 categories: 
 - 再见江湖
 
 ---
-![汉服同袍45.jpg](http://tmx.fishpi.cn/img/20210104120056646.jpg)
+![汉服同袍45.jpg](https://tmx.fishpi.cn/img/20210104120056646.jpg)
 
 <!-- require APlayer -->
 
@@ -34,7 +34,7 @@ id="1409322717">
 > 我要在 2020 年把我 2019 年立下的关于 2018 年说 2017 年要把 2016 年立的 flag 的 flag 完成。
 
 明年继续加一个前缀，因为立的这么多flag，没一个完成的
-![未标题1.jpg](http://tmx.fishpi.cn/img/20210104120157302.jpg)
+![未标题1.jpg](https://tmx.fishpi.cn/img/20210104120157302.jpg)
 
 其实总结来总结去，就那些东西而已，毕竟我对自己从来没啥要求，活着就行，哦不，这条要求也没了
 早就发现了，自己之所以活着，只是没找到合理死去的方法而已，保险也到期了，终究是没能用上

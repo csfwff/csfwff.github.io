@@ -3,12 +3,12 @@ date: '2017-07-05 00:03:56'
 updated: '2021-01-05 16:27:34'
 tags: [坏掉的Radio, 歌曲]
 permalink: /articles/2017/07/05/1533348407105.html
-cover: http://tmx.fishpi.cn/img/20210104140425193.jpg
+cover: https://tmx.fishpi.cn/img/20210104140425193.jpg
 categories: 
 - 坏掉的Radio
 
 ---
-![1d89257f05b20c313c61bead2cdab227.jpg](http://tmx.fishpi.cn/img/20210104140425193.jpg)
+![1d89257f05b20c313c61bead2cdab227.jpg](https://tmx.fishpi.cn/img/20210104140425193.jpg)
 
 ## 壊れかけのRadio
 

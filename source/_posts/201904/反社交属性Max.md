@@ -3,11 +3,11 @@ date: '2019-04-10 00:11:19'
 updated: '2021-01-05 16:41:18'
 tags: [随想]
 permalink: /articles/2019/04/10/1554826279823.html
-cover: http://tmx.fishpi.cn/img/20210104154411412.jpg
+cover: https://tmx.fishpi.cn/img/20210104154411412.jpg
 categories: 
 - 再见江湖
 ---
-![d17a4ca54fc1161d63dfb34d848a0b40.jpg](http://tmx.fishpi.cn/img/20210104154411412.jpg)
+![d17a4ca54fc1161d63dfb34d848a0b40.jpg](https://tmx.fishpi.cn/img/20210104154411412.jpg)
 
 不知道为什么
 反社交的属性被点到了最高

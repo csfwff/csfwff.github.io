@@ -5,10 +5,10 @@ tags: [Android,adb,Scrcpy]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2021/11/19/1637293983000.html
-top_img: http://tmx.fishpi.cn/img/ea79812a6b385c5d44af446cab714f9cbc6433d9_raw.jpg
-cover: http://tmx.fishpi.cn/img/ea79812a6b385c5d44af446cab714f9cbc6433d9_raw.jpg
+top_img: https://tmx.fishpi.cn/img/ea79812a6b385c5d44af446cab714f9cbc6433d9_raw.jpg
+cover: https://tmx.fishpi.cn/img/ea79812a6b385c5d44af446cab714f9cbc6433d9_raw.jpg
 ---
-![1628345033618.jpg](http://tmx.fishpi.cn/img/ea79812a6b385c5d44af446cab714f9cbc6433d9_raw.jpg)
+![1628345033618.jpg](https://tmx.fishpi.cn/img/ea79812a6b385c5d44af446cab714f9cbc6433d9_raw.jpg)
 
 又是一个，菜鸡懒得搜，copy一份记录
 
