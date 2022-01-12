@@ -3,11 +3,11 @@ date: '2020-03-09 11:46:37'
 updated: '2021-01-05 16:55:57'
 tags: [Android, Java]
 permalink: /articles/2020/03/09/1583725597624.html
-cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104171732287.jpg
+cover: https://tmx.fishpi.cn/img/20210104171732287.jpg
 categories: 
 - 菜鸡修炼手册
 ---
-![5ccce31b9a1aa339f15a7043.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104171732287.jpg)
+![5ccce31b9a1aa339f15a7043.jpg](https://tmx.fishpi.cn/img/20210104171732287.jpg)
 
 ## ATab----仿爱奇艺tabbar
 
@@ -16,7 +16,7 @@ categories:
 
 ## 效果图
 
-[SVID202003090947581.mp4](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104171832646.mp4)
+[SVID202003090947581.mp4](https://tmx.fishpi.cn/img/20210104171832646.mp4)
 
 ## 食用方法
 
@@ -136,7 +136,7 @@ categories:
 ```
 
 部分含糊的属性看如下说明
-![QQ图片20200309113000b02c0361.png](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104172307271.png)
+![QQ图片20200309113000b02c0361.png](https://tmx.fishpi.cn/img/20210104172307271.png)
 
 ## ATab方法说明
 

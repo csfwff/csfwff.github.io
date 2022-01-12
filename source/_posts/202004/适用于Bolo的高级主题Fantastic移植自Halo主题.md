@@ -3,11 +3,11 @@ date: '2020-04-06 14:55:53'
 updated: '2021-01-05 16:59:26'
 tags: [Bolo, JavaScript]
 permalink: /articles/2020/04/06/1586156153265.html
-cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210105090130270.jpg
+cover: https://tmx.fishpi.cn/img/20210105090130270.jpg
 categories: 
 - 菜鸡修炼手册
 ---
-![5c401ed7e7bce70476b6d7d1.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210105090130270.jpg)
+![5c401ed7e7bce70476b6d7d1.jpg](https://tmx.fishpi.cn/img/20210105090130270.jpg)
 
 ## ✨
 
@@ -28,7 +28,7 @@ categories:
 
 可以点[这里](https://www.sszsj.cc/?skin=bolo-fantastic)看看实际效果
 是否暗黑模式跟随浏览器自动切换
-![image.png](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210105090231051.png)
+![image.png](https://tmx.fishpi.cn/img/20210105090231051.png)
 ![null](https://github.com/adlered/bolo-solo/raw/master/preview/3.png)
 
 ## 注意

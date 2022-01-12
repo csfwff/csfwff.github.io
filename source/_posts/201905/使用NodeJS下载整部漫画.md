@@ -3,12 +3,12 @@ date: '2019-05-13 22:34:29'
 updated: '2021-01-06 10:52:20'
 tags: [Node.Js, JavaScript]
 permalink: /articles/2019/05/13/1557758069371.html
-cover: https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104113342739.jpg
+cover: https://tmx.fishpi.cn/img/20210104113342739.jpg
 categories: 
 - 菜鸡修炼手册
 
 ---
-![201904081554727888109075.jpg](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104113342739.jpg)
+![201904081554727888109075.jpg](https://tmx.fishpi.cn/img/20210104113342739.jpg)
 
 ### 0x00
 
@@ -28,10 +28,10 @@ categories:
 &emsp;&emsp;要下载，首先要找到目标，经过筛选，夏小墨决定对下面这个地址下手，对不起了~~截图如下
 `http://m.pufei.net/manhua/244/`
 
-<img src='https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/ndf_0-490189f4.png' width='30%'/>
+<img src='https://tmx.fishpi.cn/img/ndf_0-490189f4.png' width='30%'/>
 
 &emsp;&emsp;按F12打开控制台简单分析下页面
-![1.png](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104112738739.png)
+![1.png](https://tmx.fishpi.cn/img/20210104112738739.png)
 &emsp;&emsp;发现每一话都是一个li，里面包含一个a标签，但是在链接上面却没啥特别的规律，也懒得找规律了，直接全取出来保存个文件算了，开干
 &emsp;&emsp;首先请求获取整个页面，这里使用request请求库，在node下常用发请求库，使用方法如下：
 
@@ -106,14 +106,14 @@ request({
 ```
 
 至此，成功获得所有的url和标题
-![2.png](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104112839411.png)
+![2.png](https://tmx.fishpi.cn/img/20210104112839411.png)
 
 ### 0x02
 
 &emsp;&emsp;有了每一话的地址后，随便打开一话的某一页：
 `http://m.pufei.net/manhua/244/199094.html?af=2`
 可以看到链接前面部分就是之前获取的链接，而后面的参数af则表示第几页，因此，接下来需要获取每一话共有多少页。老样子，开控制台，找到页码：
-![3.png](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104112939896.png)
+![3.png](https://tmx.fishpi.cn/img/20210104112939896.png)
 如图所示，依然使用request获取页面，cheerio解析，获取页码，由于页码两边还有其他字符，所以用正则处理下：
 
 ```
@@ -174,7 +174,7 @@ for (let  i  =  1; i  <=  num; i++) {
 ### 0x04
 
 &emsp;&emsp;用同样的方法获取图片地址：
-![4.png](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104113040708.png)
+![4.png](https://tmx.fishpi.cn/img/20210104113040708.png)
 &emsp;&emsp;这时候，理论上只要获得.manga-panel-box 或者 #panel，再取得这个元素下的img标签就可以了，可这时候却死活获取不到。直接打印request返回的完整页面，panel下发现并没有img标签，也就是说，这个img标签是通过js另外加载的……
 &emsp;&emsp;既然这样，首先想到的是看看js代码有没有线索，然而，压缩过后的js真的很难看懂，遂放弃。然后发现这个网站有个app，可能会有线索，遂下载回来安装，抓包看请求（如果需要抓包的教程，另外再写了，不过这个随便搜搜就有了），成功获取到请求，能得到一话的所有图片地址，只是请求这个接口的时候有个签名校验，反编译代码后发现是md5，且成功获得盐，然而不知道原字符串的拼接方式，尝试了几次无法猜出，只能放弃。
 &emsp;&emsp;那么就没有办法了么？经过一番搜索后，发现了phantomJs。简单点，可以把他理解为一个隐形的浏览器，没有界面的浏览器，但是我们可以像正常的浏览器一样操作他。
@@ -282,7 +282,7 @@ const  getChapUrl  = (index) => {
 ```
 
 &emsp;&emsp;循环跑了两遍后，基本把全部地址都取了出来：
-![5.png](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104113141318.png)
+![5.png](https://tmx.fishpi.cn/img/20210104113141318.png)
 &emsp;&emsp;这里我另外写了个循环判断是否还有null的地址，顺便统计了下数量，就不放代码了
 
 ### 0x05
@@ -302,7 +302,7 @@ const  downloadsaveImg  = (url, num, path, index) => {
 ```
 
 &emsp;&emsp;继续循环跑起来，最终获得整部漫画……
-![6.png](https://cdn.jsdelivr.net/gh/csfwff/CDN@master/img/20210104113241818.png)
+![6.png](https://tmx.fishpi.cn/img/20210104113241818.png)
 
 ### 0x06
 
