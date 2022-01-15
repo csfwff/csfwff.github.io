@@ -425,7 +425,7 @@ footer:
   owner:
     enable: true
     since: 2017
-  custom_text: 我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a>
+  custom_text: 我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/img/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
