@@ -4,7 +4,7 @@ date: 2022-01-05 15:30:08
 tags: [bat,Android,adb]
 categories: 
 - 菜鸡修炼手册
-permalink: /articles/2021/12/12/1641367808000.html
+permalink: /articles/2022/01/05/1641367808000.html
 top_img: https://tmx.fishpi.cn/img/1640405818808.jpg
 cover: https://tmx.fishpi.cn/img/1640405818808.jpg
 ---
