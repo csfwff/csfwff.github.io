@@ -3,11 +3,11 @@ date: '2017-07-05 17:41:43'
 updated: '2021-01-05 16:34:40'
 tags: [BRT, 出行]
 permalink: /articles/2017/07/05/1533348405293.html
-cover: https://tmx.fishpi.cn/img/20210104143105865.jpg
+cover: https://tmx.fishpi.cn/img/lake-6920275_1920.jpg
 categories: 
 - 再见江湖
 ---
-![001.jpg](https://tmx.fishpi.cn/img/20210104143105865.jpg)
+![001.jpg](https://tmx.fishpi.cn/img/lake-6920275_1920.jpg)
 
 ## 你觉得快速公交BRT系统有没有为出行带来比较大的便利？
 

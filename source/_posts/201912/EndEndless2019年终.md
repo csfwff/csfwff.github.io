@@ -3,12 +3,12 @@ date: '2019-12-17 13:00:18'
 updated: '2021-01-05 16:54:41'
 tags: [总结]
 permalink: /articles/2019/12/17/1576558818186.html
-cover: https://tmx.fishpi.cn/img/20210104120056646.jpg
+cover: https://tmx.fishpi.cn/img/cosmea-6533788_1920.jpg
 categories: 
 - 再见江湖
 
 ---
-![汉服同袍45.jpg](https://tmx.fishpi.cn/img/20210104120056646.jpg)
+![汉服同袍45.jpg](https://tmx.fishpi.cn/img/cosmea-6533788_1920.jpg)
 
 <!-- require APlayer -->
 

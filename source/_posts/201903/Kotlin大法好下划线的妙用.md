@@ -3,11 +3,11 @@ date: '2019-03-21 18:54:47'
 updated: '2021-01-05 16:39:53'
 tags: [Kotlin, Android]
 permalink: /articles/2019/03/21/1553165686993.html
-cover: https://tmx.fishpi.cn/img/20210104153805943.jpg
+cover: https://tmx.fishpi.cn/img/flowers-6213351_1920.jpg
 categories: 
 - 菜鸡修炼手册
 ---
-![c8772df9de5b2637afabe3ae55f616c1.jpg](https://tmx.fishpi.cn/img/20210104153805943.jpg)
+![c8772df9de5b2637afabe3ae55f616c1.jpg](https://tmx.fishpi.cn/img/flowers-6213351_1920.jpg)
 
 记录kotlin的学习，谨防忘记
 

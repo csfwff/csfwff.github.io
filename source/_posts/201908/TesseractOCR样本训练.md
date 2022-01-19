@@ -3,11 +3,11 @@ date: '2019-08-06 21:01:27'
 updated: '2021-01-06 10:49:56'
 tags: [Tesseract-OCR]
 permalink: /articles/2019/08/06/1565096487696.html
-cover: https://tmx.fishpi.cn/img/20210104093144302.png
+cover: https://tmx.fishpi.cn/img/flower-6925027_1920.jpg
 categories: 
 - 菜鸡修炼手册
 ---
-![855545aaaf2b5680d832abf7a0a11269.png](https://tmx.fishpi.cn/img/20210104093144302.png)
+![855545aaaf2b5680d832abf7a0a11269.png](https://tmx.fishpi.cn/img/flower-6925027_1920.jpg)
 
 之前闲着写了一个识别小篆的APP，用到了Tesseract-OCR，由于没有小篆的训练数据，只能自己搞，五六千个字吧，一个个调整，当时花了挺多时间的，哈，记录下训练过程
 
