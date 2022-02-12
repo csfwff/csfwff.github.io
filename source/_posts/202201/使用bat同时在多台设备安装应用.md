@@ -9,7 +9,7 @@ top_img: https://tmx.fishpi.cn/img/1640405818808.jpg
 cover: https://tmx.fishpi.cn/img/1640405818808.jpg
 ---
 
-![图 1](https://tmx.fishpi.cn/img/1640405818808.jpg)  
+![图 1](https://tmx.fishpi.cn/img/laptop-2055522_1920.jpg)  
 
 现在公司在调试一款Android设备，平时都是adb远程连上去，然后在Android Stuido里直接运行就行了
 但是，现在一排设备摆在那里，要安装的时候，我得一个一个连上，然后一个一个安装，就很麻烦

@@ -3,11 +3,11 @@ date: '2019-05-13 21:47:53'
 updated: '2021-01-06 11:03:37'
 tags: [Node.Js, JavaScript]
 permalink: /articles/2019/05/13/1557755273356.html
-cover: https://tmx.fishpi.cn/img/20210104113544568.jpg
+cover: https://tmx.fishpi.cn/img/flamingo-6922032_1920.jpg
 categories: 
 - 菜鸡修炼手册
 ---
-![201904091554816947676263.jpg](https://tmx.fishpi.cn/img/20210104113544568.jpg)
+![201904091554816947676263.jpg](https://tmx.fishpi.cn/img/flamingo-6922032_1920.jpg)
 
 ### intro
 
