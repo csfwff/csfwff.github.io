@@ -40,10 +40,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      # 安装依赖
+      # 安装依赖  yarn install --prefer-offline --frozen-lockfile
       - name: Install dependencies
         run: |
-          yarn install --prefer-offline --frozen-lockfile
+          npm install
 
       # 从之前设置的 secret 获取部署私钥
       - name: Set up environment
