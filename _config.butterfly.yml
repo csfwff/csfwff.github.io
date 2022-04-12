@@ -851,6 +851,8 @@ css_prefix: true
    #  - <script src="https://tmx.fishpi.cn/other/mouse-snow.min.js"></script>
 inject:
   head:
+     - <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+     - <script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script>
      - <link rel="stylesheet" href="https://tmx.fishpi.cn/other/iconfont.css">
      - <link rel="stylesheet" href="https://tmx.fishpi.cn/other/style.css">
      - <script src="https://cdn.jsdelivr.net/gh/fz6m/Private-web@1.2/js/custom/click.min.js"></script>
