@@ -37,6 +37,7 @@ iOS在iOS 14的时候也推出了桌面组件
 1. AppWidgetProviderInfo 定义在xml中，是一个xml文件，放在res/xml下
 2. AppWidgetProvider widget的具体实现，kotlin或java都行
 3. 布局文件 丢到layout下就行，需要注意的是只支持指定的组件，并不是啥都能用
+
 然后在ManiFest清单文件中注册
 ```xml
 <receiver
@@ -117,7 +118,7 @@ class LeftWidgetProvider : AppWidgetProvider() {
 ```
 更新widget的时候，需要先创建RemoteViews，然后通过提供的方法来更新
 最后调用`appWidgetManager.updateAppWidget(appWidgetId, remoteViews)`刷新
-```
+```kotlin
     val remoteViews = RemoteViews(context!!.packageName, R.layout.widget_left_day)
     remoteViews.setTextViewText(R.id.contentTv, info)
     appWidgetManager.updateAppWidget(appWidgetId, remoteViews)
