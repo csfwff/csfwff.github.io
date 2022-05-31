@@ -10,3 +10,10 @@ top_img: https://tmx.fishpi.cn/img/yachts-6938309_1920.jpg
 描述：我是不慎落入世界的一滴水墨
 地址：https://www.sszsj.cc
 头像：https://tmx.fishpi.cn/img/head.jpg
+
+```
+- name: 鼠鼠在碎觉
+  link: https://www.sszsj.cc
+  avatar: https://tmx.fishpi.cn/img/head.jpg
+  descr: 我是不慎落入世界的一滴水墨
+```
