@@ -867,87 +867,98 @@ inject:
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
 CDN:
-  # main
-  main_css: /css/index.css
-  jquery: https://tmx.fishpi.cn/cdn/jquery.min.js
-  main: /js/main.js
-  utils: /js/utils.js
 
-  # pjax
-  pjax: https://tmx.fishpi.cn/cdn/pjax.min.js
+# The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
+  # option: local/jsdelivr
+  # Dev version cannot choose jsdelivr (dev版的主題不能設置為 jsdelivr)
+  internal_provider: local
+  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
+  # option: local/jsdelivr
+  # when set it to local, you need to install hexo-butterfly-extjs
+  third_party_provider: local
 
-  # comments
-  gitalk: https://tmx.fishpi.cn/cdn/gitalk.min.js
-  gitalk_css: https://tmx.fishpi.cn/cdn/gitalk.min.css
-  valine: https://tmx.fishpi.cn/cdn/Valine.min.js
-  disqusjs: https://tmx.fishpi.cn/cdn/disqus.js
-  disqusjs_css: https://tmx.fishpi.cn/cdn/disqusjs.css
-  utterances: https://utteranc.es/client.js
-  twikoo: https://tmx.fishpi.cn/cdn/twikoo.all.min.js
-  waline: https://tmx.fishpi.cn/cdn/Waline.min.js
-
-  # share
-  addtoany: https://static.addtoany.com/menu/page.js
-  sharejs: https://tmx.fishpi.cn/cdn/social-share.min.js
-  sharejs_css: https://tmx.fishpi.cn/cdn/share.min.css
-
-  # search
-  local_search: /js/search/local-search.js
-  algolia_js: /js/search/algolia.js
-  algolia_search: https://tmx.fishpi.cn/cdn/instantsearch.min.js
-  algolia_search_css: https://tmx.fishpi.cn/cdn/instantsearch.min.css
-
-  # math
-  mathjax: https://tmx.fishpi.cn/cdn/tex-mml-chtml.js
-  katex: https://tmx.fishpi.cn/cdn/katex.min.css
-  katex_copytex: https://tmx.fishpi.cn/cdn/copy-tex.min.js
-  katex_copytex_css: https://tmx.fishpi.cn/cdn/copy-tex.css
-  mermaid: https://tmx.fishpi.cn/cdn/mermaid.min.js
-
-  # count
-  busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-
-  # background effect
-  canvas_ribbon: https://tmx.fishpi.cn/cdn/canvas-ribbon.min.js
-  canvas_fluttering_ribbon: https://tmx.fishpi.cn/cdn/canvas-fluttering-ribbon.min.js
-  canvas_nest: https://tmx.fishpi.cn/cdn/canvas-nest.min.js
-
-  lazyload: https://tmx.fishpi.cn/cdn/lazyload.iife.min.js
-  instantpage: https://tmx.fishpi.cn/cdn/instantpage.min.js
-  typed: https://tmx.fishpi.cn/cdn/typed.min.js
-  pangu: https://tmx.fishpi.cn/cdn/pangu.min.js
-
-  # photo
-  fancybox_css: https://tmx.fishpi.cn/cdn/jquery.fancybox.min.css
-  fancybox: https://tmx.fishpi.cn/cdn/jquery.fancybox.min.js
-  medium_zoom: https://tmx.fishpi.cn/cdn/medium-zoom.min.js
-
-  # snackbar
-  snackbar_css: https://tmx.fishpi.cn/cdn/snackbar.min.css
-  snackbar: https://tmx.fishpi.cn/cdn/snackbar.min.js
-
-  # effect
-  activate_power_mode: https://tmx.fishpi.cn/cdn/activate-power-mode.min.js
-  fireworks: https://tmx.fishpi.cn/cdn/fireworks.min.js
-  click_heart: https://tmx.fishpi.cn/cdn/click-heart.min.js
-  ClickShowText: https://tmx.fishpi.cn/cdn/click-show-text.min.js
-
-  # fontawesome
-  fontawesome: https://tmx.fishpi.cn/cdn/fontawesomall.min.css
-
-  # Conversion between Traditional and Simplified Chinese
-  translate: /js/tw_cn.js
-
-  # justifiedGallery
-  justifiedGallery_js: https://tmx.fishpi.cn/cdn/jquery.justifiedGallery.min.js
-  justifiedGallery_css: https://tmx.fishpi.cn/cdn/justifiedGallery.min.css
-
-  # aplayer
-  aplayer_css: https://tmx.fishpi.cn/cdn/APlayer.min.css
-  aplayer_js: https://tmx.fishpi.cn/cdn/APlayer.min.js
-  meting_js: https://tmx.fishpi.cn/cdn/Meting.min.js
-
-  # Prism.js
-  prismjs_js: https://tmx.fishpi.cn/cdn/prism.min.js
-  prismjs_lineNumber_js: https://tmx.fishpi.cn/cdn/prism-line-numbers.min.js
-  prismjs_autoloader: https://tmx.fishpi.cn/cdn/prism-autoloader.min.js
+  option:
+    # main
+    main_css: /css/index.css
+    jquery: https://tmx.fishpi.cn/cdn/jquery.min.js
+    main: /js/main.js
+    utils: /js/utils.js
+  
+    # pjax
+    pjax: https://tmx.fishpi.cn/cdn/pjax.min.js
+  
+    # comments
+    gitalk: https://tmx.fishpi.cn/cdn/gitalk.min.js
+    gitalk_css: https://tmx.fishpi.cn/cdn/gitalk.min.css
+    valine: https://tmx.fishpi.cn/cdn/Valine.min.js
+    disqusjs: https://tmx.fishpi.cn/cdn/disqus.js
+    disqusjs_css: https://tmx.fishpi.cn/cdn/disqusjs.css
+    utterances: https://utteranc.es/client.js
+    twikoo: https://tmx.fishpi.cn/cdn/twikoo.all.min.js
+    waline: https://tmx.fishpi.cn/cdn/Waline.min.js
+  
+    # share
+    addtoany: https://static.addtoany.com/menu/page.js
+    sharejs: https://tmx.fishpi.cn/cdn/social-share.min.js
+    sharejs_css: https://tmx.fishpi.cn/cdn/share.min.css
+  
+    # search
+    local_search: /js/search/local-search.js
+    algolia_js: /js/search/algolia.js
+    algolia_search: https://tmx.fishpi.cn/cdn/instantsearch.min.js
+    algolia_search_css: https://tmx.fishpi.cn/cdn/instantsearch.min.css
+  
+    # math
+    mathjax: https://tmx.fishpi.cn/cdn/tex-mml-chtml.js
+    katex: https://tmx.fishpi.cn/cdn/katex.min.css
+    katex_copytex: https://tmx.fishpi.cn/cdn/copy-tex.min.js
+    katex_copytex_css: https://tmx.fishpi.cn/cdn/copy-tex.css
+    mermaid: https://tmx.fishpi.cn/cdn/mermaid.min.js
+  
+    # count
+    busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  
+    # background effect
+    canvas_ribbon: https://tmx.fishpi.cn/cdn/canvas-ribbon.min.js
+    canvas_fluttering_ribbon: https://tmx.fishpi.cn/cdn/canvas-fluttering-ribbon.min.js
+    canvas_nest: https://tmx.fishpi.cn/cdn/canvas-nest.min.js
+  
+    lazyload: https://tmx.fishpi.cn/cdn/lazyload.iife.min.js
+    instantpage: https://tmx.fishpi.cn/cdn/instantpage.min.js
+    typed: https://tmx.fishpi.cn/cdn/typed.min.js
+    pangu: https://tmx.fishpi.cn/cdn/pangu.min.js
+  
+    # photo
+    fancybox_css: https://tmx.fishpi.cn/cdn/jquery.fancybox.min.css
+    fancybox: https://tmx.fishpi.cn/cdn/jquery.fancybox.min.js
+    medium_zoom: https://tmx.fishpi.cn/cdn/medium-zoom.min.js
+  
+    # snackbar
+    snackbar_css: https://tmx.fishpi.cn/cdn/snackbar.min.css
+    snackbar: https://tmx.fishpi.cn/cdn/snackbar.min.js
+  
+    # effect
+    activate_power_mode: https://tmx.fishpi.cn/cdn/activate-power-mode.min.js
+    fireworks: https://tmx.fishpi.cn/cdn/fireworks.min.js
+    click_heart: https://tmx.fishpi.cn/cdn/click-heart.min.js
+    ClickShowText: https://tmx.fishpi.cn/cdn/click-show-text.min.js
+  
+    # fontawesome
+    fontawesome: https://tmx.fishpi.cn/cdn/fontawesomall.min.css
+  
+    # Conversion between Traditional and Simplified Chinese
+    translate: /js/tw_cn.js
+  
+    # justifiedGallery
+    justifiedGallery_js: https://tmx.fishpi.cn/cdn/jquery.justifiedGallery.min.js
+    justifiedGallery_css: https://tmx.fishpi.cn/cdn/justifiedGallery.min.css
+  
+    # aplayer
+    aplayer_css: https://tmx.fishpi.cn/cdn/APlayer.min.css
+    aplayer_js: https://tmx.fishpi.cn/cdn/APlayer.min.js
+    meting_js: https://tmx.fishpi.cn/cdn/Meting.min.js
+  
+    # Prism.js
+    prismjs_js: https://tmx.fishpi.cn/cdn/prism.min.js
+    prismjs_lineNumber_js: https://tmx.fishpi.cn/cdn/prism-line-numbers.min.js
+    prismjs_autoloader: https://tmx.fishpi.cn/cdn/prism-autoloader.min.js
