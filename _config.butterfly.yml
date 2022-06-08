@@ -48,7 +48,7 @@ social:
    #iconfont icon-bilibili-fill: https://space.bilibili.com/27540375 || Bilibili
    iconfont icon-netease-cloud-music-fill: https://music.163.com/#/user/home?id=40898262 || 网易云
    fab fa-qq: tencent://message/?uin=873997011 || QQ
-   fab fa-weixin: https://tmx.fishpi.cn/img/add_weixin.jpg || 微信
+   fab fa-weixin: https://tmx.fishpi.cn/image/add_weixin.jpg || 微信
 
 # search (搜索)
 # --------------------------------------
@@ -85,11 +85,11 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://tmx.fishpi.cn/img/favicon.png
+favicon: https://tmx.fishpi.cn/image/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://tmx.fishpi.cn/img/head.jpg
+  img: https://tmx.fishpi.cn/image/head.jpg
   effect: false
 
 # Disable all banner image
@@ -196,10 +196,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-     - img: https://tmx.fishpi.cn/img/wechatpay.png
+     - img: https://tmx.fishpi.cn/image/wechatpay.png
        link:
        text: wechat
-     - img: https://tmx.fishpi.cn/img/alipay.jpg
+     - img: https://tmx.fishpi.cn/image/alipay.jpg
        link:
        text: alipay
 
@@ -425,7 +425,7 @@ footer:
   owner:
     enable: true
     since: 2017
-  custom_text: 我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/img/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a>
+  custom_text: 我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -662,7 +662,7 @@ aside:
       link: https://github.com/csfwff
   card_announcement:
     enable: true
-    content: <small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><img src="https://tmx.fishpi.cn/img/reward1.png" width="240"/><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center>
+    content: <small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center>
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -851,15 +851,14 @@ css_prefix: true
    #  - <script src="https://tmx.fishpi.cn/other/mouse-snow.min.js"></script>
 inject:
   head:
-     - <script src="https://tmx.fishpi.cn/other/auto-jsd.js"></script>
      - <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
      - <script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script>
      - <link rel="stylesheet" href="https://tmx.fishpi.cn/other/iconfont.css">
      - <link rel="stylesheet" href="https://tmx.fishpi.cn/other/style.css">
-     - <script src="https://fastly.jsdelivr.net/gh/fz6m/Private-web@1.2/js/custom/click.min.js"></script>
-     - <script src="https://fastly.jsdelivr.net/gh/fz6m/Private-web@1.2/js/sakura/sakura-original.js"></script>
-     - <script src="https://fastly.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-     - <script src="https://tmx.fishpi.cn/other/colorful-tag.js"></script>
+     - <script src="https://tmx.fishpi.cn/cdn/click.min.js"></script>
+     - <script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script>
+     - <script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script>
+     - <script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script>
   bottom:
      - <script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script>
     # - <script src="xxxx"></script>
@@ -870,85 +869,85 @@ inject:
 CDN:
   # main
   main_css: /css/index.css
-  jquery: https://fastly.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
+  jquery: https://tmx.fishpi.cn/cdn/jquery.min.js
   main: /js/main.js
   utils: /js/utils.js
 
   # pjax
-  pjax: https://fastly.jsdelivr.net/npm/pjax/pjax.min.js
+  pjax: https://tmx.fishpi.cn/cdn/pjax.min.js
 
   # comments
-  gitalk: https://fastly.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js
-  gitalk_css: https://fastly.jsdelivr.net/npm/gitalk/dist/gitalk.min.css
-  valine: https://fastly.jsdelivr.net/npm/valine/dist/Valine.min.js
-  disqusjs: https://fastly.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
-  disqusjs_css: https://fastly.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
+  gitalk: https://tmx.fishpi.cn/cdn/gitalk.min.js
+  gitalk_css: https://tmx.fishpi.cn/cdn/gitalk.min.css
+  valine: https://tmx.fishpi.cn/cdn/Valine.min.js
+  disqusjs: https://tmx.fishpi.cn/cdn/disqus.js
+  disqusjs_css: https://tmx.fishpi.cn/cdn/disqusjs.css
   utterances: https://utteranc.es/client.js
-  twikoo: https://fastly.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js
-  waline: https://fastly.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
+  twikoo: https://tmx.fishpi.cn/cdn/twikoo.all.min.js
+  waline: https://tmx.fishpi.cn/cdn/Waline.min.js
 
   # share
   addtoany: https://static.addtoany.com/menu/page.js
-  sharejs: https://fastly.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js
-  sharejs_css: https://fastly.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
+  sharejs: https://tmx.fishpi.cn/cdn/social-share.min.js
+  sharejs_css: https://tmx.fishpi.cn/cdn/share.min.css
 
   # search
   local_search: /js/search/local-search.js
   algolia_js: /js/search/algolia.js
-  algolia_search: https://fastly.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js
-  algolia_search_css: https://fastly.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css
+  algolia_search: https://tmx.fishpi.cn/cdn/instantsearch.min.js
+  algolia_search_css: https://tmx.fishpi.cn/cdn/instantsearch.min.css
 
   # math
-  mathjax: https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  katex: https://fastly.jsdelivr.net/npm/katex@latest/dist/katex.min.css
-  katex_copytex: https://fastly.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js
-  katex_copytex_css: https://fastly.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css
-  mermaid: https://fastly.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+  mathjax: https://tmx.fishpi.cn/cdn/tex-mml-chtml.js
+  katex: https://tmx.fishpi.cn/cdn/katex.min.css
+  katex_copytex: https://tmx.fishpi.cn/cdn/copy-tex.min.js
+  katex_copytex_css: https://tmx.fishpi.cn/cdn/copy-tex.css
+  mermaid: https://tmx.fishpi.cn/cdn/mermaid.min.js
 
   # count
   busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
   # background effect
-  canvas_ribbon: https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js
-  canvas_fluttering_ribbon: https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js
-  canvas_nest: https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js
+  canvas_ribbon: https://tmx.fishpi.cn/cdn/canvas-ribbon.min.js
+  canvas_fluttering_ribbon: https://tmx.fishpi.cn/cdn/canvas-fluttering-ribbon.min.js
+  canvas_nest: https://tmx.fishpi.cn/cdn/canvas-nest.min.js
 
-  lazyload: https://fastly.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
-  instantpage: https://fastly.jsdelivr.net/npm/instant.page/instantpage.min.js
-  typed: https://fastly.jsdelivr.net/npm/typed.js/lib/typed.min.js
-  pangu: https://fastly.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js
+  lazyload: https://tmx.fishpi.cn/cdn/lazyload.iife.min.js
+  instantpage: https://tmx.fishpi.cn/cdn/instantpage.min.js
+  typed: https://tmx.fishpi.cn/cdn/typed.min.js
+  pangu: https://tmx.fishpi.cn/cdn/pangu.min.js
 
   # photo
-  fancybox_css: https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
-  fancybox: https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
-  medium_zoom: https://fastly.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js
+  fancybox_css: https://tmx.fishpi.cn/cdn/jquery.fancybox.min.css
+  fancybox: https://tmx.fishpi.cn/cdn/jquery.fancybox.min.js
+  medium_zoom: https://tmx.fishpi.cn/cdn/medium-zoom.min.js
 
   # snackbar
-  snackbar_css: https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css
-  snackbar: https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js
+  snackbar_css: https://tmx.fishpi.cn/cdn/snackbar.min.css
+  snackbar: https://tmx.fishpi.cn/cdn/snackbar.min.js
 
   # effect
-  activate_power_mode: https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js
-  fireworks: https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js
-  click_heart: https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js
-  ClickShowText: https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js
+  activate_power_mode: https://tmx.fishpi.cn/cdn/activate-power-mode.min.js
+  fireworks: https://tmx.fishpi.cn/cdn/fireworks.min.js
+  click_heart: https://tmx.fishpi.cn/cdn/click-heart.min.js
+  ClickShowText: https://tmx.fishpi.cn/cdn/click-show-text.min.js
 
   # fontawesome
-  fontawesome: https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
+  fontawesome: https://tmx.fishpi.cn/cdn/fontawesomall.min.css
 
   # Conversion between Traditional and Simplified Chinese
   translate: /js/tw_cn.js
 
   # justifiedGallery
-  justifiedGallery_js: https://fastly.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js
-  justifiedGallery_css: https://fastly.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css
+  justifiedGallery_js: https://tmx.fishpi.cn/cdn/jquery.justifiedGallery.min.js
+  justifiedGallery_css: https://tmx.fishpi.cn/cdn/justifiedGallery.min.css
 
   # aplayer
-  aplayer_css: https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
-  aplayer_js: https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-  meting_js: https://fastly.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js
+  aplayer_css: https://tmx.fishpi.cn/cdn/APlayer.min.css
+  aplayer_js: https://tmx.fishpi.cn/cdn/APlayer.min.js
+  meting_js: https://tmx.fishpi.cn/cdn/Meting.min.js
 
   # Prism.js
-  prismjs_js: https://fastly.jsdelivr.net/npm/prismjs/prism.min.js
-  prismjs_lineNumber_js: https://fastly.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-  prismjs_autoloader: https://fastly.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+  prismjs_js: https://tmx.fishpi.cn/cdn/prism.min.js
+  prismjs_lineNumber_js: https://tmx.fishpi.cn/cdn/prism-line-numbers.min.js
+  prismjs_autoloader: https://tmx.fishpi.cn/cdn/prism-autoloader.min.js
