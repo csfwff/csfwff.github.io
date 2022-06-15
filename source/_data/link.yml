@@ -1,6 +1,10 @@
 - class_name: 友情鏈接
   class_desc: 我的小伙伴们
   link_list:
+    - name: 摸鱼派
+      link: https://fishpi.cn
+      avatar: https://pwl.icu/images/favicon.png
+      descr: 专为程序员打造的摸鱼社区
     - name: 贼拉正经的技术博客
       link: https://www.stackoverflow.wiki
       avatar: https://avatars1.githubusercontent.com/u/6754458?v=4
@@ -39,8 +43,8 @@
       descr: Be profound  be funny  or  be quiet .
     - name: 长安城下
       link: https://cacx.cc
-      avatar: https://cacx.cc/favicon.png
-      descr: 不是所有的鱼 都会生活在同一片海里
+      avatar: https://cacx.cc/usr/images/9666.jpg
+      descr: 大雁塔上唐僧梦·长安城下女儿情
     - name: YuZhangWang的领域
       link: https://www.yuzhang.wang
       avatar: https://fastly.jsdelivr.net/gh/YuZhangWang/Creative_pictures01@main/img/20210907012640.png
