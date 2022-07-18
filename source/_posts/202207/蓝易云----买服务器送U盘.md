@@ -33,7 +33,7 @@ cover: https://tmx.fishpi.cn/img/asian-woman-5450028_1920.jpg
 ![img](https://tmx.fishpi.cn/img/微信图片_20220718100744.jpg)
 
 ## 蓝易云硬件配置
-蓝易云服务器香港CN2 GIA云服务器出自九龙数据中心，该产品三网CN2 GIA回程优化，采用SSD硬盘+RAID50阵列，KVM架构！1核1G内存套餐27.55元/月，2核2G内存开始支持Windows系统。
+蓝易云服务器香港CN2 GIA云服务器出自九龙数据中心，该产品三网CN2 GIA回程优化，采用SSD硬盘+RAID50阵列，KVM架构！1核1G内存套餐28.42/月，2核2G内存开始支持Windows系统。
 以下配置为 E5-2678v3 1H1G3M的跑分，CPU层面在多核心CPU里面算是优秀了，磁盘读写速度也较为优秀。
 ![pf.png](https://tmx.fishpi.cn/img/lyypf.png)
 ![ping.png](https://tmx.fishpi.cn/img/lypping.png)
