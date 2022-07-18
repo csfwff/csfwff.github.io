@@ -42,8 +42,8 @@ cover: https://tmx.fishpi.cn/img/asian-woman-5450028_1920.jpg
 ![pz.png](https://tmx.fishpi.cn/img/lyypz.png)
 总体来说蓝易云服务器香港弹性云性能不错，对于现在这个促销价格28.42元/月（98折后），可以说是超值了，推荐大家入手！
 蓝易云服务器优惠码：
-香港弹性云大带宽型95折优惠码：tsyidcd 【续费同价】
-香港弹性云不限流型95折优惠码：tsyidcb 【续费同价】
+香港弹性云大带宽型98折优惠码：tsyidcd 【续费同价】
+香港弹性云不限流型98折优惠码：tsyidcb 【续费同价】
 
 
 <!--
