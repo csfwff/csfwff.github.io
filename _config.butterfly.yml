@@ -326,15 +326,15 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: oo7Bh1hIqFmhwlkaN8QjJwY0-MdYXbMMI
-  appKey: 5tXrcQ05JPi0bnz3glifhQ5t
+  appId: 
+  appKey: 
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
   placeholder: 记得留下你的昵称和邮箱....可以快速收到回复 # valine comment input placeholder (like: Please leave your footprints)
   guest_info: nick,mail,link # valine comment header info (nick/mail/link)
   recordIP: false # Record reviewer IP
-  serverURLs: https://oo7Bh1hI.api.lncldglobal.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  serverURLs:  # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
   emojiCDN: # emoji CDN
   enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
