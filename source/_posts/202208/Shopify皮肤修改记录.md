@@ -24,7 +24,7 @@ cover: https://tmx.fishpi.cn/img/flowers-7233987_1920.jpg
 
 ## logo和nav居中修改
 `theme-styles-responsive.scss.liquid` 6712行附近
-``` css
+``` scss
   .site-nav {
         margin: 0;
         display:flex;  /*新增加*/
