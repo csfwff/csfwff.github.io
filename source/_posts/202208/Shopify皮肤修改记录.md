@@ -42,4 +42,40 @@ cover: https://tmx.fishpi.cn/img/flowers-7233987_1920.jpg
        <div class="wrapper-header-bt">
 ```
 
+## newsletter手机端修改
+`theme-styles-responsive.scss.liquid` 1352行附近
+``` scss
+    .wrapper-newsletter {
+        .modal-overlay {
+            width: 400px;
+            @include calc(max-width, '100% - 40px');
+        }
+
+        .halo-modal-body {
+            .column-left {
+                display: none;
+            }
+
+             .column-right-img{
+                display:block;
+
+                img{   /*新增这个img*/
+                  width:100%
+                }
+            }
+
+            .column-right {
+                width: 100%;
+                /*padding: 35px 20px 25px;   padding改为0 */
+                padding:0;
+            }
+
+            .title {
+                font-size: $font_size + 6;
+                display:none;   /*新增这个*/
+            }
+        }
+    }
+```
+
 
