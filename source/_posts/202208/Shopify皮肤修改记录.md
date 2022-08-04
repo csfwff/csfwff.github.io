@@ -78,4 +78,36 @@ cover: https://tmx.fishpi.cn/img/flowers-7233987_1920.jpg
     }
 ```
 
+## newsletter增加手机端图片
+`settings_schema.json`1097行附近增加选项
+```json
+    {
+        "type": "image_picker",
+        "id": "newsletter_mobile",
+        "label": "Upload a new newsletter image for mobile"
+    }
+```
+`newsletter.liquid`33行附近
+```liquid
+    {% if settings.popup_newsletter_title != blank %}
+        <h2 class="title">
+        {% render 'multilang' with settings.popup_newsletter_title %}
+        </h2>
+        {% endif %}
+        <!--以下新增 现有就修改-->
+        <div class="column-right-img">
+            {%- assign img_url = settings.newsletter_mobile | img_url: '360x180' -%}
+                      
+            {% if settings.newsletter != blank %}
+                <img data-srcset="{{ img_url }}" class="lazyload" data-sizes="auto">
+            {% else %}
+                <div class="not_img">
+                          360 x 180px
+                </div>   
+            {% endif %}
+        </div>
+        <!--以上新增 -->
+```
+
+
 
