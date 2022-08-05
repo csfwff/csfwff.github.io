@@ -109,5 +109,48 @@ cover: https://tmx.fishpi.cn/img/flowers-7233987_1920.jpg
         <!--以上新增 -->
 ```
 
+## bestseller产品增加边框
+`theme-styles-scss.liquid` 2357行附近
+```scss
+.product-item {
+    .product-top {
+        position: relative;
+        text-align: center;
+        padding: 10px;  /*新增这个*/
+        border: 1px solid #cccccc;  /*新增这个*/
+    }
 
+    .product-grid-image {
+        position: relative;
+        display: block;
+    }
+```
+2306行附近
+```scss
+    .product-image {
+        .product-grid-image {
+            min-height: unset;/*改为unset 原先216px*/
+        }
+
+        img {
+             min-height: unset;/*改为unset 原先216px*/
+        }
+    }
+```
+
+`theme-styles-responsive.scss.liquid` 4834行附近
+```scss
+ .product-image {
+            margin-bottom: 0px;/*改为0 原先13px*/
+    }
+```
+4805行附近
+```scss
+    &.abs-center {
+                @include transform(none);
+                top: inherit;
+                bottom: -1px;;
+                display:none; /*新增这个*/
+            }
+```
 
