@@ -3,7 +3,7 @@
   link_list:
     - name: 摸鱼派
       link: https://fishpi.cn
-      avatar: https://pwl.icu/images/favicon.png
+      avatar: https://fishpi.cn/images/favicon.png
       descr: 专为程序员打造的摸鱼社区
     - name: 贼拉正经的技术博客
       link: https://www.stackoverflow.wiki
@@ -87,5 +87,9 @@
       descr: keep trying!
     - name: 茂茂の部落格
       link: https://maolog.com
-      avatar: https://maolog.com/logo
+      avatar: https://maolog.com/upload/2022/02/MAOLOG-4dc2e814be184b599a5e25156aa875a6.png
       descr: 日常记录和吐槽
+    - name: 小黑娃动画
+      link: http://xiaoheiwa.com.cn/
+      avatar: http://xiaoheiwa.com.cn/zb_users/upload/2022/08/202208231661248821151662.jpg
+      descr: 从小梦想做一部动画片，不知不觉几十年过去了，一直没放下，终于决定，现在开始动工了。希望和每位追梦人成为朋友！
