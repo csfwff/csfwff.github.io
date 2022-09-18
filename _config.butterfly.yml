@@ -11,7 +11,7 @@ menu:
    归档: /archives/ || fas fa-archive
    标签: /tags/ || fas fa-tags
    分类: /categories/ || fas fa-folder-open
-   说说: /artitalk/ || fas fa-comment-dots
+   #说说: /artitalk/ || fas fa-comment-dots
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
