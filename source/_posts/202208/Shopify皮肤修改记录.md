@@ -154,3 +154,11 @@ cover: https://tmx.fishpi.cn/img/flowers-7233987_1920.jpg
             }
 ```
 
+## 去除货币选择
+自带的货币选择logo的图片无法访问，导致加载半天然后加载失败
+直接隐藏货币选择
+
+在`header.liquid`或带01 02的里
+搜索`new-currency-picker`，然后注释掉render那一行
+理论上关闭多语言多货币多支付方式就好了
+
