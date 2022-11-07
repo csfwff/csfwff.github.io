@@ -112,7 +112,7 @@ emmm
 重试，继续失败
 刚刚装的硬盘有问题？
 可是刚刚试过里面的deepin能启动啊
-重启重试开始失败
+重启重试还是失败
 开始百度谷歌，没得资料
 凉凉
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1889205264&auto=0&height=66"></iframe>
@@ -142,11 +142,11 @@ SMB，FTP，DLNA之类的
 开盖，装入硬盘，插电脑上
 嗯，资源管理器没有
 正常，毕竟是linux的硬盘，直接挂到windows上是读不出来的
-当然，这种需求不止我一个人有，百度一下就要方案
+当然，这种需求不止我一个人有，百度一下就有方案
 下载[Linux Reader](https://www.diskinternals.com/linux-reader/)安装
 成功读到文件，剩下的就是慢慢转存出来
 虽然我可以直接把这硬盘挂到omv上使用
-但是我后续准备把换下来的这块硬盘装到准备当服务器的笔记本上
+但是我后续准备把换下来的这块硬盘直接装到准备当服务器的笔记本上
 所以我还是先取出来把
 <img src=https://tmx.fishpi.cn/img/QQ图片20221107141741.jpg width="300"><img src=https://tmx.fishpi.cn/img/QQ图片20221107141745.jpg width="300">
 👆移动硬盘透明探索版
