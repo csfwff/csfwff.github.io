@@ -125,7 +125,7 @@ class LeftWidgetProvider : AppWidgetProvider() {
 ```
 
 ## 05
-关于配置用的Acitivy，需要在清单文件中增加配置
+关于配置用的Activity，需要在清单文件中增加配置
 ```xml
 <activity
     android:name=".LeftDayConfigActivity"
