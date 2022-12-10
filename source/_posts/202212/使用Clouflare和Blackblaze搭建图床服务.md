@@ -9,7 +9,7 @@ categories:
 ---
 ![图 1](https://tmx.fishpi.cn/img/20221210_japan-g5c1fc0a95_1920_95.jpg)  
 
-因为业务需求，需要用到一个面向海外的图床服务，大概搜索了一下，最终决定使用ClouFlare和BlackBlaze
+因为业务需求，需要用到一个图床服务，大概搜索了一下，最终决定使用ClouFlare和BlackBlaze
 原因嘛，当然是因为免费的10G空间啦
 参考链接
 1. [把cloudflare变成你的专属免费图床](https://wlnxing.com/archives/49.html)
