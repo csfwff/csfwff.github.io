@@ -1,7 +1,7 @@
-title: 使用Clouflare和Blackblaze搭建图床服务
+title: 使用Clouflare和Backblaze搭建图床服务
 date: '2022-12-10 15:38:21'
 updated: '2022-12-10 15:38:21'
-tags: [CDN, Cloudflare, Blackblaze]
+tags: [CDN, Cloudflare, Backblaze]
 permalink: /articles/2022/12/10/1670657901000.html
 cover: https://tmx.fishpi.cn/img/20221210_japan-g5c1fc0a95_1920_95.jpg
 categories: 
@@ -9,15 +9,15 @@ categories:
 ---
 ![图 1](https://tmx.fishpi.cn/img/20221210_japan-g5c1fc0a95_1920_95.jpg)  
 
-因为业务需求，需要用到一个图床服务，大概搜索了一下，最终决定使用ClouFlare和BlackBlaze
+因为业务需求，需要用到一个图床服务，大概搜索了一下，最终决定使用ClouFlare和Backblaze
 原因嘛，当然是因为免费的10G空间啦
 参考链接
 1. [把cloudflare变成你的专属免费图床](https://wlnxing.com/archives/49.html)
 2. [Free Image Hosting With Cloudflare Transform Rules and Backblaze B2](https://www.backblaze.com/blog/free-image-hosting-with-cloudflare-transform-rules-and-backblaze-b2/)
 (人家官方都给文档介绍怎么弄了，不怪咱白嫖)
 
-## 注册Blackblaze
-传送门->[Blackblaze](https://www.backblaze.com/)
+## 注册Backblaze
+传送门->[Backblaze](https://www.backblaze.com/)
 我们只需要用到B2 Cloud Storage
 注册完成后，新建一个Bucket，任意命名
 然后通过网页传一个文件，点击文件信息就能看到链接地址
@@ -32,9 +32,9 @@ categories:
 emmm，就是下面这只鸭子
 ![图 3](https://tmx.fishpi.cn/img/20221210_cyberduck-icon-384_3.png)  
 安装完成后，点击新建链接
-选择Blackblaze B2
+选择Backblaze B2
 需要Account ID or Key ID
-我们回Blackblaze网页
+我们回Backblaze网页
 在左下角App Keys那里生成一套
 填入连接，就能正常管理文件了
 （当然，对于我来说，后续是需要通过api来完成这些操作的）
@@ -64,7 +64,7 @@ emmm，就是下面这只鸭子
 。
 嗯？正常情况？那我肯定不正常
 没错，访问就是521
-我找了半天没找到原因，最后看blackblaze博客
+我找了半天没找到原因，最后看Backblaze博客
 发现是没有开启SSL
 好了，我们在Cloudflare左侧找到SSL/TLS
 选择Full (strict)
@@ -101,7 +101,7 @@ url按提示填写，最后带上`/*`
 然后部署规则，中间那一串就能省掉啦
 
 ## 其他配置
-Blackblaze 博客中还给出了其他一些设置
+Backblaze 博客中还给出了其他一些设置
 比如去除返回头中的bz的内容之类的
 照着抄就行了
 就这样吧
