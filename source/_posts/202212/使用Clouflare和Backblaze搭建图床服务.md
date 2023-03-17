@@ -100,6 +100,19 @@ url按提示填写，最后带上`/*`
 内容为`concat("/file/{这里写bucketname}",http.request.uri.path)`
 然后部署规则，中间那一串就能省掉啦
 
+## 去除头中的信息
+创建一个`Modify Response Header`
+任意命名，比如`Remove Backbaze B2 Headers`
+选择all
+然后在then里添加
+`Set dynamic`，`ETag`, `concat(http.response.headers["x-bz-content-sha1"][0], http.response.headers["x-bz-info-src_last_modified_millis"][0], http.response.headers["x-bz-file-id"][0])`
+`remove`, `x-bz-content-sha1`
+`remove`, `x-bz-file-id`
+`remove`, `x-bz-file-name`
+`remove`, `x-bz-info-src_last_modified_millis`
+`remove`, `x-bz-upload-timestamp`
+
+
 ## 其他配置
 Backblaze 博客中还给出了其他一些设置
 比如去除返回头中的bz的内容之类的
