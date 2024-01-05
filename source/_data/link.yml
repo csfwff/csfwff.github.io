@@ -117,10 +117,10 @@
       link: https://www.zqcnc.cn
       avatar: https://www.zqcnc.cn/favicon.ico
       descr: keep trying!
-    - name: 茂茂の部落格
-      link: https://maolog.com
-      avatar: https://maolog.com/upload/2022/02/MAOLOG-4dc2e814be184b599a5e25156aa875a6.png
-      descr: 日常记录和吐槽
+    # - name: 茂茂の部落格
+    #   link: https://maolog.com
+    #   avatar: https://maolog.com/upload/2022/02/MAOLOG-4dc2e814be184b599a5e25156aa875a6.png
+    #   descr: 日常记录和吐槽
     # - name: 小黑娃动画
     #   link: http://xiaoheiwa.com.cn/
     #   avatar: http://xiaoheiwa.com.cn/zb_users/upload/2022/08/202208231661248821151662.jpg
