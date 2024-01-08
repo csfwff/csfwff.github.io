@@ -349,6 +349,8 @@ waline:
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   avatarCDN: # Gravatar CDN baseURL
   bg: # waline background
+  requiredFields: nick,mail # required fields (nick/mail)
+  placeholder: 记得留下你的昵称和邮箱....可以快速收到回复（评论需要审核哟，不要着急） # valine comment input placeholder (like: Please leave your footprints)
   visitor: false
   option:
 
