@@ -3,11 +3,12 @@ date: '2023-03-06 18:49:18'
 updated: '2023-03-06 18:49:18'
 tags: [Mailu, 邮箱]
 permalink: /articles/2023/03/06/1678099758000.html
-cover: https://tmx.fishpi.cn/img/20230306_girl-g7cba9628f_1920_75.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707284689779.jpg
 categories: 
 - 菜鸡修炼手册
 ---
-![图 1](https://tmx.fishpi.cn/img/20230306_girl-g7cba9628f_1920_75.jpg)  
+ ![picture 0](https://tmx.fishpi.cn/img/pic_1707284689779.png)  
+
 
 [【活动】送服务器啦！蓝易云征文大赛](https://fishpi.cn/article/1677580643943)
 

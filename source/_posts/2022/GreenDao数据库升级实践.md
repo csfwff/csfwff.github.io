@@ -5,8 +5,8 @@ tags: [Android,GreenDao,Sqlite]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/06/08/16546694444.html
-top_img: https://tmx.fishpi.cn/img/town-7015699_1920.jpg
-cover: https://tmx.fishpi.cn/img/town-7015699_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707287552716.png
+cover: https://tmx.fishpi.cn/img/pic_1707287552716.png
 ---
 
 GreenDao是Android中常用的数据库管理框架

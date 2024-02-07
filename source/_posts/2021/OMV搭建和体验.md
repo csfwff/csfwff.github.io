@@ -5,10 +5,11 @@ tags: [OMV,NAS]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2021/08/16/1629091393130.html
-top_img: https://tmx.fishpi.cn/img/cochem-castle-6791148_1920.jpg
-cover: https://tmx.fishpi.cn/img/cochem-castle-6791148_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707289637201.png
+cover: https://tmx.fishpi.cn/img/pic_1707289637201.png
 ---
-![1628345033618.jpg](https://tmx.fishpi.cn/img/cochem-castle-6791148_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707289637201.png)  
+
 
 ## 旧电脑
 就像手机一样，家里总有一些淘汰下来的旧电脑，留着嘛，性能不行，用嘛，又不知道干啥，换不锈钢脸盆？那还不如放着吃灰。

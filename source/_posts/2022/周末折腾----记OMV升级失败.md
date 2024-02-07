@@ -4,10 +4,10 @@ tags: [OMV,NAS]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/11/07/1667798327000.html
-top_img: https://tmx.fishpi.cn/img/flower-g272bea4fb_1920.jpg
-cover: https://tmx.fishpi.cn/img/flower-g272bea4fb_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707287071050.png
+cover: https://tmx.fishpi.cn/img/pic_1707287071050.png
 ---
-![1628345033618.jpg](https://tmx.fishpi.cn/img/flower-g272bea4fb_1920.jpg)
+![1628345033618.jpg](https://tmx.fishpi.cn/img/pic_1707287071050.png)
 
 ## 前情提要
 去年8月份，我就家里的旧笔记本装了omv

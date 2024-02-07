@@ -3,12 +3,12 @@ date: '2020-07-03 13:04:07'
 updated: '2021-01-05 17:00:03'
 tags: [Android]
 permalink: /articles/2020/07/03/1593752646951.html
-cover: https://tmx.fishpi.cn/img/road-4730553_1920.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707290001581.png
 categories: 
 - 菜鸡修炼手册
 
 ---
-![201904091554817248554774.jpg](https://tmx.fishpi.cn/img/road-4730553_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707290001581.png)  
 
 最近升级了AS，突然发现控制台的中文乱码了，搜了下解决方案，记录下省的再找。
 

@@ -3,11 +3,11 @@ date: '2023-03-07 11:18:38'
 updated: '2023-03-07 11:18:38'
 tags: [Caddy, https, SSL]
 permalink: /articles/2023/03/07/1678159118000.html
-cover: https://tmx.fishpi.cn/img/20230307_music-player-g1a3e4cc3f_1920_94.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707284719058.png
 categories: 
 - 菜鸡修炼手册
----
-![图 1](https://tmx.fishpi.cn/img/20230307_music-player-g1a3e4cc3f_1920_94.jpg)  
+--- 
+![picture 0](https://tmx.fishpi.cn/img/pic_1707284719058.png)  
 
 ## Caddy
 众所周知，Caddy是一个用Go实现的web服务器

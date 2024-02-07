@@ -3,11 +3,11 @@ date: '2020-04-06 14:55:53'
 updated: '2021-01-05 16:59:26'
 tags: [Bolo, JavaScript]
 permalink: /articles/2020/04/06/1586156153265.html
-cover: https://tmx.fishpi.cn/img/bokeh-6655283_1920.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707289793532.png
 categories: 
 - 菜鸡修炼手册
 ---
-![5c401ed7e7bce70476b6d7d1.jpg](https://tmx.fishpi.cn/img/bokeh-6655283_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707289793532.png)  
 
 ## ✨
 

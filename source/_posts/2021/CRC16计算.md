@@ -5,11 +5,12 @@ tags: [CRC16,Android,串口]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2021/12/12/1639292768000.html
-top_img: https://tmx.fishpi.cn/img/laptop-2560051_1920.jpg
-cover: https://tmx.fishpi.cn/img/laptop-2560051_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707289682721.png
+cover: https://tmx.fishpi.cn/img/pic_1707289682721.png
 ---
+ 
+![picture 0](https://tmx.fishpi.cn/img/pic_1707289682721.png)  
 
-![图 1](https://tmx.fishpi.cn/img/laptop-2560051_1920.jpg)  
 
 
 因为最近在调试一款串口设备，发送数据需要用16进制，然后还要算CRC16的校验码

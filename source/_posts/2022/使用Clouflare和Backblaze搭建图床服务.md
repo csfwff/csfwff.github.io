@@ -3,11 +3,12 @@ date: '2022-12-10 15:38:21'
 updated: '2022-12-10 15:38:21'
 tags: [CDN, Cloudflare, Backblaze]
 permalink: /articles/2022/12/10/1670657901000.html
-cover: https://tmx.fishpi.cn/img/20221210_japan-g5c1fc0a95_1920_95.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707287215046.png
 categories: 
 - 菜鸡修炼手册
 ---
-![图 1](https://tmx.fishpi.cn/img/20221210_japan-g5c1fc0a95_1920_95.jpg)  
+![picture 0](https://tmx.fishpi.cn/img/pic_1707287215046.png)  
+
 
 因为业务需求，需要用到一个图床服务，大概搜索了一下，最终决定使用ClouFlare和Backblaze
 原因嘛，当然是因为免费的10G空间啦

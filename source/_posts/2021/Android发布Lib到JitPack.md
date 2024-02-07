@@ -5,10 +5,11 @@ tags: [Android,JitPack]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2021/09/09/1631184077130.html
-top_img: https://tmx.fishpi.cn/img/stones-6660734_1920.jpg
-cover: https://tmx.fishpi.cn/img/stones-6660734_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707289737797.png
+cover: https://tmx.fishpi.cn/img/pic_1707289737797.png
 ---
-![1628345033618.jpg](https://tmx.fishpi.cn/img/stones-6660734_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707289737797.png)  
+
 
 ## =.= 
 之前一直以为发布到Jitpack，jcenter（这个要没了）这种中央仓库很麻烦，要注册账号啥的，所以一直不愿意搞

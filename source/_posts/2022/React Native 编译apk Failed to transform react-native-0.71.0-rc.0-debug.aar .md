@@ -3,11 +3,12 @@ date: '2022-12-10 11:30:20'
 updated: '2022-12-10 11:30:20'
 tags: [React Native, Android]
 permalink: /articles/2022/12/10/1670643020000.html
-cover: https://tmx.fishpi.cn/img/20221210_photographer-gb73056019_1920_16.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707287497463.png
 categories: 
 - 菜鸡修炼手册
 ---
-![图 1](https://tmx.fishpi.cn/img/20221210_photographer-gb73056019_1920_16.jpg)  
+![picture 0](https://tmx.fishpi.cn/img/pic_1707287497463.png)  
+
 
 一个老项目，突然要修改图标和名称，只能打开重新打包
 打包的时候报错了

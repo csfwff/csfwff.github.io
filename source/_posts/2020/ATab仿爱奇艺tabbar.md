@@ -3,11 +3,11 @@ date: '2020-03-09 11:46:37'
 updated: '2021-01-05 16:55:57'
 tags: [Android, Java]
 permalink: /articles/2020/03/09/1583725597624.html
-cover: https://tmx.fishpi.cn/img/leaves-6932140_1920.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707290767713.png
 categories: 
 - 菜鸡修炼手册
 ---
-![5ccce31b9a1aa339f15a7043.jpg](https://tmx.fishpi.cn/img/leaves-6932140_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707290767713.png)  
 
 ## ATab----仿爱奇艺tabbar
 

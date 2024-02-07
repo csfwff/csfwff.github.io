@@ -5,10 +5,11 @@ tags: [UniApp,CSS,前端]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/10/13/1665631374512.html
-top_img: https://tmx.fishpi.cn/img/rocks-g837bc8c3c_1920.jpg
-cover: https://tmx.fishpi.cn/img/rocks-g837bc8c3c_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707287290592.png
+cover: https://tmx.fishpi.cn/img/pic_1707287290592.png
 ---
-![1628345033618.jpg](https://tmx.fishpi.cn/img/rocks-g837bc8c3c_1920.jpg)
+
+![picture 0](https://tmx.fishpi.cn/img/pic_1707287290592.png)  
 
 ## 踩坑
 可能是我的姿势不对，引入一直失败

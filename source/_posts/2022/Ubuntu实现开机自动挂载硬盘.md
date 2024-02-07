@@ -5,10 +5,10 @@ tags: [Ubuntu,Linux]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/10/06/1665040782325.html
-top_img: https://tmx.fishpi.cn/img/red-maple-leaves-g3378b9232_1920.jpg
-cover: https://tmx.fishpi.cn/img/red-maple-leaves-g3378b9232_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707287367003.png
+cover: https://tmx.fishpi.cn/img/pic_1707287367003.png
 ---
-![1628345033618.jpg](https://tmx.fishpi.cn/img/red-maple-leaves-g3378b9232_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707287367003.png)  
 
 
 ## 正常手动挂载

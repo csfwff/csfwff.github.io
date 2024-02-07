@@ -5,10 +5,11 @@ tags: [CSS,前端,Shopify]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/08/03/1659504202231.html
-top_img: https://tmx.fishpi.cn/img/flowers-7233987_1920.jpg
-cover: https://tmx.fishpi.cn/img/flowers-7233987_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707287433270.png
+cover: https://tmx.fishpi.cn/img/pic_1707287433270.png
 ---
-![1628345033618.jpg](https://tmx.fishpi.cn/img/flowers-7233987_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707287433270.png)  
+
 
 ## 顶部广告图修改
 皮肤自定义里**Header Default**，编辑**Top Message Text**，内容如下`{表示说明}`，改的时候去掉大括号

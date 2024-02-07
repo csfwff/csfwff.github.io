@@ -5,10 +5,10 @@ tags: [CDN,服务器]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/07/18/1658109426.html
-top_img: https://tmx.fishpi.cn/img/asian-woman-5450028_1920.jpg
-cover: https://tmx.fishpi.cn/img/asian-woman-5450028_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707286271337.png
+cover: https://tmx.fishpi.cn/img/pic_1707286271337.png
 ---
-![1628345033618.jpg](https://tmx.fishpi.cn/img/asian-woman-5450028_1920.jpg)
+
 
 
 ## 关于蓝易云

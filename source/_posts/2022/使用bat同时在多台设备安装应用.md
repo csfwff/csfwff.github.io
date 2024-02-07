@@ -5,11 +5,12 @@ tags: [bat,Android,adb]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/01/05/1641367808000.html
-top_img: https://tmx.fishpi.cn/img/ranunkeln-g3e434f4c9_1920.jpg
-cover: https://tmx.fishpi.cn/img/ranunkeln-g3e434f4c9_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707287255771.png
+cover: https://tmx.fishpi.cn/img/pic_1707287255771.png
 ---
 
-![图 1](https://tmx.fishpi.cn/img/ranunkeln-g3e434f4c9_1920.jpg)  
+![picture 0](https://tmx.fishpi.cn/img/pic_1707287255771.png)  
+
 
 现在公司在调试一款Android设备，平时都是adb远程连上去，然后在Android Stuido里直接运行就行了
 但是，现在一排设备摆在那里，要安装的时候，我得一个一个连上，然后一个一个安装，就很麻烦

@@ -5,8 +5,8 @@ tags: [Android,debug,ic卡,M1卡]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/05/04/1651629967000.html
-top_img: https://tmx.fishpi.cn/img/christmas-2942305_1920.jpg
-cover: https://tmx.fishpi.cn/img/christmas-2942305_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707286164647.png
+cover: https://tmx.fishpi.cn/img/pic_1707286164647.png
 ---
 
 ## DaDaDaDaDa

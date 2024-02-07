@@ -5,9 +5,10 @@ tags: [Android,widget]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2022/05/18/1652871571111.html
-top_img: https://tmx.fishpi.cn/img/avocado-6931344_1920.jpg
-cover: https://tmx.fishpi.cn/img/avocado-6931344_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707288877222.png
+cover: https://tmx.fishpi.cn/img/pic_1707288877222.png
 ---
+
 
 ## 00
 桌面widget指的是放在桌面的小组件（你这不是废话么……）

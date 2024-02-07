@@ -5,10 +5,11 @@ tags: [总结]
 categories: 
 - 再见江湖
 permalink: /articles/2023/12/29/1703825008.html
-top_img: https://tmx.fishpi.cn/img/music-1285165_1280.jpg
-cover: https://tmx.fishpi.cn/img/music-1285165_1280.jpg
----
-![图 0](https://tmx.fishpi.cn/img/music-1285165_1280.jpg)  
+top_img: https://tmx.fishpi.cn/img/pic_1707286043339.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707286043339.jpg
+--- 
+![picture 0](https://tmx.fishpi.cn/img/pic_1707286043339.png)  
+
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1924062187&auto=0&height=66"></iframe>
 

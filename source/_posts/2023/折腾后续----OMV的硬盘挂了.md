@@ -4,10 +4,11 @@ tags: [OMV,NAS]
 categories: 
 - 菜鸡修炼手册
 permalink: /articles/2023/04/12/1681282326000.html
-top_img: https://tmx.fishpi.cn/img/20230412_soldering-7897827_1920_20.jpg
-cover: https://tmx.fishpi.cn/img/20230412_soldering-7897827_1920_20.jpg
+top_img: https://tmx.fishpi.cn/img/00018-1581855605.png
+cover: https://tmx.fishpi.cn/img/00018-1581855605.png
 ---
-![图 1](https://tmx.fishpi.cn/img/20230412_soldering-7897827_1920_20.jpg)  
+ 
+![picture 0](https://tmx.fishpi.cn/img/00018-1581855605.png)  
 
 ## 前情提要
 看这里->[周末折腾----记OMV升级失败](https://www.sszsj.cc/articles/2022/11/07/1667798327000.html)
