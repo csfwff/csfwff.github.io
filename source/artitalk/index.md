@@ -3,7 +3,7 @@ title: 说说
 date: 2021-07-22 14:38:40
 type: 'artitalk'
 comments: 'false'
-top_img: https://tmx.fishpi.cn/img/pexels-hanfu-8273123.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707299615529.png
 ---
 <!-- 引用 artitalk -->
 <script type="text/javascript" src="https://unpkg.com/artitalk"></script>

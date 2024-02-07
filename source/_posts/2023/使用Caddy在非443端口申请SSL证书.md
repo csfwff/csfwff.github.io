@@ -7,7 +7,7 @@ cover: https://tmx.fishpi.cn/img/pic_1707284719058.png
 categories: 
 - 菜鸡修炼手册
 --- 
-![picture 0](https://tmx.fishpi.cn/img/pic_1707284719058.png)  
+![picture 0](https://tmx.fishpi.cn/img/pic_1707284719058.png) 
 
 ## Caddy
 众所周知，Caddy是一个用Go实现的web服务器

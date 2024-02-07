@@ -2,9 +2,8 @@
 title: 关于
 date: 2021-07-20 17:06:37
 type: "about"
-top_img: https://tmx.fishpi.cn/img/fantasy-6941630_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707299763343.png
 ---
-![147038774165967995.JPEG](https://tmx.fishpi.cn/img/fantasy-6941630_1920.jpg)
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=421137682&auto=1&height=66"></iframe>
 

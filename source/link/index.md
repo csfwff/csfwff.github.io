@@ -2,7 +2,7 @@
 title: 友情链接
 date: 2021-07-20 16:58:30
 type: "link"
-top_img: https://tmx.fishpi.cn/img/woman-7281733_1920.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707299478314.png
 ---
 
 ## 我的信息
