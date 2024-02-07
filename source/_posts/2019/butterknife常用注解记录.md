@@ -3,12 +3,13 @@ date: '2019-11-14 10:26:02'
 updated: '2021-01-05 16:52:11'
 tags: [butterknife, Android]
 permalink: /articles/2019/11/14/1573698361728.html
-cover: https://tmx.fishpi.cn/img/bird-6946682_1920.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707292844018.png
 categories: 
 - 菜鸡修炼手册
 
 ---
-![中国汉服127.jpg](https://tmx.fishpi.cn/img/bird-6946682_1920.jpg)
+
+![picture 0](https://tmx.fishpi.cn/img/pic_1707292844018.png)  
 
 `OnTextChanged`老是记不住，抄的作业，找地方存着而已
 

@@ -3,11 +3,12 @@ date: '2019-03-14 20:35:49'
 updated: '2021-01-05 16:39:41'
 tags: [ReactNative, Android]
 permalink: /articles/2019/03/14/1552566949418.html
-cover: https://tmx.fishpi.cn/img/leaves-6932148_1920.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707292516328.png
 categories: 
 - 菜鸡修炼手册
 ---
-![5ab204abca886.jpg](https://tmx.fishpi.cn/img/leaves-6932148_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707292516328.png)  
+
 
 今天准备打包一版react native app
 debug的时候，那么进行打包release

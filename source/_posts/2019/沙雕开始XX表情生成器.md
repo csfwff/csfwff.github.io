@@ -3,12 +3,13 @@ date: '2019-07-24 09:30:42'
 updated: '2021-01-05 16:47:27'
 tags: [React, JavaScript]
 permalink: /articles/2019/07/24/1563931842680.html
-cover: https://tmx.fishpi.cn/img/christmas-decor-6930460_1920.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707291692045.png
 categories: 
 - 菜鸡修炼手册
 
 ---
-![a940a1a9f4754020bee6342658ae39b1.jpeg](https://tmx.fishpi.cn/img/christmas-decor-6930460_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707291692045.png)  
+
 
 前段时间看到了几个表情，觉得不错
 ![9150e4e5gy1g52ffs90hdj203n01y0s01d320299.jpg](https://tmx.fishpi.cn/img/20210104162043584.jpg)

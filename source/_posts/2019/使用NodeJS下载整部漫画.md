@@ -3,12 +3,12 @@ date: '2019-05-13 22:34:29'
 updated: '2021-01-06 10:52:20'
 tags: [Node.Js, JavaScript]
 permalink: /articles/2019/05/13/1557758069371.html
-cover: https://tmx.fishpi.cn/img/grey-heron-6908906_1920.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707292246881.png
 categories: 
 - 菜鸡修炼手册
 
 ---
-![201904081554727888109075.jpg](https://tmx.fishpi.cn/img/grey-heron-6908906_1920.jpg)
+![picture 0](https://tmx.fishpi.cn/img/pic_1707292246881.png)  
 
 ### 0x00
 

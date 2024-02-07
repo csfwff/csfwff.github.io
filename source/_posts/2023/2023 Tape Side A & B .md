@@ -5,8 +5,8 @@ tags: [总结]
 categories: 
 - 再见江湖
 permalink: /articles/2023/12/29/1703825008.html
-top_img: https://tmx.fishpi.cn/img/pic_1707286043339.jpg
-cover: https://tmx.fishpi.cn/img/pic_1707286043339.jpg
+top_img: https://tmx.fishpi.cn/img/pic_1707286043339.png
+cover: https://tmx.fishpi.cn/img/pic_1707286043339.png
 --- 
 ![picture 0](https://tmx.fishpi.cn/img/pic_1707286043339.png)  
 

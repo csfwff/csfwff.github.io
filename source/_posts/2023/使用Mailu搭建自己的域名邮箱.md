@@ -3,7 +3,7 @@ date: '2023-03-06 18:49:18'
 updated: '2023-03-06 18:49:18'
 tags: [Mailu, 邮箱]
 permalink: /articles/2023/03/06/1678099758000.html
-cover: https://tmx.fishpi.cn/img/pic_1707284689779.jpg
+cover: https://tmx.fishpi.cn/img/pic_1707284689779.png
 categories: 
 - 菜鸡修炼手册
 ---
