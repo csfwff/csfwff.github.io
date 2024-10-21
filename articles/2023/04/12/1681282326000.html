@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>折腾后续----OMV的硬盘挂了 | 鼠鼠在碎觉</title><meta name="keywords" content="OMV,NAS"><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前情提要看这里-&gt;周末折腾—-记OMV升级失败那一次手贱升级失败后，被迫换了硬盘重新安装之前还想着没机会再拆开了可惜啊可惜啊，现在又不得不拆开了 全是报错在那之后，我又部署了docker，然后部署了rust desk，ddns等服务，本来没啥事，用着也很顺畅最近不知怎么的，老是挂掉，开盖一看全是这个报错 123ata1.00: status: &amp;#123; DRDY ERR &amp;#125">
+<meta property="og:type" content="article">
+<meta property="og:title" content="折腾后续----OMV的硬盘挂了">
+<meta property="og:url" content="https://www.sszsj.cc/articles/2023/04/12/1681282326000.html">
+<meta property="og:site_name" content="鼠鼠在碎觉">
+<meta property="og:description" content="前情提要看这里-&gt;周末折腾—-记OMV升级失败那一次手贱升级失败后，被迫换了硬盘重新安装之前还想着没机会再拆开了可惜啊可惜啊，现在又不得不拆开了 全是报错在那之后，我又部署了docker，然后部署了rust desk，ddns等服务，本来没啥事，用着也很顺畅最近不知怎么的，老是挂掉，开盖一看全是这个报错 123ata1.00: status: &amp;#123; DRDY ERR &amp;#125">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tmx.fishpi.cn/img/00018-1581855605.png">
+<meta property="article:published_time" content="2023-04-12T06:52:06.000Z">
+<meta property="article:modified_time" content="2024-10-21T09:07:04.661Z">
+<meta property="article:author" content="唐墨夏">
+<meta property="article:tag" content="OMV">
+<meta property="article:tag" content="NAS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tmx.fishpi.cn/img/00018-1581855605.png"><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://www.sszsj.cc/articles/2023/04/12/1681282326000"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//s4.cnzz.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-L2FFP00RKZ');
+</script><script async="async" data-pjax="data-pjax" src="https://s4.cnzz.com/z_stat.php?id=1280246701&amp;web_id=1280246701"></script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '折腾后续----OMV的硬盘挂了',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-21 17:07:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">153</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">151</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://tmx.fishpi.cn/img/00018-1581855605.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">鼠鼠在碎觉</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">折腾后续----OMV的硬盘挂了</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-12T06:52:06.000Z" title="发表于 2023-04-12 14:52:06">2023-04-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-21T09:07:04.661Z" title="更新于 2024-10-21 17:07:04">2024-10-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">636</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/00018-1581855605.png" alt="picture 0">  </p>
+<h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>看这里-&gt;<a href="https://www.sszsj.cc/articles/2022/11/07/1667798327000.html">周末折腾—-记OMV升级失败</a><br>那一次手贱升级失败后，被迫换了硬盘重新安装<br>之前还想着没机会再拆开了<br>可惜啊可惜啊，现在又不得不拆开了</p>
+<h2 id="全是报错"><a href="#全是报错" class="headerlink" title="全是报错"></a>全是报错</h2><p>在那之后，我又部署了docker，然后部署了rust desk，ddns等服务，<br>本来没啥事，用着也很顺畅<br>最近不知怎么的，老是挂掉，开盖一看全是这个报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ata1.00: status: &#123; DRDY ERR &#125;</span><br><span class="line">ata1.00: error:  &#123; UNC &#125;</span><br><span class="line">ata1.00: failed command: READ FPDM QUEUED</span><br></pre></td></tr></table></figure>
+<p>以及一些IO错误<br><img src="https://tmx.fishpi.cn/img/20230412_518AB28DCE9AAA8FCEA9C3452B3A3CFB_0.jpg" alt="图 2">  </p>
+<h2 id="百度一下"><a href="#百度一下" class="headerlink" title="百度一下"></a>百度一下</h2><p>以我目前的水平，掉进的坑肯定有前人掉进去过<br>所以，不管怎么说，先百度一下<br>差不多就是因为异常断电导致硬盘坏了<br>仔细想想也雀食是这么一回事，有次断电后就经常出现这个现象</p>
+<h2 id="拆机拔硬盘"><a href="#拆机拔硬盘" class="headerlink" title="拆机拔硬盘"></a>拆机拔硬盘</h2><p>简单想了想，ovm上直接检测坏道之类的用不习惯<br>那就直接拆机拔硬盘吧，反正几个螺丝拧一下<br>顺便可以拆开看看这台笔记本里面的结构<br>《原装正品》<br><img src="https://tmx.fishpi.cn/img/20230412_QQ%E5%9B%BE%E7%89%8720230412155508_24.jpg" alt="图 3"><br>主板和硬盘，小巧玲珑的风扇<br><img src="https://tmx.fishpi.cn/img/20230412_QQ%E5%9B%BE%E7%89%8720230412155733_10.jpg" alt="图 4"><br>百度了一下，是记忆内存出品的2G内存条（只有一个内存插槽）<br><img src="https://tmx.fishpi.cn/img/20230412_B112C58E2F7E7EBB35536494B5FFEC87_44.jpg" alt="图 5">  </p>
+<h2 id="坏道检测"><a href="#坏道检测" class="headerlink" title="坏道检测"></a>坏道检测</h2><p>拔出硬盘，装入上次买的硬盘盒<br><img src="https://tmx.fishpi.cn/img/20230412_7E3EFB07D0DB5CC738866E97E5818AC9_78.jpg" alt="图 6"><br>插上电脑，打开diskgenius(奇怪，为什么我电脑里会有这个？)<br>开始坏道检测<br>一看要好几个小时，直接去睡觉了<br>一觉醒来，跑完了<br><img src="https://tmx.fishpi.cn/img/20230412_8B27337571593666FA5D81ADC987B6EE_23.jpg" alt="图 7"><br>好的，凉凉，好多红的<br>因为修复坏道可能损坏数据，所以暂时不做修复</p>
+<h2 id="然后呢？"><a href="#然后呢？" class="headerlink" title="然后呢？"></a>然后呢？</h2><p>然后，当然是搬出另外一个淘汰的笔记本，顶替这个辣鸡捡来的笔记本<br><img src="https://tmx.fishpi.cn/img/20230412_C6AFD118BAD0CC20E21EB4B292ACAD97_8.jpg" alt="图 8"><br><img src="https://tmx.fishpi.cn/img/20230412_105235A3B4BD3B129489B3F298F79BB9_8.jpg" alt="图 9"><br>这个笔记本是家里领导上大学的时候用的<br>经历了汤汤水水的洗礼，键盘部分按键一直处于按下的状态<br>无奈，我只能拆开，把键盘的排线拔了<br>之前的硬盘装上，准备重新安装系统<br>然后另外下单了一个光驱硬盘支架，到时候把有坏道的硬盘数据弄出来修复一下，直接上光驱位<br>（不得不说，thinkpad的设计是真的舒服，清灰换硬盘加内存换光驱，都是几个螺丝的事，哪像我的acer，清个灰直接拆成碎片）<br><img src="https://tmx.fishpi.cn/img/20230412_36F5E4CBCF380A3546BAB23FE877D450_43.jpg" alt="图 10"><br>反正不存重要数据，几块钱都无所谓</p>
+<p>就酱，准备开干</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.sszsj.cc">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.sszsj.cc/articles/2023/04/12/1681282326000.html">https://www.sszsj.cc/articles/2023/04/12/1681282326000.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.sszsj.cc" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OMV/">OMV</a><a class="post-meta__tags" href="/tags/NAS/">NAS</a></div><div class="post_share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/00018-1581855605.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/articles/2023/05/27/1685150426000.html"><img class="prev-cover" src="https://tmx.fishpi.cn/img/20230527_pic_1685150671243_63.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">我为什么选择玩换装游戏</div></div></a></div><div class="next-post pull-right"><a href="/articles/2023/03/07/1678159118000.html"><img class="next-cover" src="https://tmx.fishpi.cn/img/pic_1707284719058.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用Caddy在非443端口申请SSL证书</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/articles/2021/08/16/1629091393130.html" title="OMV搭建和体验"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289637201.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-16</div><div class="title">OMV搭建和体验</div></div></a></div><div><a href="/articles/2022/11/07/1667798327000.html" title="周末折腾----记OMV升级失败"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707287071050.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-07</div><div class="title">周末折腾----记OMV升级失败</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Waline</span><span class="switch-btn"></span><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">唐墨夏</div><div class="author-info__description">鼠鼠在碎觉，请勿打扰~</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">153</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">151</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="toc-number">1.</span> <span class="toc-text">前情提要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E6%98%AF%E6%8A%A5%E9%94%99"><span class="toc-number">2.</span> <span class="toc-text">全是报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6%E4%B8%80%E4%B8%8B"><span class="toc-number">3.</span> <span class="toc-text">百度一下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%86%E6%9C%BA%E6%8B%94%E7%A1%AC%E7%9B%98"><span class="toc-number">4.</span> <span class="toc-text">拆机拔硬盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B"><span class="toc-number">5.</span> <span class="toc-text">坏道检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E5%91%A2%EF%BC%9F"><span class="toc-number">6.</span> <span class="toc-text">然后呢？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/10/17/1729163627.html" title="写写最近淘宝小程序遇到的坑"><img src="https://tmx.fishpi.cn/img/dsjfhsBEDJH.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写写最近淘宝小程序遇到的坑"/></a><div class="content"><a class="title" href="/articles/2024/10/17/1729163627.html" title="写写最近淘宝小程序遇到的坑">写写最近淘宝小程序遇到的坑</a><time datetime="2024-10-17T11:13:47.000Z" title="发表于 2024-10-17 19:13:47">2024-10-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/08/02/1722580787.html" title="来自天空的告白书"><img src="https://tmx.fishpi.cn/img/pic_1722581029196.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="来自天空的告白书"/></a><div class="content"><a class="title" href="/articles/2024/08/02/1722580787.html" title="来自天空的告白书">来自天空的告白书</a><time datetime="2024-08-02T06:39:47.000Z" title="发表于 2024-08-02 14:39:47">2024-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/07/167/1721121716.html" title="就这样吧"><img src="https://tmx.fishpi.cn/img/pic_1721121785248.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="就这样吧"/></a><div class="content"><a class="title" href="/articles/2024/07/167/1721121716.html" title="就这样吧">就这样吧</a><time datetime="2024-07-16T09:21:56.000Z" title="发表于 2024-07-16 17:21:56">2024-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/06/17/1718601326.html" title="十里红妆----花轿"><img src="https://tmx.fishpi.cn/img/pic_1718601385170.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="十里红妆----花轿"/></a><div class="content"><a class="title" href="/articles/2024/06/17/1718601326.html" title="十里红妆----花轿">十里红妆----花轿</a><time datetime="2024-06-17T05:15:26.000Z" title="发表于 2024-06-17 13:15:26">2024-06-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/06/03/1717390846.html" title="古墓丽影：崛起----“不死先知和不死军团最终倒在了我的手下”"><img src="https://tmx.fishpi.cn/img/poster.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="古墓丽影：崛起----“不死先知和不死军团最终倒在了我的手下”"/></a><div class="content"><a class="title" href="/articles/2024/06/03/1717390846.html" title="古墓丽影：崛起----“不死先知和不死军团最终倒在了我的手下”">古墓丽影：崛起----“不死先知和不死军团最终倒在了我的手下”</a><time datetime="2024-06-03T05:00:46.000Z" title="发表于 2024-06-03 13:00:46">2024-06-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2024 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadWaline () {
+  function insertCSS () {
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "/pluginsSrc/@waline/client/dist/waline.css"
+    document.head.appendChild(link)
+  }
+
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline.sszsj.cc',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else {
+    insertCSS()
+    getScript('/pluginsSrc/@waline/client/dist/waline.js').then(initWaline)
+  }
+}
+
+if ('Waline' === 'Waline' || !false) {
+  if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://tmx.fishpi.cn/cdn/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '927454808bbf693710ab',
+      clientSecret: 'db84ef2314e89b00c03d667c54be9b52f47f9e21',
+      repo: 'csfwff.github.io',
+      owner: 'csfwff',
+      admin: ['csfwff'],
+      id: '27e06ad886a77754a0ec98c408584097',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://tmx.fishpi.cn/cdn/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Waline' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
