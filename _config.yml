@@ -69,6 +69,9 @@ index_generator:
 archive_generator:
   # 0表示不分页，全部显示
   per_page: 20  
+
+tag_generator:
+  per_page: 20
  
 
 # Category & Tag
