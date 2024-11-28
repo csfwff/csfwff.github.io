@@ -69,10 +69,10 @@
       link: https://www.cjzshilong.cn
       avatar: https://avatars1.githubusercontent.com/u/48144475?v=4
       descr: 记录精彩的坎坷人生，经营属于自己的世界！
-    - name: Frank笔记
-      link: https://frank2019.me
-      avatar: https://tuchuang.frank2019.me/uploadImages/185/202/221/119/2022/09/20/02/02/e6459aa8-11a3-4ebc-925b-1d731df68ea2.png
-      descr: 记录蜕变后的生活
+    # - name: Frank笔记
+    #   link: https://frank2019.me
+    #   avatar: https://tuchuang.frank2019.me/uploadImages/185/202/221/119/2022/09/20/02/02/e6459aa8-11a3-4ebc-925b-1d731df68ea2.png
+    #   descr: 记录蜕变后的生活
     - name: JssDream 的个人博客
       link: https://www.hjava.cn
       avatar: https://avatars2.githubusercontent.com/u/24471999?v=4
@@ -85,10 +85,10 @@
       link: https://iamwaiting.cn/
       avatar: https://t.iamwaiting.cn/jqqYni
       descr: 一点想法，无数实践
-    - name: 长安城下
-      link: https://cacx.cc
-      avatar: https://cacx.cc/usr/images/9666.jpg
-      descr: 大雁塔上唐僧梦·长安城下女儿情
+    # - name: 长安城下
+    #   link: https://cacx.cc
+    #   avatar: https://cacx.cc/usr/images/9666.jpg
+    #   descr: 大雁塔上唐僧梦·长安城下女儿情
     - name: YuZhangWang的领域
       link: https://www.yuzhang.wang
       avatar: https://gcore.jsdelivr.net/gh/YuZhangWang/Creative-pictures02@master/img/202210171416164.png
@@ -157,3 +157,7 @@
       link: https://blog.dominickk.top/
       avatar: http://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/11/dominic.jpg
       descr: 写文档使我快乐🍺
+    - name: 张文保的博客
+      link: https://zhangwenbao.com
+      avatar: https://zhangwenbao.com/img/paul.jpg
+      descr: 功不唐捐，玉汝于成
