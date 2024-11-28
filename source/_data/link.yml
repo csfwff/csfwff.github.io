@@ -109,10 +109,10 @@
       link: https://www.yejiefeng.com/
       avatar: https://b3logfile.com/avatar/1564713863595_1577810552225.jpeg
       descr: 左脑编程，右脑写诗
-    - name: 蓝泽
-      link: http://lanze.top
-      avatar: https://gitee.com/lanweixiao/Blogpbed/raw/master/img/header.jpg
-      descr: 你在想什么
+    # - name: 蓝泽
+    #   link: http://lanze.top
+    #   avatar: https://gitee.com/lanweixiao/Blogpbed/raw/master/img/header.jpg
+    #   descr: 你在想什么
     - name: ghostsf
       link: https://ghostsf.com
       avatar: https://ghostsf.com/logo
