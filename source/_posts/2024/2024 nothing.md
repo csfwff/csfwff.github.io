@@ -9,7 +9,7 @@ top_img: https://tmx.fishpi.cn/img/pic_1734065443906.png
 cover: https://tmx.fishpi.cn/img/pic_1734065443906.png
 --- 
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2163695162&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2163695162&auto=0&height=66"></iframe>
 
 ## 2024
 
@@ -98,6 +98,24 @@ emmm 过段时间又可以去玩玩了
 唉~不知道还有持续多久
 我讨厌冬天
 我讨厌下雨的冬天
+
+## 我曾追逐夜的星到黎明
+>清晨雾散让分别明显
+>温存的夜竟有些流连
+>拥挤的站台
+>是谁在想念
+>你何时会再次出现
+>列车驶向往后是再见
+>遗憾缓缓随着风飘远
+>任时光匆匆
+>任前路朦胧
+>晨曦的光美过霓虹
+>我曾追逐 夜的星 到黎明
+>落得孤独 的背影
+>回头看看 走过的路 全是
+>青春的淤青
+>如今贪婪 蓝色天空 白云
+>确只剩下 朦胧的眼睛
 
 <details>
 <summary>最后留个彩蛋吧</summary>
