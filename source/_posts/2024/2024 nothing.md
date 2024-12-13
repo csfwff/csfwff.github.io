@@ -8,7 +8,7 @@ permalink: /articles/2024/12/13/1734065533.html
 top_img: https://tmx.fishpi.cn/img/pic_1734065443906.png
 cover: https://tmx.fishpi.cn/img/pic_1734065443906.png
 --- 
-
+![1](https://tmx.fishpi.cn/img/pic_1734065443906.png)
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2163695162&auto=0&height=66"></iframe>
 
 ## 2024
