@@ -277,7 +277,7 @@ comments:
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
   use:
     - Waline
-    - Gitalk
+    # - Gitalk
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -311,8 +311,8 @@ livere:
 # gitalk
 # https://github.com/gitalk/gitalk
 gitalk:
-  client_id: 927454808bbf693710ab
-  client_secret: db84ef2314e89b00c03d667c54be9b52f47f9e21
+  client_id: 
+  client_secret: 
   repo: csfwff.github.io
   owner: csfwff
   admin: csfwff
@@ -897,7 +897,9 @@ CDN:
     disqusjs_css: https://tmx.fishpi.cn/cdn/disqusjs.css
     utterances: https://utteranc.es/client.js
     twikoo: https://tmx.fishpi.cn/cdn/twikoo.all.min.js
-    waline: https://tmx.fishpi.cn/cdn/Waline.min.js
+    # waline: https://tmx.fishpi.cn/cdn/Waline.min.js
+    waline_css: https://tmx.fishpi.cn/cdn/waline.css
+    waline_js: https://tmx.fishpi.cn/cdn/waline.js
   
     # share
     addtoany: https://static.addtoany.com/menu/page.js
