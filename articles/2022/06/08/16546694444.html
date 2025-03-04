@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>GreenDao数据库升级实践 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://www.sszsj.cc/articles/2022/06/08/16546694444.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GreenDao数据库升级实践',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">158</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707287552716.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">GreenDao数据库升级实践</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">GreenDao数据库升级实践</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-08T06:24:04.000Z" title="发表于 2022-06-08 14:24:04">2022-06-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-04T05:39:38.369Z" title="更新于 2025-03-04 13:39:38">2025-03-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">646</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>GreenDao是Android中常用的数据库管理框架<br>使用起来雀食方便高效<br>但是他有一个问题，就是在升级数据库的时候<br>比如加个字段，加个表之类的<br>他会删除原来的数据，删表重建<br>所以一般的解决方案都是创建一个临时表储存数据<br>升级完了再覆盖回去<br>虽然可行，但是操作实在过于麻烦</p>
+<p>既然原生的SQL可以实现不删库加字段<br>按理说GreenDao应该不支持<br>毕竟使用量这么大的库，这个问题肯定有考虑的<br>在参考前人的文章后，终于找到合适的方案<br>不删库升级数据库，增加字段</p>
+<p>首先，我们来看为什么会删库<br>在GreenDao make project后生成的<code>DaoMaster.java</code>里<br>有一个<code>DevOpenHelper</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** WARNING: Drops all table on Upgrade! Use only during development. */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">DevOpenHelper</span> <span class="keyword">extends</span> <span class="title class_">OpenHelper</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DevOpenHelper</span><span class="params">(Context context, String name)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(context, name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DevOpenHelper</span><span class="params">(Context context, String name, CursorFactory factory)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(context, name, factory);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onUpgrade</span><span class="params">(Database db, <span class="type">int</span> oldVersion, <span class="type">int</span> newVersion)</span> &#123;</span><br><span class="line">        Log.i(<span class="string">&quot;greenDAO&quot;</span>, <span class="string">&quot;Upgrading schema from version &quot;</span> + oldVersion + <span class="string">&quot; to &quot;</span> + newVersion + <span class="string">&quot; by dropping all tables&quot;</span>);</span><br><span class="line">        dropAllTables(db, <span class="literal">true</span>);</span><br><span class="line">        onCreate(db);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>升级的时候其实是调用它的<code>onUpgrade</code><br>然后在这里面，我们可以看到有一个<code>dropAllTables</code>的操作<br>然后又重新创建表，所以升级完数据都么了</p>
+<p>原因找到了，解决方案就来了<br>我们不用它的升级就完事了hhhh</p>
+<p>具体操作</p>
+<ol>
+<li>在对应的实体类增加字段或者新加实体类（加表）</li>
+<li>make project</li>
+<li>修改GreenDao的schemaVersion</li>
+<li>修改升级方法，具体如下<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">DaoMaster.<span class="type">DevOpenHelper</span> <span class="variable">helper</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DaoMaster</span>.DevOpenHelper(<span class="built_in">this</span>, <span class="string">&quot;data-db&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onUpgrade</span><span class="params">(Database db, <span class="type">int</span> oldVersion, <span class="type">int</span> newVersion)</span> &#123;</span><br><span class="line">            <span class="comment">//注释掉这个，不使用官方的升级</span></span><br><span class="line">            <span class="comment">//super.onUpgrade(db, oldVersion, newVersion);</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">currentVersion</span> <span class="operator">=</span> oldVersion;</span><br><span class="line">            <span class="keyword">if</span>(currentVersion == <span class="number">1</span>)&#123;</span><br><span class="line">                <span class="comment">//可以直接用Dao建表</span></span><br><span class="line">                OrderDetailDao.createTable(db,<span class="literal">true</span>);</span><br><span class="line">                <span class="comment">//增加字段</span></span><br><span class="line">                db.execSQL(<span class="string">&quot;alter table ORDER_DETAIL add TYPE int&quot;</span>);</span><br><span class="line">                <span class="comment">//这两句之后数据库版本来到了2</span></span><br><span class="line">                currentVersion = <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(currentVersion == <span class="number">2</span>)&#123;</span><br><span class="line">                <span class="comment">//可以直接用Dao建表</span></span><br><span class="line">                ProductDao.createTable(db,<span class="literal">true</span>);</span><br><span class="line">                <span class="comment">//这句之后数据库版本来到了3</span></span><br><span class="line">                currentVersion = <span class="number">3</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (currentVersion ==<span class="number">3</span>)&#123;</span><br><span class="line">                <span class="comment">//增加字段</span></span><br><span class="line">                db.execSQL(<span class="string">&quot;alter table ORDER_DETAIL add STATUS int&quot;</span>);</span><br><span class="line">                <span class="comment">//这句之后数据库版本来到了4</span></span><br><span class="line">                currentVersion = <span class="number">4</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//理论上走完之后，当前版本已经等于新版本了</span></span><br><span class="line">            <span class="comment">//所以这个if并不会走进去</span></span><br><span class="line">            <span class="keyword">if</span>(currentVersion != newVersion)&#123;</span><br><span class="line">                <span class="built_in">super</span>.onUpgrade(db,oldVersion,newVersion);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="type">Database</span> <span class="variable">db</span> <span class="operator">=</span> helper.getWritableDb();</span><br><span class="line">    daoSession = <span class="keyword">new</span> <span class="title class_">DaoMaster</span>(db).newSession();</span><br></pre></td></tr></table></figure>
+至此，升级完成，数据也没丢，也不需要大改动</li>
+</ol>
+<p>参考链接 -&gt; <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29924041/article/details/86584702">GreenDAO数据库升级</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.sszsj.cc">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.sszsj.cc/articles/2022/06/08/16546694444.html">https://www.sszsj.cc/articles/2022/06/08/16546694444.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.sszsj.cc" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Android/">Android</a><a class="post-meta__tags" href="/tags/GreenDao/">GreenDao</a><a class="post-meta__tags" href="/tags/Sqlite/">Sqlite</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/pic_1707287552716.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2022/07/04/1656920985231.html" title="蓝易云----可靠的云服务厂商"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707286216741.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">蓝易云----可靠的云服务厂商</div></div><div class="info-2"><div class="info-item-1">   因为个人需要，得买个服务器，同时因为个人原因，不准备备案，所以只能买香港的，正好，摸鱼派接入了蓝易云的高防CDN，扛住了几波攻击，那我必然要支持下蓝易云，遂购入一年，目前使用下来，体验良好，所以有了这篇软文（我真的没有被蓝易云的老板拿枪顶着） 最新活动香港CN2服务器29元一个月，10M大带宽。官网： https://www.tsyvps.com/aff/DXBBYSXD香港云服务器无需备案哦！高性能KVM架构，稳定，安全，灵活！持证企业许可证号：B1-20222080官网最新活动，买服务器送U盘，还有团购活动哦！ 简单介绍下蓝易云服务器香港CN2 GIA云服务器出自九龙数据中心，该产品三网CN2 GIA回程优化，采用SSD硬盘+RAID50阵列，KVM架构！1核1G内存套餐27.55元&#x2F;月，2核2G内存开始支持Windows系统。蓝易云计算是国人商家，隶属于成都蓝易云网络科技有限公司 ，专注于香港、美国海外云服务器的产品，有多年的运维维护经验。世界这么大...</div></div></div></a><a class="pagination-related" href="/articles/2022/06/06/1654503345231.html" title="将遗憾写成歌"><img class="cover" src="https://tmx.fishpi.cn/img/109951166145402800.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">将遗憾写成歌</div></div><div class="info-2"><div class="info-item-1">     要做的事太多遗憾太多可惜却再也没有机会了总想回到过去却没有时光机 遗憾将永远写在那里可是有什么关系呢老天爷就喜欢这样跟你开玩笑既然如此不如就这样，当作旅途的风景 哪有什么完美无瑕遗憾才是人生明天应该是个雨天呢~  仿佛时光又回到从前，花瓣纷纷落在身边那句问候也随风擦肩，遗憾却丝毫未减模糊的思绪变迁，也变不了的思念海风的温度渐渐暖了一点期待白昼越过黑夜期待美梦都能兑现期待未来以后温柔与你相拥期待那时你用力拥抱彩虹也许不会再默默忍受那些与你无关冷漠带刺的玫瑰不必强求倔强的迎合温柔可夜空总有闪烁任何时候抬起头眼底看到的光芒属于你的期待白昼越过黑夜期待美梦都能兑现期待未来以后温柔与你相拥期待那时你用力拥抱彩虹  </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2019/04/09/1554788508900.html" title="Gradle编译 Faile to resolve:support-media-compat"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292694023.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-09</div><div class="info-item-2">Gradle编译 Faile to resolve:support-media-compat</div></div><div class="info-2"><div class="info-item-1">   原因是中央仓库里没找到相应的包解决方案是在项目的build.gradle中 123456allprojects &#123;    repositories &#123;        google()        jcenter()    &#125;&#125;  把google挪到jcenter前就可以了 </div></div></div></a><a class="pagination-related" href="/articles/2019/03/21/1553165686993.html" title="Kotlin大法好--&gt;&quot;_&quot;下划线的妙用"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292623117.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-21</div><div class="info-item-2">Kotlin大法好--&gt;&quot;_&quot;下划线的妙用</div></div><div class="info-2"><div class="info-item-1">   记录kotlin的学习，谨防忘记  _下划线平时用于在变量命名的时候作为单词的间隔除此之外，在kotlin中还有别的用途 作为lambda的参数名称123view.setOnTouchListener&#123; v , event -&gt;	//do something&#125;  如果上述回调中，我们只用到了event而没有用到v的时候，就可以用_代替 123view.setOnTouchListener&#123; _ , event -&gt;	//do something&#125;  当然，如果一个参数都没用到，那就自己省略参数部分就完事 作为解构声明参数解构可以一次性建好多个变量，但是有时候会用不到其中一部分参数，那么解构的时候用_替代就可以了 123data class Person(var name : String, var age : Int)val person = Person(&quot;Tom&quot;, 20)val (name, age) =...</div></div></div></a><a class="pagination-related" href="/articles/2019/03/14/1552566949418.html" title="React Native debug正常，release闪退"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292516328.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-14</div><div class="info-item-2">React Native debug正常，release闪退</div></div><div class="info-2"><div class="info-item-1">   今天准备打包一版react native appdebug的时候，那么进行打包release打包成功，安装打开后闪退查看日志，显示未能加载index.android.js所以，解决方案：在android工程assets下生成相应的bundle文件 在工程目录下输入命令如下： 1react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/  继续打包，正常 </div></div></div></a><a class="pagination-related" href="/articles/2019/11/14/1573698361728.html" title="butter knife 常用注解记录"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292844018.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-14</div><div class="info-item-2">butter knife 常用注解记录</div></div><div class="info-2"><div class="info-item-1">   OnTextChanged老是记不住，抄的作业，找地方存着而已 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182public class MainActivity extends AppCompatActivity &#123;     //ButterKnife可以在activity，fragment , adapter中使用     @Nullable //为了防止异常没有id    @BindView(R.id.tv_text)    TextView tv_text;    @BindView(R.id.yzs)    TextView yzs;    @BindView(R.id.wzs)    TextView wzs;    @BindViews(&#123;R.id.b1 , R.id.b2 ,...</div></div></div></a><a class="pagination-related" href="/articles/2019/10/08/1570519976196.html" title="墨璃编辑器"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707291939788.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-08</div><div class="info-item-2">墨璃编辑器</div></div><div class="info-2"><div class="info-item-1">   Android-Markdown-Editor墨璃编辑器(ame) — Android Markdown 编辑器，基于b3log&#x2F;vditorgithub: https://github.com/csfwff/Android-Markdown-Editor 更新记录 2020&#x2F;3&#x2F;12 升级vditor到2.2.19 增加wysiwyg模式 将getHTML和html2md改为同步 insertValue增加是否渲染参数    背景我就是闲的，感觉得整点东西，又不知道整啥，就整了个这个，然后结合之前做富文本是遇到的坑，稍微做了点修改 方法说明由于基于 vditor，因此支持 vditor 的大部分方法     说明    getValue(ValueCallback callback) 获取编辑器内容   getHTML(ValueCallback callback) 获取预览区内容。   insertValue(String value, boolean...</div></div></div></a><a class="pagination-related" href="/articles/2020/03/09/1583725597624.html" title="ATab----仿爱奇艺tabbar"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290767713.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-03-09</div><div class="info-item-2">ATab----仿爱奇艺tabbar</div></div><div class="info-2"><div class="info-item-1">   ATab—-仿爱奇艺tabbar仿爱奇艺选中凸起的tabbar项目地址：https://github.com/csfwff/ATab 效果图SVID202003090947581.mp4 食用方法 引入现在还么的上传，自己下载引入吧，略🤪  使用a. xml中使用 123456789101112131415&lt;com.xiamo.atab.ATab    android:layout_width=&quot;match_parent&quot;    android:layout_alignParentBottom=&quot;true&quot;    android:orientation=&quot;horizontal&quot;    android:id=&quot;@+id/atab&quot;    android:layout_height=&quot;80dp&quot;&gt;    &lt;com.xiamo.atab.ATabItem        android:layout_width=&quot;0dp&quot;       ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">158</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"><img src="https://tmx.fishpi.cn/img/20250213131510_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"/></a><div class="content"><a class="title" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）">仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）</a><time datetime="2025-03-03T05:12:54.000Z" title="发表于 2025-03-03 13:12:54">2025-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/24/1735028687.html" title="2024 三亚"><img src="https://tmx.fishpi.cn/img/20241224173417.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 三亚"/></a><div class="content"><a class="title" href="/articles/2024/12/24/1735028687.html" title="2024 三亚">2024 三亚</a><time datetime="2024-12-24T08:24:47.000Z" title="发表于 2024-12-24 16:24:47">2024-12-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing"><img src="https://tmx.fishpi.cn/img/pic_1734065443906.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 Nothing"/></a><div class="content"><a class="title" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing">2024 Nothing</a><time datetime="2024-12-13T04:52:13.000Z" title="发表于 2024-12-13 12:52:13">2024-12-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/11/29/1732855861.html" title="八方旅人----活着，就是一场旅行"><img src="https://tmx.fishpi.cn/img/octopathtraveler.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="八方旅人----活着，就是一场旅行"/></a><div class="content"><a class="title" href="/articles/2024/11/29/1732855861.html" title="八方旅人----活着，就是一场旅行">八方旅人----活着，就是一场旅行</a><time datetime="2024-11-29T04:51:01.000Z" title="发表于 2024-11-29 12:51:01">2024-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/10/24/1729746236.html" title="小老鼠四周岁记"><img src="https://tmx.fishpi.cn/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241024131530.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小老鼠四周岁记"/></a><div class="content"><a class="title" href="/articles/2024/10/24/1729746236.html" title="小老鼠四周岁记">小老鼠四周岁记</a><time datetime="2024-10-24T05:03:56.000Z" title="发表于 2024-10-24 13:03:56">2024-10-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2025 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.cc',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
