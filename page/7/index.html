@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>鼠鼠在碎觉 - forever alone forever sad</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="鼠鼠在碎觉，请勿打扰~"><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://www.sszsj.cc/page/7/index.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '鼠鼠在碎觉',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">159</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">155</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707295359109.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">鼠鼠在碎觉</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/articles/2021/09/10/1631271198739.html" title="小老鼠周岁记"><img class="post-bg" src="https://tmx.fishpi.cn/img/pic_1707289376096.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小老鼠周岁记"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/09/10/1631271198739.html" title="小老鼠周岁记">小老鼠周岁记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-10T10:53:18.000Z" title="发表于 2021-09-10 18:53:18">2021-09-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%86%8D%E8%A7%81%E6%B1%9F%E6%B9%96/">再见江湖</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B0%8F%E8%80%81%E9%BC%A0/">小老鼠</a></span></div><div class="content">   🐭真的很快，小老鼠出生已经一年了感觉过去了很久却感觉很近真的是，时间在不经意之间就过去了小老鼠终于一周岁啦 🐭之前农历生日的时候，给他抓周一开始拿的计算器，然后扔掉抓起算盘抱走继续抓，还是算盘还好，我没把键盘放进去 🐭回想起小老鼠刚出生的时候黄疸，红屁股，感冒到后来肚脐发炎真的是太难了好在之后一直好好的 🐭一开始说他不会抬头后来一样抬的好好的一开始说他不会爬现在爬的那个溜现在，我们要学走路啦 🐭小老鼠一直吃的母乳虽然最近白天不怎么吃奶但是，今天早上称了有22斤多了妥妥的一个小胖几了想想当初刚出来的时候才5斤多 🐭超喜欢看书，虽然只是翻过来翻过去然后就往嘴里塞喜欢开小火车，开起来以后把他掰停超级喜欢绿色，绿色的小汽车以及……家门口绿色的垃圾桶…… 🐭在地上四处乱爬站在围栏边使劲摇坐在学步车里到处乱跑骑着小马四处乱窜每天坐在摇一摇里跟小爷爷散步 🐭有时候希望时间快一点这样就能看到小老鼠长大拉有时候希望时间慢一点美好的时光不想这么快就过去让我们一起长大吧~ </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/2021/09/09/1631184077130.html" title="Android 发布lib到JitPack"><img class="post-bg" src="https://tmx.fishpi.cn/img/pic_1707289737797.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Android 发布lib到JitPack"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/09/09/1631184077130.html" title="Android 发布lib到JitPack">Android 发布lib到JitPack</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-09T10:41:13.000Z" title="发表于 2021-09-09 18:41:13">2021-09-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Android/">Android</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/JitPack/">JitPack</a></span></div><div class="content">   &#x3D;.&#x3D;之前一直以为发布到Jitpack，jcenter（这个要没了）这种中央仓库很麻烦，要注册账号啥的，所以一直不愿意搞结果搜了一下，似乎不需要，只要配置一下就好了的虽然不麻烦，但还是遇到了几个坑，简单记录一下 *.*首先建好github仓库，把代码传上去这一步正常操作，没有问题 0.0在项目的根目录下的 build.gradle 文件里面添加Jitpack 插件 1classpath &#x27;com.github.dcendents:android-maven-gradle-plugin:2.1&#x27; 没问题 在 repositories 下面添加 1maven &#123; url &quot;https://jitpack.io&quot; &#125; 问题来了升级到gradle:7.0.0后，项目的build.gradle里已经没有了allprojects，所以也没有repositories如果强行添加，sync就会报 1Build was configured to prefer settings repositories...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/articles/2021/08/30/1630302787009.html" title="最终幻想3----4个孤儿的冒险"><img class="post-bg" src="https://tmx.fishpi.cn/img/1630298809278.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最终幻想3----4个孤儿的冒险"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/08/30/1630302787009.html" title="最终幻想3----4个孤儿的冒险">最终幻想3----4个孤儿的冒险</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T05:53:07.000Z" title="发表于 2021-08-30 13:53:07">2021-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%98%E4%B8%96%E9%9A%8F%E6%83%B3%E5%BD%95/">默世随想录</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3/">最终幻想</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/2021/08/16/1629091393130.html" title="OMV搭建和体验"><img class="post-bg" src="https://tmx.fishpi.cn/img/pic_1707289637201.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OMV搭建和体验"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/08/16/1629091393130.html" title="OMV搭建和体验">OMV搭建和体验</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-16T05:23:13.000Z" title="发表于 2021-08-16 13:23:13">2021-08-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/OMV/">OMV</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/NAS/">NAS</a></span></div><div class="content">   旧电脑就像手机一样，家里总有一些淘汰下来的旧电脑，留着嘛，性能不行，用嘛，又不知道干啥，换不锈钢脸盆？那还不如放着吃灰。就这样，我手头有4个笔记本，一个surface...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/articles/2021/07/26/1627266387130.html" title="服务搬迁公告"><img class="post-bg" src="https://tmx.fishpi.cn/img/pic_1707289247761.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务搬迁公告"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/07/26/1627266387130.html" title="服务搬迁公告">服务搬迁公告</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-26T02:26:27.000Z" title="发表于 2021-07-26 10:26:27">2021-07-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%86%8D%E8%A7%81%E6%B1%9F%E6%B9%96/">再见江湖</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></span></div><div class="content">   时间很快，在良心云买的服务器，3年半，马上就到期期间磕磕绊绊，最开始是iis放静态页，后来搭了solo再因为种种原因我们独立出来了bolo后面自己有用node写了一个服务端，专门放自己的一些定时任务和静态页因为这个服务器，学习了不少，nginx，cdn，koa等等等等终于，要说再见了因为某些原因，不准备继续续费了（还不是因为没钱）服务器没了，备案也准备注销了，所以以后cdn云存储都没了…… 前段时间，把文章都迁移到hexo了，放在github pages上加上了自动部署，以后只需要推markdown上去就行了图床最终嫖的github（不是我不想付费，国内没有域名用不了）只是，这么操作下了之前积攒的评论就没有了不过，没有就没有吧，又是新的开始兜兜转转，最终还是回到了hexo也许，这次可以长久进行下去了吧但愿吧 </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/2021/03/19/1616145020130.html" title="域名切换通知"><img class="post-bg" src="https://tmx.fishpi.cn/img/pic_1707289414837.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="域名切换通知"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/03/19/1616145020130.html" title="域名切换通知">域名切换通知</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-19T09:10:20.000Z" title="发表于 2021-03-19 17:10:20">2021-03-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%86%8D%E8%A7%81%E6%B1%9F%E6%B9%96/">再见江湖</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a></span></div><div class="content">   最近把sszsj.cc这个域名给备案了近期准备把博客和中转站的域名切换到cc去 cc这个域名是我最早注册的，看记录是16年的时候那时候不知道备案这些个玩意最开始用的虚拟空间，卡的一批后来换到了hexo，解析到GitHub page上直到自己买了服务器，部署后发现需要备案……其实最开始，用https走443端口是可以绕过备案限制的可惜没多久，这条路子也被封了那时候cc域名还不能备案无奈剑走偏锋通过444端口绕过限制但是终究得跟着一个端口号，就很难受然后就想着注册一个能备案的于是就注册了top的这个域名后来，cc的也让备案了但是偷懒懒得搞就一直懒得备案最近不知道咋的又想起来备案了毕竟我一开始就是想要的cc至于为什么？当然是因为这个后缀短啦至于为什么不注册一个cn的因为等我想起来的时候sszsj.cn已经被人注册了…… 就这样把，切换到cc，回到最初的开始 </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/articles/2021/03/11/1615455476889.html" title="号外，号外，收徒啦！"><img class="post-bg" src="https://tmx.fishpi.cn/img/pic_1707289466586.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="号外，号外，收徒啦！"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/03/11/1615455476889.html" title="号外，号外，收徒啦！">号外，号外，收徒啦！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-11T09:37:56.000Z" title="发表于 2021-03-11 17:37:56">2021-03-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%86%8D%E8%A7%81%E6%B1%9F%E6%B9%96/">再见江湖</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%91%B8%E9%B1%BC/">摸鱼</a></span></div><div class="content">   有时候啊，人啊，就是闲的，你说嘛，忙是肯定都忙，但是总想着摸鱼🐟，摸鱼摸了这么多年，自认为有点段位了，所以，在此公告，收摸鱼徒弟，关门弟子~男的教关门，女的关门教(bushi)个人比较喜欢新鲜玩意，啥都想学，却又啥都没时间学~摸鱼，想学画画，学像素画，想做游戏，想学口琴，学吹埙，想继续做木戒指，可惜时间永远不够那你就要问了，啥都没学的你收个啥子徒弟，那就大概列一下：  随便回答一些技术问题，包括但不限于Android，React，当然也包括化学工程（是的没错，化学工程） 工作生活中的小问题 偶尔看看我家可爱帅气的小老鼠 偶尔来的段子丧句 摸鱼，斗图，开车(bushi)  虽然不介意被打扰，但我可能不会立即回复，至于一些小白问题，建议先找我的合作伙伴百毒如果你有意向，可以联系我，至于怎么联系，我想你有这个能力能找到，如果你找不到，说明你没有通过入门审核 以上服务不收取任何费用，敬请放心，毕竟，这就是摸鱼🐟~ </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/2021/02/20/1613800945546.html" title="汽车基本名称恶补"><img class="post-bg" src="https://tmx.fishpi.cn/img/pic_1707289183051.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汽车基本名称恶补"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/02/20/1613800945546.html" title="汽车基本名称恶补">汽车基本名称恶补</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-20T06:02:25.000Z" title="发表于 2021-02-20 14:02:25">2021-02-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B1%BD%E8%BD%A6/">汽车</a></span></div><div class="content">   领导马上要上班了，但是手动挡开不习惯，加上领导喜欢SUV，所有就准备整个看看，但是我属于汽车小白，很多基本的东西都不知道，只能临时恶补一下 SUV，MPVMPV的全称是Multi-Purpose Vehicle(或Mini Passenger Van)，即多用途汽车。它集轿车、旅行车和厢式货车的功能于一身，车内每个坐椅都可调整，并有多种组合的方式。近年来，MPV趋向于小型化，并出现了所谓的S-MPV，S是小(Small)的意思，车身紧凑，一般为5～7座。 SUV指运动型实用汽车,不同于可在崎岖地面使用的ORV越野车（Off-Road Vehicle的缩写） SUV全称是sport utility vehicle，或suburban utility...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/articles/2021/01/25/1611554571932.html" title="迟迟"><img class="post-bg" src="https://tmx.fishpi.cn/img/0GS_QQ20210125101404.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="迟迟"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/01/25/1611554571932.html" title="迟迟">迟迟</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-25T06:02:52.000Z" title="发表于 2021-01-25 14:02:52">2021-01-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%9D%8F%E6%8E%89%E7%9A%84Radio/">坏掉的Radio</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BF%9F%E8%BF%9F/">迟迟</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%90%89%E7%92%83/">琉璃</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/2021/01/14/1610606360833.html" title="像素画练习"><img class="post-bg" src="https://tmx.fishpi.cn/img/mza_2021-01-14_14.30.06.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="像素画练习"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2021/01/14/1610606360833.html" title="像素画练习">像素画练习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-14T06:39:20.000Z" title="发表于 2021-01-14 14:39:20">2021-01-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%83%8F%E7%B4%A0%E7%94%BB/">像素画</a></span></div><div class="content">最近沉迷像素画🤣 🤣 🤣  </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#content-inner">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/#content-inner">16</a><a class="extend next" rel="next" href="/page/8/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">159</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">155</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/12/1741760610.html" title="服务部署命令备份"><img src="https://tmx.fishpi.cn/img/20250224125625_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务部署命令备份"/></a><div class="content"><a class="title" href="/articles/2025/03/12/1741760610.html" title="服务部署命令备份">服务部署命令备份</a><time datetime="2025-03-12T06:23:30.000Z" title="发表于 2025-03-12 14:23:30">2025-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"><img src="https://tmx.fishpi.cn/img/20250213131510_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"/></a><div class="content"><a class="title" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）">仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）</a><time datetime="2025-03-03T05:12:54.000Z" title="发表于 2025-03-03 13:12:54">2025-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/24/1735028687.html" title="2024 三亚"><img src="https://tmx.fishpi.cn/img/20241224173417.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 三亚"/></a><div class="content"><a class="title" href="/articles/2024/12/24/1735028687.html" title="2024 三亚">2024 三亚</a><time datetime="2024-12-24T08:24:47.000Z" title="发表于 2024-12-24 16:24:47">2024-12-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing"><img src="https://tmx.fishpi.cn/img/pic_1734065443906.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 Nothing"/></a><div class="content"><a class="title" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing">2024 Nothing</a><time datetime="2024-12-13T04:52:13.000Z" title="发表于 2024-12-13 12:52:13">2024-12-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/11/29/1732855861.html" title="八方旅人----活着，就是一场旅行"><img src="https://tmx.fishpi.cn/img/octopathtraveler.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="八方旅人----活着，就是一场旅行"/></a><div class="content"><a class="title" href="/articles/2024/11/29/1732855861.html" title="八方旅人----活着，就是一场旅行">八方旅人----活着，就是一场旅行</a><time datetime="2024-11-29T04:51:01.000Z" title="发表于 2024-11-29 12:51:01">2024-11-29</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%86%8D%E8%A7%81%E6%B1%9F%E6%B9%96/"><span class="card-category-list-name">再见江湖</span><span class="card-category-list-count">53</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%9D%8F%E6%8E%89%E7%9A%84Radio/"><span class="card-category-list-name">坏掉的Radio</span><span class="card-category-list-count">19</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/"><span class="card-category-list-name">菜鸡修炼手册</span><span class="card-category-list-count">63</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%BB%98%E4%B8%96%E9%9A%8F%E6%83%B3%E5%BD%95/"><span class="card-category-list-name">默世随想录</span><span class="card-category-list-count">24</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%B8%85%E9%A3%8E%E6%98%8E%E6%9C%88/" style="font-size: 1.1em; color: #999">清风明月</a> <a href="/tags/%E5%87%BA%E8%A1%8C/" style="font-size: 1.1em; color: #999">出行</a> <a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/%E5%A4%9C%E5%8B%A4%E4%BA%BA/" style="font-size: 1.1em; color: #999">夜勤人</a> <a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 1.1em; color: #999">回忆</a> <a href="/tags/%E5%B0%8F%E8%80%81%E9%BC%A0/" style="font-size: 1.5em; color: #99a9bf">小老鼠</a> <a href="/tags/%E5%85%AB%E6%96%B9%E6%97%85%E4%BA%BA/" style="font-size: 1.1em; color: #999">八方旅人</a> <a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 1.1em; color: #999">脚本</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 1.1em; color: #999">日常</a> <a href="/tags/%E6%B3%8A%E6%A2%A6/" style="font-size: 1.1em; color: #999">泊梦</a> <a href="/tags/%E7%94%BB%E7%83%9F%E9%9B%A8/" style="font-size: 1.1em; color: #999">画烟雨</a> <a href="/tags/%E5%BF%83%E5%A2%93/" style="font-size: 1.1em; color: #999">心墓</a> <a href="/tags/%E4%BD%95%E7%94%9F%E6%9E%B7%E9%94%81/" style="font-size: 1.1em; color: #999">何生枷锁</a> <a href="/tags/https/" style="font-size: 1.1em; color: #999">https</a> <a href="/tags/Mailu/" style="font-size: 1.1em; color: #999">Mailu</a> <a href="/tags/%E8%BD%AF%E8%91%97/" style="font-size: 1.1em; color: #999">软著</a> <a href="/tags/CSS/" style="font-size: 1.23em; color: #999ea6">CSS</a> <a href="/tags/%E5%9D%8F%E6%8E%89%E7%9A%84Radio/" style="font-size: 1.1em; color: #999">坏掉的Radio</a> <a href="/tags/%E4%B8%8D%E8%80%81%E6%A2%A6/" style="font-size: 1.1em; color: #999">不老梦</a> <a href="/tags/%E9%9D%92%E6%98%A5%E6%9C%9F%E7%8C%AA%E5%A4%B4%E5%B0%91%E5%B9%B4%E4%B8%8D%E5%81%9A%E6%80%80%E6%A2%A6%E5%B0%91%E5%A5%B3%E7%9A%84%E6%A2%A6/" style="font-size: 1.1em; color: #999">青春期猪头少年不做怀梦少女的梦</a> <a href="/tags/%E6%B7%98%E5%AE%9D/" style="font-size: 1.1em; color: #999">淘宝</a> <a href="/tags/%E6%B9%AB%E4%B9%8B%E7%81%B5/" style="font-size: 1.1em; color: #999">湫之灵</a> <a href="/tags/%E6%B0%B4%E6%B4%97%E6%A0%87/" style="font-size: 1.1em; color: #999">水洗标</a> <a href="/tags/%E5%B0%8F%E7%A1%AE%E4%B8%A7/" style="font-size: 1.1em; color: #999">小确丧</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: #999">小程序</a> <a href="/tags/Linux/" style="font-size: 1.1em; color: #999">Linux</a> <a href="/tags/%E7%88%B1%E6%AE%87/" style="font-size: 1.1em; color: #999">爱殇</a> <a href="/tags/Auto-js/" style="font-size: 1.1em; color: #999">Auto.js</a> <a href="/tags/%E6%98%9F%E8%B1%A1%E4%BB%AA/" style="font-size: 1.1em; color: #999">星象仪</a> <a href="/tags/butterknife/" style="font-size: 1.1em; color: #999">butterknife</a> <a href="/tags/%E9%AD%94%E6%96%B9/" style="font-size: 1.37em; color: #99a4b2">魔方</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">教程</a> <a href="/tags/%E7%BA%A2%E8%B1%86%E6%9D%89/" style="font-size: 1.1em; color: #999">红豆杉</a> <a href="/tags/%E6%91%B8%E9%B1%BC%E6%B4%BE/" style="font-size: 1.1em; color: #999">摸鱼派</a> <a href="/tags/%E6%B6%88%E9%98%B2%E8%BD%A6/" style="font-size: 1.1em; color: #999">消防车</a> <a href="/tags/Ubuntu/" style="font-size: 1.1em; color: #999">Ubuntu</a> <a href="/tags/%E9%82%AE%E7%AE%B1/" style="font-size: 1.1em; color: #999">邮箱</a> <a href="/tags/%E7%94%B5%E9%A5%AD%E9%94%85/" style="font-size: 1.1em; color: #999">电饭锅</a> <a href="/tags/%E5%AD%94%E6%98%8E%E9%94%81/" style="font-size: 1.1em; color: #999">孔明锁</a> <a href="/tags/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/" style="font-size: 1.1em; color: #999">钱德拉塞卡极限</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/" title="查看更多"><i class="fas fa-angle-right"></i></a>
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/03/">
+          <span class="card-archive-list-date">三月 2025</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/10/">
+          <span class="card-archive-list-date">十月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/08/">
+          <span class="card-archive-list-date">八月 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/07/">
+          <span class="card-archive-list-date">七月 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/06/">
+          <span class="card-archive-list-date">六月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/05/">
+          <span class="card-archive-list-date">五月 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">159</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">133.1k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-24T14:32:43.802Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2025 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://tmx.fishpi.cn/cdn/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["Forever alone forever sad"])
+  } else {
+    document.getElementById("subtitle").textContent = "Forever alone forever sad"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
