@@ -112,8 +112,12 @@ plugins:
     hexo-generator-feed
 #Feed Atom
 feed:
-    type: atom
-    path: atom.xml
+    type: 
+      - atom
+      - rss2
+    path:
+      - atom.xml
+      - rss2.xml
     limit: 20
 
 
