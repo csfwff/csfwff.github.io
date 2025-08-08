@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>ATab----仿爱奇艺tabbar | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="   ATab—-仿爱奇艺tabbar仿爱奇艺选中凸起的tabbar项目地址：https://github.com/csfwff/ATab 效果图SVID202003090947581.mp4 食用方法 引入现在还么的上传，自己下载引入吧，略🤪  使用a...."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://www.sszsj.cc/articles/2020/03/09/1583725597624.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ATab----仿爱奇艺tabbar',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">158</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">155</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707290767713.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">ATab----仿爱奇艺tabbar</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">ATab----仿爱奇艺tabbar</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-03-09T03:46:37.000Z" title="发表于 2020-03-09 11:46:37">2020-03-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-05T08:55:57.000Z" title="更新于 2021-01-05 16:55:57">2021-01-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">857</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/pic_1707290767713.png" alt="picture 0">  </p>
+<h2 id="ATab—-仿爱奇艺tabbar"><a href="#ATab—-仿爱奇艺tabbar" class="headerlink" title="ATab—-仿爱奇艺tabbar"></a>ATab—-仿爱奇艺tabbar</h2><p>仿爱奇艺选中凸起的tabbar<br>项目地址：<a target="_blank" rel="noopener" href="https://github.com/csfwff/ATab">https://github.com/csfwff/ATab</a></p>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><a target="_blank" rel="noopener" href="https://tmx.fishpi.cn/img/20210104171832646.mp4">SVID202003090947581.mp4</a></p>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
+<li><p>引入<br>现在还么的上传，自己下载引入吧，略🤪</p>
+</li>
+<li><p>使用<br>a. xml中使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;com.xiamo.atab.ATab</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_alignParentBottom=&quot;true&quot;</span><br><span class="line">    android:orientation=&quot;horizontal&quot;</span><br><span class="line">    android:id=&quot;@+id/atab&quot;</span><br><span class="line">    android:layout_height=&quot;80dp&quot;&gt;</span><br><span class="line">    &lt;com.xiamo.atab.ATabItem</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        app:msgText=&quot;哦豁&quot;</span><br><span class="line">        app:title=&quot;啦啦啦&quot;</span><br><span class="line">        app:checkIcon=&quot;@mipmap/home_un&quot;</span><br><span class="line">        app:uncheckIcon=&quot;@mipmap/home&quot;</span><br><span class="line">        android:layout_height=&quot;match_parent&quot;/&gt;</span><br><span class="line">&lt;/com.xiamo.atab.ATab&gt;</span><br></pre></td></tr></table></figure>
+
+<p>b. Java中使用<br>xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;com.xiamo.atab.ATab</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_alignParentBottom=&quot;true&quot;</span><br><span class="line">    android:orientation=&quot;horizontal&quot;</span><br><span class="line">    android:id=&quot;@+id/atab&quot;</span><br><span class="line">    android:layout_height=&quot;80dp&quot;&gt;</span><br><span class="line">&lt;/com.xiamo.atab.ATab&gt;</span><br></pre></td></tr></table></figure>
+
+<p>java<br><code>       aTab = (ATab)findViewById(R.id.atab);</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">aTab.addItem(new ATabItem.Builder(this).title(&quot;首页&quot;).uncheckIcon(getDrawable(R.mipmap.home_un))</span><br><span class="line">            .checkIcon(getDrawable(R.mipmap.home)).checkColor(R.color.colorPrimary).create());</span><br><span class="line">aTab.addItem(new ATabItem.Builder(this).title(&quot;热门&quot;).uncheckIcon(getDrawable(R.mipmap.hot_un))</span><br><span class="line">            .checkIcon(getDrawable(R.mipmap.hot)).checkColor(R.color.colorPrimary).create());</span><br><span class="line">aTab.addItem(new ATabItem.Builder(this).title(&quot;会员&quot;).uncheckIcon(getDrawable(R.mipmap.vip_un))</span><br><span class="line">            .checkIcon(getDrawable(R.mipmap.vip)).checkColor(R.color.colorAccent).create());</span><br><span class="line">aTab.addItem(new ATabItem.Builder(this).title(&quot;消息&quot;).uncheckIcon(getDrawable(R.mipmap.msg_un))</span><br><span class="line">            .checkIcon(getDrawable(R.mipmap.msg)).checkColor(R.color.colorPrimary).msg(&quot;哦豁&quot;).create());</span><br><span class="line">aTab.addItem(new ATabItem.Builder(this).title(&quot;我的&quot;).uncheckIcon(getDrawable(R.mipmap.mine_un))</span><br><span class="line">            .checkIcon(getDrawable(R.mipmap.mine)).checkColor(R.color.colorPrimary).create());</span><br></pre></td></tr></table></figure></li>
+<li><p>设置监听</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">aTab.setOnItemSelectListener(new ATab.OnItemSelectListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onItemSelect(int nowPos, int prePos) &#123;</span><br><span class="line">        Log.e(&quot;-----&quot;, nowPos+&quot;---&quot;+prePos);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="ATabItem属性"><a href="#ATabItem属性" class="headerlink" title="ATabItem属性"></a>ATabItem属性</h2><p>定义了如下属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;declare-styleable name=&quot;ATabItem&quot;&gt;</span><br><span class="line">        &lt;!-- 基线距顶部的距离--&gt;</span><br><span class="line">        &lt;attr name=&quot;baseLinePos&quot; format=&quot;dimension&quot; /&gt;</span><br><span class="line">        &lt;!--凸起的高度，需要小于baseLinePos，需要留一部分空间显示弹性效果--&gt;</span><br><span class="line">        &lt;attr name=&quot;upHeight&quot; format=&quot;dimension&quot; /&gt;</span><br><span class="line">        &lt;!-- 背景颜色--&gt;</span><br><span class="line">        &lt;attr name=&quot;bgColor&quot; format=&quot;color&quot; /&gt;</span><br><span class="line">        &lt;!--未选中icon--&gt;</span><br><span class="line">        &lt;attr name=&quot;uncheckIcon&quot; format=&quot;reference&quot;/&gt;</span><br><span class="line">        &lt;!--选中icon--&gt;</span><br><span class="line">        &lt;attr name=&quot;checkIcon&quot; format=&quot;reference&quot;/&gt;</span><br><span class="line">        &lt;!--icon的宽度--&gt;</span><br><span class="line">        &lt;attr name=&quot;iconWidth&quot; format=&quot;dimension&quot; /&gt;</span><br><span class="line">        &lt;!--icon的高度--&gt;</span><br><span class="line">        &lt;attr name=&quot;iconHeight&quot; format=&quot;dimension&quot; /&gt;</span><br><span class="line">        &lt;!--未选中颜色--&gt;</span><br><span class="line">        &lt;attr name=&quot;uncheckColor&quot; format=&quot;color&quot;/&gt;</span><br><span class="line">        &lt;!--选中颜色--&gt;</span><br><span class="line">        &lt;attr name=&quot;checkColor&quot; format=&quot;color&quot;/&gt;</span><br><span class="line">        &lt;!--选中的背景圆半径--&gt;</span><br><span class="line">        &lt;attr name=&quot;checkRadius&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">        &lt;!--icon顶部到基线的距离--&gt;</span><br><span class="line">        &lt;attr name=&quot;iconToBase&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">        &lt;!--文字下边距--&gt;</span><br><span class="line">        &lt;attr name=&quot;textMarginBottom&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">        &lt;!--文字大小--&gt;</span><br><span class="line">        &lt;attr name=&quot;textSize&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">        &lt;!--文字--&gt;</span><br><span class="line">        &lt;attr name=&quot;title&quot; format=&quot;string&quot;/&gt;</span><br><span class="line">        &lt;!--消息--&gt;</span><br><span class="line">        &lt;attr name=&quot;msgText&quot; format=&quot;string&quot;/&gt;</span><br><span class="line">        &lt;!--消息文字大小--&gt;</span><br><span class="line">        &lt;attr name=&quot;msgSize&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">        &lt;!--消息文字颜色--&gt;</span><br><span class="line">        &lt;attr name=&quot;msgColor&quot; format=&quot;color&quot;/&gt;</span><br><span class="line">        &lt;!--消息背景颜色--&gt;</span><br><span class="line">        &lt;attr name=&quot;msgBgColor&quot; format=&quot;color&quot;/&gt;</span><br><span class="line">        &lt;!--消息距顶部距离--&gt;</span><br><span class="line">        &lt;attr name=&quot;msgToTop&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">        &lt;!--消息距中心的x距离--&gt;</span><br><span class="line">        &lt;attr name=&quot;msgToCenter&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">        &lt;!--消息内边距--&gt;</span><br><span class="line">        &lt;attr name=&quot;msgPadding&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">        &lt;!--消息背景圆角半径--&gt;</span><br><span class="line">        &lt;attr name=&quot;msgRadius&quot; format=&quot;dimension&quot;/&gt;</span><br><span class="line">&lt;/declare-styleable&gt;</span><br></pre></td></tr></table></figure>
+
+<p>部分含糊的属性看如下说明<br><img src="https://tmx.fishpi.cn/img/20210104172307271.png" alt="QQ图片20200309113000b02c0361.png"></p>
+<h2 id="ATab方法说明"><a href="#ATab方法说明" class="headerlink" title="ATab方法说明"></a>ATab方法说明</h2><ol>
+<li>设置选中，举例：<br><code> aTab.setSelect(2);</code></li>
+<li>设置消息<br><code> aTab.setMsg(3,&quot;消息内容&quot;);</code><br>注：消息内容为null即表示不显示消息</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.sszsj.cc">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.sszsj.cc/articles/2020/03/09/1583725597624.html">https://www.sszsj.cc/articles/2020/03/09/1583725597624.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.sszsj.cc" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Android/">Android</a><a class="post-meta__tags" href="/tags/Java/">Java</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/pic_1707290767713.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2020/03/12/1584020754749.html" title="摸🐟玩家在线卑微"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290303398.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">摸🐟玩家在线卑微</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2020/03/03/1583203320952.html" title="墨黎集----来看美美的汉服妹子😉"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290477726.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">墨黎集----来看美美的汉服妹子😉</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2021/09/09/1631184077130.html" title="Android 发布lib到JitPack"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289737797.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-09</div><div class="info-item-2">Android 发布lib到JitPack</div></div><div class="info-2"><div class="info-item-1">   &#x3D;.&#x3D;之前一直以为发布到Jitpack，jcenter（这个要没了）这种中央仓库很麻烦，要注册账号啥的，所以一直不愿意搞结果搜了一下，似乎不需要，只要配置一下就好了的虽然不麻烦，但还是遇到了几个坑，简单记录一下 *.*首先建好github仓库，把代码传上去这一步正常操作，没有问题 0.0在项目的根目录下的 build.gradle 文件里面添加Jitpack 插件 1classpath &#x27;com.github.dcendents:android-maven-gradle-plugin:2.1&#x27; 没问题 在 repositories 下面添加 1maven &#123; url &quot;https://jitpack.io&quot; &#125; 问题来了升级到gradle:7.0.0后，项目的build.gradle里已经没有了allprojects，所以也没有repositories如果强行添加，sync就会报 1Build was configured to prefer settings repositories...</div></div></div></a><a class="pagination-related" href="/articles/2021/12/12/1639292768000.html" title="CRC16计算"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289682721.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-12</div><div class="info-item-2">CRC16计算</div></div><div class="info-2"><div class="info-item-1">   因为最近在调试一款串口设备，发送数据需要用16进制，然后还要算CRC16的校验码然后问题来了，这玩意怎么算，一脸懵逼，只能百度copy一份省的找…… 说实话，我看了这个还是没懂怎么算……但是至少可以算出来这大概就是半路出家的痛处吧有空是得好好补一补了（问题就是没空啊…… 原文地址-&gt;JAVA CRC16校验码计算 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778/** * @author lwt * @date 2018-06-26 * * CRC16校验码计算 * &lt;p&gt; * (1)．预置1个16位的寄存器为十六进制FFFF（即全为1），称此寄存器为CRC寄存器； * (2)．把第一个8位二进制数据（既通讯信息帧的第一个字节）与16位的CRC寄存器的低 * 8位相异或，把结果放于CRC寄存器； *...</div></div></div></a><a class="pagination-related" href="/articles/2021/11/19/1637293983000.html" title="Scrcpy常用快捷键"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289575444.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-19</div><div class="info-item-2">Scrcpy常用快捷键</div></div><div class="info-2"><div class="info-item-1">   又是一个，菜鸡懒得搜，copy一份记录 Scrcpy是一款在电脑上通过adb控制手机的软件，主要是我现在开发很多时候设备没在身边，不好操作，所以找到这么一款软件 在下列表格中，MOD是热键的修饰键， 默认是（左）Alt或者（左）Super。您可以使用 –shortcut-mod后缀来修改它。可选的按键有lctrl、rctrl、 lalt、ralt、lsuper和rsuper。如下例：使用右侧的Ctrl键scrcpy –shortcut-mod&#x3D;rctrl使用左侧的Ctrl键、Alt键或Super键scrcpy –shortcut-mod&#x3D;lctrl+lalt,lsuper一般来说，Super就是Windows或者Cmd。    操作 快捷键    全屏 MOD+f   向左旋转屏幕 MOD+← (左)   将窗口大小重置为1:1 (像素优先)	MOD+g   将窗口大小重置为消除黑边 MOD+w or 双击1   点按 主屏幕 MOD+h or 点击鼠标中键   点按 返回 MOD+b or 点击鼠标右键2   点按 切换应用 MOD+s   点按...</div></div></div></a><a class="pagination-related" href="/articles/2019/04/09/1554788508900.html" title="Gradle编译 Faile to resolve:support-media-compat"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292694023.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-09</div><div class="info-item-2">Gradle编译 Faile to resolve:support-media-compat</div></div><div class="info-2"><div class="info-item-1">   原因是中央仓库里没找到相应的包解决方案是在项目的build.gradle中 123456allprojects &#123;    repositories &#123;        google()        jcenter()    &#125;&#125;  把google挪到jcenter前就可以了 </div></div></div></a><a class="pagination-related" href="/articles/2019/03/21/1553165686993.html" title="Kotlin大法好--&gt;&quot;_&quot;下划线的妙用"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292623117.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-21</div><div class="info-item-2">Kotlin大法好--&gt;&quot;_&quot;下划线的妙用</div></div><div class="info-2"><div class="info-item-1">   记录kotlin的学习，谨防忘记  _下划线平时用于在变量命名的时候作为单词的间隔除此之外，在kotlin中还有别的用途 作为lambda的参数名称123view.setOnTouchListener&#123; v , event -&gt;	//do something&#125;  如果上述回调中，我们只用到了event而没有用到v的时候，就可以用_代替 123view.setOnTouchListener&#123; _ , event -&gt;	//do something&#125;  当然，如果一个参数都没用到，那就自己省略参数部分就完事 作为解构声明参数解构可以一次性建好多个变量，但是有时候会用不到其中一部分参数，那么解构的时候用_替代就可以了 123data class Person(var name : String, var age : Int)val person = Person(&quot;Tom&quot;, 20)val (name, age) =...</div></div></div></a><a class="pagination-related" href="/articles/2019/03/14/1552566949418.html" title="React Native debug正常，release闪退"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292516328.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-14</div><div class="info-item-2">React Native debug正常，release闪退</div></div><div class="info-2"><div class="info-item-1">   今天准备打包一版react native appdebug的时候，那么进行打包release打包成功，安装打开后闪退查看日志，显示未能加载index.android.js所以，解决方案：在android工程assets下生成相应的bundle文件 在工程目录下输入命令如下： 1react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/  继续打包，正常 </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">158</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">155</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ATab%E2%80%94-%E4%BB%BF%E7%88%B1%E5%A5%87%E8%89%BAtabbar"><span class="toc-number">1.</span> <span class="toc-text">ATab—-仿爱奇艺tabbar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%9B%BE"><span class="toc-number">2.</span> <span class="toc-text">效果图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">食用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ATabItem%E5%B1%9E%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text">ATabItem属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ATab%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E"><span class="toc-number">5.</span> <span class="toc-text">ATab方法说明</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/06/23/1750659999.html" title="服务器攻击记录"><img src="https://tmx.fishpi.cn/img/20250623142727.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务器攻击记录"/></a><div class="content"><a class="title" href="/articles/2025/06/23/1750659999.html" title="服务器攻击记录">服务器攻击记录</a><time datetime="2025-06-23T06:26:39.000Z" title="发表于 2025-06-23 14:26:39">2025-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/12/1741760610.html" title="服务部署命令备份"><img src="https://tmx.fishpi.cn/img/20250224125625_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务部署命令备份"/></a><div class="content"><a class="title" href="/articles/2025/03/12/1741760610.html" title="服务部署命令备份">服务部署命令备份</a><time datetime="2025-03-12T06:23:30.000Z" title="发表于 2025-03-12 14:23:30">2025-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"><img src="https://tmx.fishpi.cn/img/20250213131510_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"/></a><div class="content"><a class="title" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）">仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）</a><time datetime="2025-03-03T05:12:54.000Z" title="发表于 2025-03-03 13:12:54">2025-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/24/1735028687.html" title="2024 三亚"><img src="https://tmx.fishpi.cn/img/20241224173417.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 三亚"/></a><div class="content"><a class="title" href="/articles/2024/12/24/1735028687.html" title="2024 三亚">2024 三亚</a><time datetime="2024-12-24T08:24:47.000Z" title="发表于 2024-12-24 16:24:47">2024-12-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing"><img src="https://tmx.fishpi.cn/img/pic_1734065443906.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 Nothing"/></a><div class="content"><a class="title" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing">2024 Nothing</a><time datetime="2024-12-13T04:52:13.000Z" title="发表于 2024-12-13 12:52:13">2024-12-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2025 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.cc',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

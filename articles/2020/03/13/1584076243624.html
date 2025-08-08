@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>夜勤人----不会开店的勇者不是好村民 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://www.sszsj.cc/articles/2020/03/13/1584076243624.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '夜勤人----不会开店的勇者不是好村民',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">158</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">155</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/20210104172649787.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">夜勤人----不会开店的勇者不是好村民</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">夜勤人----不会开店的勇者不是好村民</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-03-13T05:10:43.000Z" title="发表于 2020-03-13 13:10:43">2020-03-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-05T08:56:31.000Z" title="更新于 2021-01-05 16:56:31">2021-01-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%BB%98%E4%B8%96%E9%9A%8F%E6%83%B3%E5%BD%95/">默世随想录</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">691</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/20210104172649787.jpg" alt="psc.jpg"></p>
+<p>首先来一句，Epic永远是我大哥！</p>
+<h2 id="00"><a href="#00" class="headerlink" title="00"></a>00</h2><p>游戏荒，再加上古董笔记本带不了大作，只能在epic上翻翻有哪些不吃配置的游戏，于是就找到了这个，像素风（是的，最近有点迷像素风），roguelike，可以，下载安装~</p>
+<h2 id="1"><a href="#1" class="headerlink" title="-1"></a>-1</h2><p>小镇居民威尔只是一个普通的商人，继承了一家祖传的夜勤人商店。夜勤人，白天开店，晚上进货，到哪进货呢，当然就是附近的地牢了。4个普通地牢加最后一扇大门，村里的老者不断警告，不要去开门，但是，你觉得有用么？随着地牢的深入，击败一个又一个守将，最终集齐了4把钥匙，你会选择不开么</p>
+<h2 id="2"><a href="#2" class="headerlink" title="-2"></a>-2</h2><p>想要变强，就要氪金，钱从哪来，当然是变卖地牢里获得的战利品。想要快速利益最大化的出货，那就要设置合适的价格，通过记录不通顾客的反应，不断更新价格。当然了，偷懒就是直接找别人整理好的价格表23333。可以当个普通的小贩，也可以当个奸商，恶意抬价哈哈哈。<br>有了钱，就能升级装备，升级商店，挑战更难的地牢，获得更值钱的战利品，如此循环。</p>
+<h2 id="3"><a href="#3" class="headerlink" title="-3"></a>-3</h2><p>真羡慕有这样一个地牢，源源不断的产出物品，没钱了就去下地牢，就算打不过了也无所谓，死了顶多丢掉这次的战利品，然后被地牢吐出来而已，简直永动机。地牢里物品的诅咒设定也很有趣，尤其到了后期，背包日常爆满，就要考虑通过各种诅咒合理摆放各种战利品，利用诅咒直接送回商店，利用诅咒复制战利品，当然了，更多的时候只能低价变卖成金币。不过后面爆出宝箱怪的蛋就可以了，空间大大增加。</p>
+<h2 id="4"><a href="#4" class="headerlink" title="-4"></a>-4</h2><p>开店也并不容易，有时候会有鸟儿飞进来干扰，需要尽快赶跑，有时候会有小偷光顾，必须眼疾手快，在他下手的时候当场抓获。<br>有时候村民回来悬赏，需要某某物品，要是有存货还好，日期到了直接成交，没有的话只能在夜晚继续忙碌，夜勤人嘛~</p>
+<h2 id="5"><a href="#5" class="headerlink" title="-5"></a>-5</h2><p>可惜，游戏重复性有点高，到了后期，金币不缺，材料不缺，所有都升级到最高了，再也没有继续的必要了，打开第五扇门，打败维度大盗，封印所有地牢，不知小镇最后会怎么样，围绕着地牢的繁华，估计最后终将散去，end</p>
+<p><img src="https://tmx.fishpi.cn/img/20210104172750350.jpg" alt="psc1.jpg"><br><br/><br><img src="https://tmx.fishpi.cn/img/20210104172850896.jpg" alt="psc2.jpg"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.sszsj.cc">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.sszsj.cc/articles/2020/03/13/1584076243624.html">https://www.sszsj.cc/articles/2020/03/13/1584076243624.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.sszsj.cc" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a><a class="post-meta__tags" href="/tags/%E5%A4%9C%E5%8B%A4%E4%BA%BA/">夜勤人</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/20210104172649787.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2020/03/13/1584081025904.html" title="光明旅者Hyper Light Drifter"><img class="cover" src="https://tmx.fishpi.cn/img/20210104172951365.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">光明旅者Hyper Light Drifter</div></div><div class="info-2"><div class="info-item-1"> 一开始玩的时候，一脸懵逼，游戏没有中文，剧情全靠动画和插图，虽然开场很震撼，但是有点不知道剧情是什么。主角一直在吐血，大地被黑暗吞没。而后面了解了，才发现游戏的制作人患有先天性心脏病，在生命是一个不可控的倒计时状态下，选择为自己，为世界留下一部属于他自己的作品。 游戏分为东南西北四个方向，四个区域，每个区域特色鲜明，东边的水域，南边的荒漠，西边的红树林，北方的雪山。看似一片生机盎然，实则建立在一片废土之上。仔细观察各个场景，到处各种骷髅。另外每个区域入口都有一个守卫石像，每个区域都有一个融入场景的巨人（骷髅） 每个区域都有8个碎片，玩家通过不断探索，收集碎片，打败boss，升起这一方的石柱，每当有柱子升起的时候，主角都回忆起在黑暗中苦苦挣扎缺不得解脱。升起了4方的柱子，就可以回到中心城镇，坐电梯打败这一切的罪魁祸首，&#x3D; &#x3D; 好吧 这个boss我打了7...</div></div></div></a><a class="pagination-related" href="/articles/2020/03/12/1584020754749.html" title="摸🐟玩家在线卑微"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290303398.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">摸🐟玩家在线卑微</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2017/07/05/1533348408121.html" title="所以，这有什么用？吃屎吧"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293587612.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">所以，这有什么用？吃屎吧</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348409230.html" title="游戏人生"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293371923.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">游戏人生</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348412480.html" title="雨血——这场雨何时能停"><img class="cover" src="https://tmx.fishpi.cn/img/20210104103054692.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">雨血——这场雨何时能停</div></div><div class="info-2"><div class="info-item-1">雨血系列雨血1：迷镇是用RPG Maker 做的，真的被吸引了，不一样的画风，剧情也很棒，就放几张图     雨血2：烨城由回合制改成半回合制，继续雨血1的剧情  雨血前传：蜃楼讲述之前的故事   最后就是氪金手游影之刃了已经弃了有段时间了，找了点以前的截图  至少不是像现在大部分手游那样要么是卡牌要么是页游品质的，打斗界面没有截图，可以去找视频看看 最后，其实我的头像就是其中一个主角  再最后，自己画的主角的剑，渣渣水平 </div></div></div></a><a class="pagination-related" href="/articles/2021/08/30/1630302787009.html" title="最终幻想3----4个孤儿的冒险"><img class="cover" src="https://tmx.fishpi.cn/img/1630298809278.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-30</div><div class="info-item-2">最终幻想3----4个孤儿的冒险</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/articles/2019/09/07/1567834362634.html" title="最终幻想----一切的幻想从这里开始"><img class="cover" src="https://tmx.fishpi.cn/img/4Hu_1-f641bcdc.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-07</div><div class="info-item-2">最终幻想----一切的幻想从这里开始</div></div><div class="info-2"><div class="info-item-1">笔记本配置跟不上玩不了大作了那就玩玩以前的游戏吧补一补以前的经典正好现在手机配置也不低旧手机装了几个模拟器彻底沦为掌机经典那就从最终幻想开始吧最终幻想系列挺多的也不知道我什么时候能补完🤣🤣🤣   世界被黑暗笼罩着。风静止了，海啸强烈，大地在腐败。人民在等待，他们唯一的希望，一则预言……“世界被染成黑暗时，4位光之战士将会出现……”经过漫长的旅途，4个年轻人来了，每人拥有一块水晶。这4个年轻人真是光之战士吗？操纵形成世界的4种力量——土、火、水、风的敌人能打败吗？首先要让4大水晶恢复光辉，阻止世界的崩溃！即将起程了，4位光之战士！  踩雷，走迷宫，打boss，我玩的时候并没有感觉到特别惊艳，而且时常不知道下一步该干什么，然而这是因为我玩习惯了这类RPG，考虑到游戏发行年份，就不难理解了，这是一款直接拯救了一家公司的游戏，总体上这就是一个合格的RPG吧，最终boss一开始不会打，一个回血直接白打后来才发现要叠状态，囧 最终，4位年轻人拯救了公主，顺便把世界也拯救了😏           </div></div></div></a><a class="pagination-related" href="/articles/2019/09/11/1568209682009.html" title="最终幻想2----轮班的4号，白给的敏武"><img class="cover" src="https://tmx.fishpi.cn/img/8l5_1-6752d17d.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-11</div><div class="info-item-2">最终幻想2----轮班的4号，白给的敏武</div></div><div class="info-2"><div class="info-item-1">  打完了《最终幻想》一代，接下来就打二代。其实最终幻想每一代的故事都是独立的，除了像飞空艇之类的元素互通外，各代之间并不关联   最终幻想2，玩的是psp版本，开场CG还是不错滴，开场讲明了起因是帕拉梅西亚帝国皇帝从地狱招来大批魔物，妄图征服世界，各个国家相继沦陷了，即使组织了反抗军依然失败了~  只不过开场过完进入游戏，又回到了1代的RPGMaker风格，反差有点大。而整个二代讲述的就是主角们怎么复国，最后打败皇帝的故事了。  然而在这一代，取消了前作中的等级设定。是的，没错，没有等级，各项属性都要在战斗中提升。简单地说就是战斗中消耗血量到一定程度了，战斗结束后就增加血量上限，耗魔了，就增加魔上限，各种技能也靠熟练度升级。然后这就造成一种奇怪的现象，当主角们走到一个新的区域的时候，踩雷遇怪，怪在边上看着，主角们在互殴……我也不好评价这个设定好不好，总之我一开始是不知道还能自残的，所以初期打小怪没问题，打boss就爵爵了……...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">158</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">155</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#00"><span class="toc-number">1.</span> <span class="toc-text">00</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-number">2.</span> <span class="toc-text">-1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-number">3.</span> <span class="toc-text">-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-number">4.</span> <span class="toc-text">-3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-number">5.</span> <span class="toc-text">-4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-number">6.</span> <span class="toc-text">-5</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/06/23/1750659999.html" title="服务器攻击记录"><img src="https://tmx.fishpi.cn/img/20250623142727.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务器攻击记录"/></a><div class="content"><a class="title" href="/articles/2025/06/23/1750659999.html" title="服务器攻击记录">服务器攻击记录</a><time datetime="2025-06-23T06:26:39.000Z" title="发表于 2025-06-23 14:26:39">2025-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/12/1741760610.html" title="服务部署命令备份"><img src="https://tmx.fishpi.cn/img/20250224125625_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务部署命令备份"/></a><div class="content"><a class="title" href="/articles/2025/03/12/1741760610.html" title="服务部署命令备份">服务部署命令备份</a><time datetime="2025-03-12T06:23:30.000Z" title="发表于 2025-03-12 14:23:30">2025-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"><img src="https://tmx.fishpi.cn/img/20250213131510_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"/></a><div class="content"><a class="title" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）">仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）</a><time datetime="2025-03-03T05:12:54.000Z" title="发表于 2025-03-03 13:12:54">2025-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/24/1735028687.html" title="2024 三亚"><img src="https://tmx.fishpi.cn/img/20241224173417.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 三亚"/></a><div class="content"><a class="title" href="/articles/2024/12/24/1735028687.html" title="2024 三亚">2024 三亚</a><time datetime="2024-12-24T08:24:47.000Z" title="发表于 2024-12-24 16:24:47">2024-12-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing"><img src="https://tmx.fishpi.cn/img/pic_1734065443906.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 Nothing"/></a><div class="content"><a class="title" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing">2024 Nothing</a><time datetime="2024-12-13T04:52:13.000Z" title="发表于 2024-12-13 12:52:13">2024-12-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2025 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.cc',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
