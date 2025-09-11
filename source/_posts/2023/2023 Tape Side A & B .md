@@ -42,10 +42,10 @@ cover: https://tmx.fishpi.cn/img/pic_1707286043339.png
 （为什么我总是拍这些奇奇怪怪的东西）
 哈，5月底，终于下定决心换一个工作了
 终于不用每天8点下班了，也轻松了一些
-哈，7月份去了一趟双龙洞，也算旅游过了->[双龙洞小记](https://www.sszsj.cc/articles/2023/07/17/1689558830000.html)
+哈，7月份去了一趟双龙洞，也算旅游过了->[双龙洞小记](https://sszsj.com/articles/2023/07/17/1689558830000.html)
 8月，终于抓住了整个夏天
 ![图 4](https://tmx.fishpi.cn/img/pic_1703826373590.png)  
-小老鼠也终于去上学了->[小老鼠上学记](https://www.sszsj.cc/articles/2023/09/25/1695622847.html)
+小老鼠也终于去上学了->[小老鼠上学记](https://sszsj.com/articles/2023/09/25/1695622847.html)
 ![图 5](https://tmx.fishpi.cn/img/pic_1703826883059.png)  
 被人追尾被迫修车
 房贷利率也赶上政策降下来了（可惜利息都还了不少了）

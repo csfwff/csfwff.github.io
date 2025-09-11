@@ -22,7 +22,7 @@ cover: https://tmx.fishpi.cn/img/pic_1734065443906.png
 ## 翻翻相册
 
 年初下了一场雪，已经好久没有这样大的雪了
-[2024 年的第一场雪](https://www.sszsj.cc/articles/2024/01/23/1705977652.html)
+[2024 年的第一场雪](https://sszsj.com/articles/2024/01/23/1705977652.html)
 不知道这个冬天还会不会继续下
 3 月，终于狠下心来买了 SD（其实是因为上家拖欠的工资要回来了）
 ![图 1](https://tmx.fishpi.cn/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241213130656.jpg)
@@ -41,9 +41,9 @@ emmm 过段时间又可以去玩玩了
 ![图 5](https://tmx.fishpi.cn/img/20241213131716.jpg)  
 ![图 6](https://tmx.fishpi.cn/img/20241213131708.jpg)  
 哦，还做了一辆消防车 🚒
-[消防车有个新任务，咿呀咿呀呦](https://www.sszsj.cc/articles/2024/05/16/1715826712.html)
+[消防车有个新任务，咿呀咿呀呦](https://sszsj.com/articles/2024/05/16/1715826712.html)
 6 月把之前搁置了几年的花轿完工了
-[十里红妆----花轿](https://www.sszsj.cc/articles/2024/06/17/1718601326.html)
+[十里红妆----花轿](https://sszsj.com/articles/2024/06/17/1718601326.html)
 之前种的百合也开花咯
 ![图 7](https://tmx.fishpi.cn/img/20241213132017.jpg)  
 买了画板却永远在吃灰
@@ -63,10 +63,10 @@ emmm 过段时间又可以去玩玩了
 得益于有了 SD，终于，勉强，可以愉快地打游戏了
 
 1. 虚构世界（Figment）
-2. 古墓丽影 9（Tomb Raider）[古墓丽影----“我为了救我的闺蜜与同伴杀了一个岛的人”](https://www.sszsj.cc/articles/2024/02/27/1709015614.html)
-3. 信使（The Messager）[The Messager----有什么故事可以讲吗？](https://www.sszsj.cc/articles/2024/03/25/1711335321.html)
-4. 古墓丽影：崛起 [古墓丽影：崛起----“不死先知和不死军团最终倒在了我的手下”](https://www.sszsj.cc/articles/2024/06/03/1717390846.html)
-5. 八方旅人 [八方旅人----活着，就是一场旅行](https://www.sszsj.cc/articles/2024/11/29/1732855861.html)
+2. 古墓丽影 9（Tomb Raider）[古墓丽影----“我为了救我的闺蜜与同伴杀了一个岛的人”](https://sszsj.com/articles/2024/02/27/1709015614.html)
+3. 信使（The Messager）[The Messager----有什么故事可以讲吗？](https://sszsj.com/articles/2024/03/25/1711335321.html)
+4. 古墓丽影：崛起 [古墓丽影：崛起----“不死先知和不死军团最终倒在了我的手下”](https://sszsj.com/articles/2024/06/03/1717390846.html)
+5. 八方旅人 [八方旅人----活着，就是一场旅行](https://sszsj.com/articles/2024/11/29/1732855861.html)
 6. 霓虹深渊
 7. 双相
 8. 绣湖：旅馆

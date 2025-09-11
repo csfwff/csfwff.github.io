@@ -26,7 +26,7 @@ categories:
 
 ## 预览图
 
-可以点[这里](https://www.sszsj.cc/?skin=bolo-fantastic)看看实际效果
+可以点[这里](https://sszsj.com/?skin=bolo-fantastic)看看实际效果
 是否暗黑模式跟随浏览器自动切换
 ![image.png](https://tmx.fishpi.cn/img/20210105090231051.png)
 ![null](https://github.com/adlered/bolo-solo/raw/master/preview/3.png)

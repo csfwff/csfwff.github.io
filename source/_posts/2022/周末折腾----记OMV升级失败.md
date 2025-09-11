@@ -11,7 +11,7 @@ cover: https://tmx.fishpi.cn/img/pic_1707287071050.png
 
 ## 前情提要
 去年8月份，我就家里的旧笔记本装了omv
-具体看[这里](https://www.sszsj.cc/articles/2021/08/16/1629091393130.html)
+具体看[这里](https://sszsj.com/articles/2021/08/16/1629091393130.html)
 开启SMB，DLNA，可以直接电视上播放里面存的视频
 一直么的问题
 前几天我摸鱼在网上冲浪的时候，发现出了OMV 6

@@ -15,12 +15,12 @@ top_img: https://tmx.fishpi.cn/img/pic_1707299478314.png
 ## 我的信息
 名称：鼠鼠在碎觉
 描述：我是不慎落入世界的一滴水墨
-地址：https://www.sszsj.cc
+地址：https://sszsj.com
 头像：https://tmx.fishpi.cn/image/head.jpg
 
 ```
 - name: 鼠鼠在碎觉
-  link: https://www.sszsj.cc
+  link: https://sszsj.com
   avatar: https://tmx.fishpi.cn/image/head.jpg
   descr: 我是不慎落入世界的一滴水墨
 ```

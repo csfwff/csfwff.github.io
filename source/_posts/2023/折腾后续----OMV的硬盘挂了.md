@@ -11,7 +11,7 @@ cover: https://tmx.fishpi.cn/img/00018-1581855605.png
 ![picture 0](https://tmx.fishpi.cn/img/00018-1581855605.png)  
 
 ## 前情提要
-看这里->[周末折腾----记OMV升级失败](https://www.sszsj.cc/articles/2022/11/07/1667798327000.html)
+看这里->[周末折腾----记OMV升级失败](https://sszsj.com/articles/2022/11/07/1667798327000.html)
 那一次手贱升级失败后，被迫换了硬盘重新安装
 之前还想着没机会再拆开了
 可惜啊可惜啊，现在又不得不拆开了
