@@ -49,10 +49,10 @@
       link: https://lemon-cxh.github.io/
       avatar: https://lemon-cxh.github.io/images/avatar.jpg
       descr: 要做一个不动声色的大人了
-    - name: 十一
-      link: https://www.elevenblog.cn/
-      avatar: https://file.fishpi.cn/2022/06/blob-fbff7c58.png
-      descr: 懒癌晚期，混吃等死者
+    # - name: 十一
+    #   link: https://www.elevenblog.cn/
+    #   avatar: https://file.fishpi.cn/2022/06/blob-fbff7c58.png
+    #   descr: 懒癌晚期，混吃等死者
     - name: bulabula
       link: https://fishpi.cn/member/bulabula
       avatar: https://pwl.stackoverflow.wiki/2021/09/bulabula1-98fde124.png?imageView2/1/w/210/h/210/interlace/0/q/100
@@ -65,10 +65,10 @@
       link: https://fushaolei.fun/
       avatar: https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg
       descr: 往事只能追忆~
-    - name: 邯城往事
-      link: https://www.cjzshilong.cn
-      avatar: https://avatars1.githubusercontent.com/u/48144475?v=4
-      descr: 记录精彩的坎坷人生，经营属于自己的世界！
+    # - name: 邯城往事
+    #   link: https://www.cjzshilong.cn
+    #   avatar: https://avatars1.githubusercontent.com/u/48144475?v=4
+    #   descr: 记录精彩的坎坷人生，经营属于自己的世界！
     # - name: Frank笔记
     #   link: https://frank2019.me
     #   avatar: https://tuchuang.frank2019.me/uploadImages/185/202/221/119/2022/09/20/02/02/e6459aa8-11a3-4ebc-925b-1d731df68ea2.png
@@ -81,10 +81,10 @@
       link: https://heycmm.cn
       avatar: https://gravatar.webp.se/avatar/8ab4390d6b7163cb5fa805fd78fc109f?s=256&d=mm
       descr: 好看的皮囊扫黄打非，有趣的灵魂涉嫌违规。
-    - name: Amore
-      link: https://iamwaiting.cn/
-      avatar: https://t.iamwaiting.cn/jqqYni
-      descr: 一点想法，无数实践
+    # - name: Amore
+    #   link: https://iamwaiting.cn/
+    #   avatar: https://t.iamwaiting.cn/jqqYni
+    #   descr: 一点想法，无数实践
     # - name: 长安城下
     #   link: https://cacx.cc
     #   avatar: https://cacx.cc/usr/images/9666.jpg
@@ -129,14 +129,14 @@
     #   link: http://xiaoheiwa.com.cn/
     #   avatar: http://xiaoheiwa.com.cn/zb_users/upload/2022/08/202208231661248821151662.jpg
     #   descr: 从小梦想做一部动画片，不知不觉几十年过去了，一直没放下，终于决定，现在开始动工了。希望和每位追梦人成为朋友！
-    - name: Anjhon’s Blog
-      link: https://www.anjhon.top/
-      avatar: https://cdn.jsdelivr.net/gh/An-Jhon/image_bed/202402231446700.png
-      descr: 但知行好事，莫要问前程
-    - name: WenderFeng
-      link: https://wenderfeng.top/
-      avatar: https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F69622aa8-4af1-4177-a1ab-7ea3e4f344f9%2F142723yrnqhrhcyryhwyqa.jpg.icon.png?table=collection&id=45957907-e72c-46a8-bde4-f5bee9af4138
-      descr: Step by step
+    # - name: Anjhon’s Blog
+    #   link: https://www.anjhon.top/
+    #   avatar: https://cdn.jsdelivr.net/gh/An-Jhon/image_bed/202402231446700.png
+    #   descr: 但知行好事，莫要问前程
+    # - name: WenderFeng
+    #   link: https://wenderfeng.top/
+    #   avatar: https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F69622aa8-4af1-4177-a1ab-7ea3e4f344f9%2F142723yrnqhrhcyryhwyqa.jpg.icon.png?table=collection&id=45957907-e72c-46a8-bde4-f5bee9af4138
+    #   descr: Step by step
     - name: 知录
       link: https://kacper.fun
       avatar: https://kacper.fun/images/myself/my.jpg
@@ -145,10 +145,10 @@
       link: https://www.langhai.net/
       avatar: https://www.langhai.net/assets/images/langhai-logo.png
       descr: 浪海导航 ~ 收录各种类型的博客
-    - name: 无名之辈
-      link: http://blog.icestone.work/
-      avatar: https://avatars.githubusercontent.com/u/60811236?v=4
-      descr: 椎间孔实名上网冲浪
+    # - name: 无名之辈
+    #   link: http://blog.icestone.work/
+    #   avatar: https://avatars.githubusercontent.com/u/60811236?v=4
+    #   descr: 椎间孔实名上网冲浪
     - name: 雾林博客
       link: https://www.baiwulin.com
       avatar: https://cravatar.cn/avatar/6069656389d12d0741da383e40f82e8f?s=400
