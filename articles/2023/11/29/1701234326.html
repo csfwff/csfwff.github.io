@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>最终幻想4----亲兄弟的相爱相杀 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2023/11/29/1701234326.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '最终幻想4----亲兄弟的相爱相杀',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">159</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">155</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/Screenshot_2023-11-29-12-46-10-857_org.ppsspp.pps.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">最终幻想4----亲兄弟的相爱相杀</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">最终幻想4----亲兄弟的相爱相杀</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-29T05:05:26.000Z" title="发表于 2023-11-29 13:05:26">2023-11-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-29T05:05:26.000Z" title="更新于 2023-11-29 13:05:26">2023-11-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%BB%98%E4%B8%96%E9%9A%8F%E6%83%B3%E5%BD%95/">默世随想录</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>看了下记录，最终幻想3是在21年8月底打完的<br>没记错的话，在那之后我就开始了最终幻想4<br>可惜还是老样子，因为某些原因没时间玩中断了<br>之后又过了好久才想起来，等再次找回存档的时候，已经是两年后了</p>
+<p>好了，终于来到了第四代，玩的是psp的完全版，包括正传，间章和月之归还<br>目前只打通了正传，后面的还在进行中，后续再说</p>
+<p>友情的背叛，爱情的允诺，身份的转变，空间的迁移……这一切，全都在最终幻想4之中。<br>开场，国王命令主角塞西尔去夺取水晶，塞西尔回来询问国王动机时，便被免去职务，并被要求同凯因将一个包裹送至迷雾村<br>然而，当塞西尔到达雾之村后，包裹里的炸弹指环立即飞出，烧掉了整个村庄，炸死了全部村民。塞西尔与他的好友龙骑士カ凯因发誓与邪恶的国王战斗到底。<br>然而，事情却并非塞西尔想的那么简单，国王也只不过一枚棋子，似乎有一只看不到的手在左右着这一切……</p>
+<p>亲兄弟的相爱相杀<br>剧情的前半部分主要都是与高贝扎抢夺水晶，是他操控了一切<br>然而最后到了月球，在福素雅的告知下，结果塞西尔和高贝扎是亲兄弟<br>高贝扎也最后醒悟过来，来来回回打了n久打了个寂寞</p>
+<p>友情的背叛<br>前半部分，凯因在高贝扎的控制下反复横跳<br>反复跳反，诶，我清醒了，又没有完全清醒<br>（主要还是因为凯因也算某种意义上的舔狗）<br>（经典剧情，女主喜欢男主，然后男二喜欢女主）<br>（不过最后凯因独自上试练之山了）</p>
+<p>爱情的允诺<br>泰拉的女儿安娜，和吉尔伯特互相爱慕，安娜和吉尔伯特私奔到达姆西安王国。<br>但在王国被红翼的飞空艇袭击时，安娜也受波及而死亡。<br>后来在吉尔伯特失意而遭受怪物攻击时，安娜以灵魂的形态出现，在为他打气后消失。<br>以及柔纱的不离不弃</p>
+<p>身份的转变<br>塞西尔本身是暗黑骑士，<br>然而暗黑力量无法战胜现存的邪恶，<br>最终登上试练之山，<br>战胜过去的自己，转为圣骑士<br>（前期暗黑骑士的时候嘎嘎乱杀，转职完欲哭无泪只能平A）</p>
+<p>空间的迁移<br>这一代直接加了一个月球<br>（地球叫做蓝星，有两个月球）<br>虽然后期拿到魔导号以后才能去<br>而且月球也没多少东西<br>这一代的故事归根结底就是月之民搞出来<br>好在最后这个月球离开了地球</p>
+<p>不过这代的编剧也还友好，<br>写死的角色不多，<br>前期以为死了好多人，<br>就像塞西尔说：为什么大家都着急去死呢？<br>（我也想问）<br>杨，希德，都是这样，<br>（我断后！！！你们快走！！）<br>不过双胞胎姐弟的死却是令人触动的<br>为了阻止两侧的墙壁继续压缩<br>她俩同时对自己使用石化术变成雕像<br>好在最后都没死<br>（编剧：诶，我就是玩~）</p>
+<p>打完之后看了下，游戏时长31小时多<br>（这还是没用金手指照着攻略打了，不看攻略估计更久）<br>emmm总体还行，剧情比3要好点<br>好了，接下来就是继续间章和月之归还<br>不知道啥时候打完<br>随缘吧</p>
+<blockquote>
+<p>于龙口中诞生之物<br>飞舞天际<br>暗与光相互辉映<br>给沉眠的大地带来新的约定。</p>
+<p>月被无尽的光辉包围<br>给母亲般的大地带来极大的<br>恩惠和慈悲。</p>
+<p>于是便可获得片刻的休息。<br>月亮寻求自身的光<br>被导向再度的旅程。<br>继承相同血脉的一人在月亮<br>一人在大地<br>时间的流逝将他们两人无情的分开。</p>
+</blockquote>
+<p><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-27-12-48-46-159_org.ppsspp.pps.jpg" alt="图 1"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-29-12-48-25-863_org.ppsspp.pps.jpg" alt="图 17"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-29-12-48-39-538_org.ppsspp.pps.jpg" alt="图 18"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-29-12-48-57-020_org.ppsspp.pps.jpg" alt="图 19"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-29-12-49-26-640_org.ppsspp.pps.jpg" alt="图 20"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-29-12-50-06-255_org.ppsspp.pps.jpg" alt="图 21"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-29-12-50-38-343_org.ppsspp.pps.jpg" alt="图 22"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-09-17-23-02-51-251_org.ppsspp.pps.jpg" alt="图 2"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-10-26-12-48-28-073_org.ppsspp.pps.jpg" alt="图 3"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-10-27-13-14-59-333_org.ppsspp.pps.jpg" alt="图 4"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-10-12-50-20-931_org.ppsspp.pps.jpg" alt="图 5"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-13-13-06-06-044_org.ppsspp.pps.jpg" alt="图 6"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-13-13-07-02-800_org.ppsspp.pps.jpg" alt="图 7"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-13-13-08-02-888_org.ppsspp.pps.jpg" alt="图 8"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-23-13-20-53-741_org.ppsspp.pps.jpg" alt="图 9"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-23-13-25-04-468_org.ppsspp.pps.jpg" alt="图 10"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-23-13-31-15-448_org.ppsspp.pps.jpg" alt="图 11"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-24-12-58-52-113_org.ppsspp.pps.jpg" alt="图 12"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-24-13-04-07-176_org.ppsspp.pps.jpg" alt="图 13"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-24-13-07-59-041_org.ppsspp.pps.jpg" alt="图 14"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-24-13-12-42-866_org.ppsspp.pps.jpg" alt="图 15"><br><img src="https://tmx.fishpi.cn/img/Screenshot_2023-11-24-13-18-57-886_org.ppsspp.pps.jpg" alt="图 16">  </p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2023/11/29/1701234326.html">https://sszsj.com/articles/2023/11/29/1701234326.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a><a class="post-meta__tags" href="/tags/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3/">最终幻想</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/Screenshot_2023-11-29-12-46-10-857_org.ppsspp.pps.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2023/12/05/1701754808.html" title="酿酒"><img class="cover" src="https://tmx.fishpi.cn/img/00008-3505094722.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">酿酒</div></div><div class="info-2"><div class="info-item-1">上次家里酿酒，还是上次hhh，应该是3年前了那时候小老鼠刚出生之后爸爸妈妈一直帮忙带小老鼠所以也就没空酿酒了我们这边的这种一般是黄酒，米酒度数不高，喝起来很柔和（其实也有烧酒的，不过那种得请人来烧，需要工具）黄酒就自己在家就能做 👇准备好几口缸，洗干净，然后不停的烧水，倒进去冷却（根据买的糯米重量计算需要多少水）👇另外准备一口缸，把糯米倒进去，加水泡起来👇第二天，开始蒸糯米👇蒸好了一炉👇等温度降下来了拌上酒曲丢进缸里👇完成hhh👇当然时不时要去拌一下OK，就先这样吧 </div></div></div></a><a class="pagination-related" href="/articles/2023/11/27/1701052432.html" title="逛下庙会"><img class="cover" src="https://tmx.fishpi.cn/img/00002-494270201.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">逛下庙会</div></div><div class="info-2"><div class="info-item-1">   说是庙会，但是我们一般称之为物资交流说实话，已经很久没有见过这么多人的交流了也可以说是人山人海了    这也算是我小时候最喜欢的活动之一吧因为有好吃的和好玩的，而且还不贵（虽然我小时候更多的也是看看） 一般来说，都是一些卖衣服裤子，或者其他乱七八糟的小玩意👆（糖画）👆这个是蜂蜜   然后现在玩的也多了，甚至迷宫鬼屋都出来了👆(无力吐槽)👆看了一小会，没见到有人套上了最终逛了一圈，可以说啥都没买，毕竟现在看来这些东西也就这样本来想给小老鼠买个兔子的，可惜看着都不是很有活力，最终作罢 不过重头戏是居然有斗牛金华斗牛这个东西，虽然说是有名的传统民俗娱乐活动，但是说实话，我也只在课本上见过这次算上见到真的了只可惜主办方挖的坑有点深，周围全是人，完全看不到👆手机举过头顶勉强拍到一点   (凑合看吧)  最后，猜猜这是啥   </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2019/09/07/1567834362634.html" title="最终幻想----一切的幻想从这里开始"><img class="cover" src="https://tmx.fishpi.cn/img/4Hu_1-f641bcdc.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-07</div><div class="info-item-2">最终幻想----一切的幻想从这里开始</div></div><div class="info-2"><div class="info-item-1">笔记本配置跟不上玩不了大作了那就玩玩以前的游戏吧补一补以前的经典正好现在手机配置也不低旧手机装了几个模拟器彻底沦为掌机经典那就从最终幻想开始吧最终幻想系列挺多的也不知道我什么时候能补完🤣🤣🤣   世界被黑暗笼罩着。风静止了，海啸强烈，大地在腐败。人民在等待，他们唯一的希望，一则预言……“世界被染成黑暗时，4位光之战士将会出现……”经过漫长的旅途，4个年轻人来了，每人拥有一块水晶。这4个年轻人真是光之战士吗？操纵形成世界的4种力量——土、火、水、风的敌人能打败吗？首先要让4大水晶恢复光辉，阻止世界的崩溃！即将起程了，4位光之战士！  踩雷，走迷宫，打boss，我玩的时候并没有感觉到特别惊艳，而且时常不知道下一步该干什么，然而这是因为我玩习惯了这类RPG，考虑到游戏发行年份，就不难理解了，这是一款直接拯救了一家公司的游戏，总体上这就是一个合格的RPG吧，最终boss一开始不会打，一个回血直接白打后来才发现要叠状态，囧 最终，4位年轻人拯救了公主，顺便把世界也拯救了😏           </div></div></div></a><a class="pagination-related" href="/articles/2019/09/11/1568209682009.html" title="最终幻想2----轮班的4号，白给的敏武"><img class="cover" src="https://tmx.fishpi.cn/img/8l5_1-6752d17d.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-11</div><div class="info-item-2">最终幻想2----轮班的4号，白给的敏武</div></div><div class="info-2"><div class="info-item-1">  打完了《最终幻想》一代，接下来就打二代。其实最终幻想每一代的故事都是独立的，除了像飞空艇之类的元素互通外，各代之间并不关联   最终幻想2，玩的是psp版本，开场CG还是不错滴，开场讲明了起因是帕拉梅西亚帝国皇帝从地狱招来大批魔物，妄图征服世界，各个国家相继沦陷了，即使组织了反抗军依然失败了~  只不过开场过完进入游戏，又回到了1代的RPGMaker风格，反差有点大。而整个二代讲述的就是主角们怎么复国，最后打败皇帝的故事了。  然而在这一代，取消了前作中的等级设定。是的，没错，没有等级，各项属性都要在战斗中提升。简单地说就是战斗中消耗血量到一定程度了，战斗结束后就增加血量上限，耗魔了，就增加魔上限，各种技能也靠熟练度升级。然后这就造成一种奇怪的现象，当主角们走到一个新的区域的时候，踩雷遇怪，怪在边上看着，主角们在互殴……我也不好评价这个设定好不好，总之我一开始是不知道还能自残的，所以初期打小怪没问题，打boss就爵爵了……...</div></div></div></a><a class="pagination-related" href="/articles/2021/08/30/1630302787009.html" title="最终幻想3----4个孤儿的冒险"><img class="cover" src="https://tmx.fishpi.cn/img/1630298809278.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-30</div><div class="info-item-2">最终幻想3----4个孤儿的冒险</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/articles/2024/01/02/1704177884.html" title="最终幻想4月之归还"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1704181062587.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-02</div><div class="info-item-2">最终幻想4月之归还</div></div><div class="info-2"><div class="info-item-1">   月之归还是最终幻想4的后传正传1991年发售，后传是2008年讲述正传17年以后的故事 后传了增加了新的月相系统和联合技不过还是炒冷饭基本的素材地图都是一样的甚至boss都有一些是一样的啊……这…… 后传不同篇章之间似乎是有点独立的就先这样吧，目前打到了月之民篇    赛奥德亚篇–最后的赤翼...</div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348408121.html" title="所以，这有什么用？吃屎吧"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293587612.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">所以，这有什么用？吃屎吧</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348409230.html" title="游戏人生"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293371923.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">游戏人生</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">159</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">155</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/09/16/1758011089.html" title="小老鼠五周岁记"><img src="https://tmx.fishpi.cn/img/pic_1758011126510.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小老鼠五周岁记"/></a><div class="content"><a class="title" href="/articles/2025/09/16/1758011089.html" title="小老鼠五周岁记">小老鼠五周岁记</a><time datetime="2025-09-16T08:24:49.000Z" title="发表于 2025-09-16 16:24:49">2025-09-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/06/23/1750659999.html" title="服务器攻击记录"><img src="https://tmx.fishpi.cn/img/20250623142727.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务器攻击记录"/></a><div class="content"><a class="title" href="/articles/2025/06/23/1750659999.html" title="服务器攻击记录">服务器攻击记录</a><time datetime="2025-06-23T06:26:39.000Z" title="发表于 2025-06-23 14:26:39">2025-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/12/1741760610.html" title="服务部署命令备份"><img src="https://tmx.fishpi.cn/img/20250224125625_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务部署命令备份"/></a><div class="content"><a class="title" href="/articles/2025/03/12/1741760610.html" title="服务部署命令备份">服务部署命令备份</a><time datetime="2025-03-12T06:23:30.000Z" title="发表于 2025-03-12 14:23:30">2025-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"><img src="https://tmx.fishpi.cn/img/20250213131510_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）"/></a><div class="content"><a class="title" href="/articles/2025/03/03/1740978774.html" title="仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）">仙剑奇侠传七----大概也只剩下情怀了（多图杀猫）</a><time datetime="2025-03-03T05:12:54.000Z" title="发表于 2025-03-03 13:12:54">2025-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024/12/24/1735028687.html" title="2024 三亚"><img src="https://tmx.fishpi.cn/img/20241224173417.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 三亚"/></a><div class="content"><a class="title" href="/articles/2024/12/24/1735028687.html" title="2024 三亚">2024 三亚</a><time datetime="2024-12-24T08:24:47.000Z" title="发表于 2024-12-24 16:24:47">2024-12-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2025 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
