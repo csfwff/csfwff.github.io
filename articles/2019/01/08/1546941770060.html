@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>0.0 2018 年度吐槽报告 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="   好了，又一年的年终总结来了，回去瞄了一眼，突然发现去年的年终总结没写，囧( ╯□╰..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2019/01/08/1546941770060.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '0.0 2018 年度吐槽报告',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707293026211.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">0.0 2018 年度吐槽报告</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">0.0 2018 年度吐槽报告</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-01-08T10:05:00.000Z" title="发表于 2019-01-08 18:05:00">2019-01-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-06T03:07:27.000Z" title="更新于 2021-01-06 11:07:27">2021-01-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%86%8D%E8%A7%81%E6%B1%9F%E6%B9%96/">再见江湖</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/pic_1707293026211.png" alt="picture 0">  </p>
+<p>好了，又一年的年终总结来了，回去瞄了一眼，突然发现去年的年终总结没写，囧( ╯□╰ )，算了，那就略过了。<br>不过按现在这样一年或两年写一次日志，感觉间隔有点久，我jio得需要多写写，一个月或3个月写一篇似乎又有点多了，暂时还是先定个半年一篇吧。希望我在19年6月份能记得。之前试着每天记录点想法，不过身为懒癌患者，坚持不动，而且有很多一闪而过的念头也来不及记录，其实锤子的闪念胶囊挺适合这种场景，可惜不用锤子……<br>依旧凌乱，随便看看，开启瞎扯模式</p>
+<p><img src="https://tmx.fishpi.cn/img/20210104152733396.gif" alt="12a0f4383.gif"></p>
+<p>2018年，在编乎上看了88499608个字，走了2086805步，听了3600首歌，b站看了283个小时……<br>emmm，仔细想想么，转行已经3年了，时间真的很快，猛然间就会发现10年前已经是2008年了，时间戳也早就过了1500000000大关，现在讨论最多的也已经从90后变成了蛋蛋后，估计不久就变成了10后了。<br>当年学化工后在车间或实验室里搬砖，各种东西往瓶子里加，搅一搅，煮一煮，然后洗一洗再结晶出来滤一滤，最后在装到纸盒子里烘一烘，（强行队形23333），然后再走个液相估计就差不多了。尝过氢氧化钠，也闻过吡啶，不过终究可以不管这些了~<br>从一开始转化做Android，到后来写写小程序，后来又学了react，react native，到现在又写cocos，小游戏，最近又瞄了几眼yii，中途上架了一个应用写着玩（主要还是为了试试Kotlin）为了上架还特意申请了软著，以及顺手写的一个浏览器插件，感觉技能树越点越歪，不过自己想要的不就是这样么？好玩的东西都想学着玩一玩……等把yii框架再熟悉熟悉，就可以继续看之前的sai了，毕竟sp3的触屏和电磁笔不能浪费。说起来今年年初想着做一个微信小游戏版的飞行棋的，后来写了一个简单的不能再简单的原型后就没动过了，等以后想起来再说了（以后再也想不起来了2333）<br>瞄了一眼GitHub的提交记录，惨不忍睹<br><img src="https://tmx.fishpi.cn/img/20210104111428021.jpg" alt="8.jpg"><br>最近各行各业都不景气（不是最近，是近几年），实业误国，炒房兴邦，投机的越来越多，踏踏实实干的越来越少。所有人想的都是如何快速赚一笔，不过也没办法，生活所迫，所有人都在转发各种锦鲤各种抽奖，支付宝锦鲤，花呗锦鲤，小米锦鲤，零食锦鲤等等等等，营销无话可说，然而给我的感觉是助长了不劳而获的风气，也许是我言重了，但是你们可以去王校长113万的那次抽奖的中奖者的微博下去看看，有多少是去说见者有份的……不过说到微博抽奖，就又是一个黑幕了。作为一名微博垃圾用户，看看就行了，转再多的抽奖都不会中。最后说句，微博除了是个好图床以外就是个辣鸡（❀鸡）<br>今年冬天不知道是共享单车的第几个冬天，当年的ofo基本凉了，摩拜在这个小城市已经看不到踪影，希望明年春天能够再冒出来，然而我是不会再交押金的哈哈。到头来还是滚回了“帕布利克白克”，虽然有的车不怎么好骑，还必须停到指定的站点，虽然最近骑公共自行车的人也多了有时候站点都停满了，在共享单车最火热的时候，该做的维护并没有减少，在共享单车凉的时候，他还是这样。眼看他起高楼，眼看他宴宾客，眼看他楼塌了哈哈哈哈。<br>现在钱是越来越不值钱了，再加上微信支付宝的存在，钱变成了一个数字，可是怎么就减得特别快加的特别慢，现在都减成负的了……<br>为什么攒不下钱，因为现在不买自己想要的东西，以后就没有机会再买了。以后所有的购买需求都可以用以下理由回绝：又不是不能用，又不是非买不可。幸亏买了sp3，虽然买的有点迟，但是至少不用买数位板了，等到sp4出来的时候以及买不起了。当年很想要xbox，后来觉得ps4比较合适，再后来发现switch比较适合我，最后发现不买最合适。至今用着10年的笔记本，当年还行的gt540现在完全不够看，还好不跑算法，本来准备上一个8g的内存，然而1代i5不支持，只能4g * 2，还好有个光驱可以卸掉上了固态苟活着。曾经想买个3d打印机，现在想想算了，买了也没时间折腾；曾经想买个古罗，现在不知道那家店还在不在；曾经想买几个实体专辑，现在想想还是算了，数字专辑都不买了。手机也是，又不是不能用，空间满了清一清就是了，当年8g这么过来的，16G也是，现在32g也是，即使换了64g，128g的，依然会装一些乱七八糟的东西占满全部空间，只是现在空间少，乱七八糟的东西能少装就少装而已。就跟从a市到b市，本来一条路很堵，即使建了两条路依然会很堵一样。所以啊，就是因为有像我这样的人存在，GDP才涨不上去（逃~<br>既然说到手机了，那就继续说手机。国产手机在被苹果带歪后这两年稍微回来点了，水果是越来越贵了，买不起买不起。这两年强行全面屏，到后面被带歪搞刘海屏，以及红绿灯摄像头，实在是无力吐槽。说实话蓝绿大厂的vivo nex 和oppo findx的确让我改善了对他们的印象，然并卵，他们的主力机型仍然是刘海屏加红绿灯摄像头，再加一个大下巴。照目前的趋势，接下来是挖孔屏，前后双屏，和折叠屏，想要去掉下巴仍然需要一段时间，最重要的电池技术依然没有令人满意的进展，再加上最近5G的噱头，换机还是再等等吧。<br>emmm，又到了游戏时间。似乎已经很久没玩网游了（还不是因为电脑带不起来，还不是因为没游戏玩），说了好几年的戒游戏终于戒地差不多了（还不是转成云玩家了2333），其实云玩家也挺好的，反正自己手残，boss打不过去，解迷又不会，还不如看别人玩，还省了买游戏钱哈哈哈。最近这两年出的国产单机游戏其实还是蛮可以的，包括神舞幻想，古剑3，太吾绘卷等等，用心做游戏的还是有的。然而国内的形势依然不行，一个版号都能停了这么久，郭嘉这是要让整个游戏行业完蛋，不过他们当年似乎已经这么干过了。依然神烦各种备案，包括之前提到的软著，除了更精准地查水表，以及为某些人创收外，没什么卵用。然而这却导致了我花费两个月申请软著，个人博客依旧是用的借来的二级域名，谁让我买的cc的域名呢，连备案的机会都没，现在七牛云也得要备案域名了，刚注册就直接不能用。算了，反正我又不存文件，也就用来存图，微博是个好图床，还是不说这个了，墙越来越高，鬼知道接下来会发生什么，毕竟这是一个连🐻和🐸这两个表情都能成为敏感词汇的地方。</p>
+<img src = "https://tmx.fishpi.cn/img/V5a_9-951b8e97.jpg" width="300" />
+
+<p>好了，就这样吧，本来就已经放弃了挣扎，放弃了一切，放弃了自己，放弃了世界。每天上班，下班然后碎觉，现在唯一想的就是希望明年年底能够顺利交房，在接下来的这段时间里补一补装修的知识，真正烦人的事还没到来。没啥好追求的了，什么也不想动，感觉自己越来越咸鱼了，反正咸鱼也不错，就当最咸的那条吧。其实我很不理解为什么非要搞一番大事情，我也特别反感非要让我创业啊开公司啥的，又不是说搞就搞的，说点不好听的，其实我就是想这样咸鱼咸着。这大概就是人与人的不同吧，就像别人说某家店特别好吃，我始终get不到那个点一样。比如别人说这家店好吃那家店不好吃，我是比不出来的，吃了那么多外卖也是，除了特别难吃恶心到了的那种，所以每当有人问我哪家店好不好吃的时候，我只能说还行吧……我感觉我对吃的要求很低，除了牛肉也没有什么特别执着的了2333，只要不是特别难吃应该都没事，除了不喜欢吃的以及吃了闻着会恶心的比如肥肉（这个是吃了真的恶心想吐），芹菜（这个现在还好，没以前那么严重了），萝卜，胡萝卜（腌萝卜除外），还有莴苣，emmm差不多应该就这几个了吧（老是被说挑食，不买这几个我也不挑食……）<br>最后到了写了也没用的列目标时间，2019年的目标是：“完成2018年那些本该在2017年完成的我在2016年就信誓旦旦要完成2015年制定的目标。” ​​​ ​​ &#x3D; &#x3D; 不说笑了，2019的目标是，多读书多看报，少吃零食多睡觉……<br>还是先填坑吧，有一两个小游戏的点子，尽快实现出来吧，上架加广告，虽然没什么卵用，不过设计方面一直很头疼，画画么又不会，ps也不熟，ai也不会，设计也不懂，只能随便搞搞将就凑合了，之后学学画画再换掉吧。然后是补补装修相关的内容，0.0好像除了这俩就没啥了，那就佛了，随便找点书看看，补一补之前想看没看的动漫电影，似乎就这样了？那就这样吧<br>2019，在下唐墨夏，请多指教。<br>隐约雷鸣，雾霾天空。但盼风雨来，能留你在此。</p>
+<p>谁许了谁的情深，<br>谁弃了谁的红尘。<br>到底是天物弄人，<br>忘却三生独皈门。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2019/01/08/1546941770060.html">https://sszsj.com/articles/2019/01/08/1546941770060.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%80%BB%E7%BB%93/">总结</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/pic_1707293026211.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2019/02/01/1549029322040.html" title="WPS表格使用VBA脚本实现链接自动获取图片"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292415010.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">WPS表格使用VBA脚本实现链接自动获取图片</div></div><div class="info-2"><div class="info-item-1">   WPS表格使用VBA脚本实现链接自动获取图片记录代码防止忘记  安装vba一般用户的wps是不带vba的，无法启用宏，需要单独安装，搜索下载安装就行 写代码切换到开发工具，打开VB编辑器，选择当前的工作表，贴入代码，收工  1234567891011Private Sub Worksheet_Change(ByVal Target As Range)    With Target        If .Column = 1 And .Count = 1 Then &#x27;修改的单元格在A列，且只修改一个单元格            If Left(.Value, 7) = &quot;http://&quot; Then &#x27;如果单元格内容为网址                &#x27;添加网络图片，并设置为图片大小位置随单元格变化而变化                ActiveSheet.Shapes.AddPicture(.Value, msoCTrue, msoCTrue, .Left, .Top, .Width,...</div></div></div></a><a class="pagination-related" href="/articles/2018/12/28/1545989829230.html" title="红豆杉"><img class="cover" src="https://tmx.fishpi.cn/img/Str_6-96923d83.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">红豆杉</div></div><div class="info-2"><div class="info-item-1">  这棵红豆杉似乎是我小学的时候从山上挖下来的，10几年了。之前我爸说有结果的，然而我一直没看到果子。今年终于找到了3颗，不容易呀。   </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2020/06/04/1591246385311.html" title="煎熬--2020年中"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290083304.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-08</div><div class="info-item-2">煎熬--2020年中</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2020/12/03/1606980773113.html" title="熬过去了么？2020年终"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290043323.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-15</div><div class="info-item-2">熬过去了么？2020年终</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2019/12/17/1576558818186.html" title="End?Endless……2019年终"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292788402.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-12-17</div><div class="info-item-2">End?Endless……2019年终</div></div><div class="info-2"><div class="info-item-1">                 零老规矩，年底了，写个总结，虽然并没有什么卵用本来没准备推到社区的，毕竟是个辣鸡吐槽文但是看到黑客派第一届年终总结赠书活动，那就打个酱油混个参与奖，将就看吧 壹 我要在 2020 年把我 2019 年立下的关于 2018 年说 2017 年要把 2016 年立的 flag 的 flag...</div></div></div></a><a class="pagination-related" href="/articles/2019/05/22/1558525435723.html" title="似乎得写年中总结了2333"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292342601.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-22</div><div class="info-item-2">似乎得写年中总结了2333</div></div><div class="info-2"><div class="info-item-1">   🤣🤣🤣差不多快6月份了，得准备年中总结了，先列个大概，计划就是拿之前的文章拼凑一下2333  主要内容如下   随便的人生，放弃挣扎  合理死去  996.icu  反社交属性  溜到新房里量尺寸  这辈子没机会去四川  算命&amp;缘分  华为事件  暂时先这些了，其他想到再补充背景音乐     </div></div></div></a><a class="pagination-related" href="/articles/2019/05/28/1559042092350.html" title="随便吧~2019年中"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707291236530.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-28</div><div class="info-item-2">随便吧~2019年中</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2021/12/02/1638423849130.html" title="注定无法安稳的2021"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289136752.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-02</div><div class="info-item-2">注定无法安稳的2021</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://foreverblog.cn/assets/logo/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://foreverblog.cn/assets/logo/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性"><img src="https://tmx.fishpi.cn/img/20260123131839_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="光与影：33号远征队——论防沉迷的重要性"/></a><div class="content"><a class="title" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性">光与影：33号远征队——论防沉迷的重要性</a><time datetime="2026-01-23T06:36:49.000Z" title="发表于 2026-01-23 14:36:49">2026-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/22/1766414821.html" title="生性凉薄"><img src="https://tmx.fishpi.cn/img/20251130210912_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生性凉薄"/></a><div class="content"><a class="title" href="/articles/2025/12/22/1766414821.html" title="生性凉薄">生性凉薄</a><time datetime="2025-12-22T14:47:01.000Z" title="发表于 2025-12-22 22:47:01">2025-12-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/17/1765948402.html" title="2025 空白页"><img src="https://tmx.fishpi.cn/img/20251211114436_70_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025 空白页"/></a><div class="content"><a class="title" href="/articles/2025/12/17/1765948402.html" title="2025 空白页">2025 空白页</a><time datetime="2025-12-17T05:13:22.000Z" title="发表于 2025-12-17 13:13:22">2025-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人"><img src="https://tmx.fishpi.cn/img/20251010135659_49_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我将注定孤身一人"/></a><div class="content"><a class="title" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人">我将注定孤身一人</a><time datetime="2025-10-10T05:59:22.000Z" title="发表于 2025-10-10 13:59:22">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸"><img src="https://tmx.fishpi.cn/img/pic_1704181062587.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最终幻想4月之归还----又是月亮惹的祸"/></a><div class="content"><a class="title" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸">最终幻想4月之归还----又是月亮惹的祸</a><time datetime="2025-09-22T06:35:36.000Z" title="发表于 2025-09-22 14:35:36">2025-09-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2026 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

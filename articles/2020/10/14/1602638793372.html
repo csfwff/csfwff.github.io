@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小老鼠惊险成长记 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" ..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2020/10/14/1602638793372.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小老鼠惊险成长记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707290430480.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">小老鼠惊险成长记</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">小老鼠惊险成长记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-21T01:26:33.000Z" title="发表于 2020-10-21 09:26:33">2020-10-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-05T09:00:48.000Z" title="更新于 2021-01-05 17:00:48">2021-01-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%86%8D%E8%A7%81%E6%B1%9F%E6%B9%96/">再见江湖</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/pic_1707290430480.png" alt="picture 0">  </p>
+<p>承接上文<a href="https://sszsj.com/articles/2020/09/20/1600608317739.html">小老鼠惊险诞生记</a></p>
+<p>&emsp;&emsp;之前小老鼠黄疸，吃药之后终于是退下去了<br>&emsp;&emsp;然而没过多久，新的问题又来了。不知道是不是因为吃黄疸药的问题，一直拉肚子，然后，理所当然就红屁股了，一开始一丢丢，后面范围越来越大，看着就疼。<br>&emsp;&emsp;红屁股就算了，偏偏又开始咳嗽，吐泡泡，测耳温，37.4℃了快，接近发烧了，但也还差点，去医院，开了点头孢就回家了，吃了两天，屁股红的实在不行了，找了另外一个专门看小孩的医生，开了药，内服外用，效果显著，红屁股是退下去了。<br>&emsp;&emsp;10月11号，小老鼠刚好满月，去医院检查，没啥大问题，就一个腿纹不一致，照了 B 超，没问题，愉快地回家。结果第二天早上，换尿不湿的时候，发现小老鼠的肚脐上有液体流出来，感觉像渗血一样，赶紧拿碘伏消毒了一下，观察了一天，没啥好转，星期二上午，就赶紧请假送去医院，然后又有点咳嗽，吐泡泡，拍了胸片，有点肺炎，没办法，吊针打上，肚脐继续消毒。<br>  打完回家，到了晚上，肚脐还是在往外冒淡黄色的脓一样的液体，量体温，37 度多，思来想去，不放心，晚上开车去医院，准备急诊住院。还在路上的时候，叔叔打电话过来，因为我在开车，不方便接，就说待会打回去，匆匆挂掉电话。等小老鼠这边安定好后，我打电话回去问什么事，结果说是我奶奶摔跤了……真的是，一波未平一波又起，我奶奶也真的是，80 多的人了，大晚上还在外面（我们出发的时候奶奶没在家），问叔叔情况怎么样，说是看着挺严重的，因为没有车，只是送到镇里的卫生院处理了一下。小老鼠这边处理好后，我跟我妈就赶紧回家，回家一看，半边脸肿了，嘴上还一直说着没事没事。我跟我妈觉得得送到医院去，镇里的卫生院只能临时处理下，但是奶奶一直说不用去，只能作罢，观察一晚上。<br>  第二天一大早，准备好早饭，我和我妈就赶紧去医院，毕竟就留了小老鼠妈妈在医院，一晚上肯定没得休息（虽然这一个月都没怎么睡好过），在医院待了一会，赶去上班。上班期间，看到小老鼠的一堆化验报告单出来，好几个指标不正常，又是一顿谷歌百毒，都查到婴儿肝炎综合征了，后面问了医生是正常的，才放下心来，真是自己吓自己。另外肚脐也做了超声，好像是有脐尿管瘘，又不确定。下班后立刻就去医院（平时按惯例要多待个 6 7 分钟），看了一会回家吃饭。回家后，我妈说姑姑他们也来看过奶奶了，但是都觉得听奶奶的意思，不想去医院就不去了，既然大家都这么说，只能继续搁置（后面会说一下原因）。<br>  星期四，又是打点滴的一天，换尿不湿的时候，小老鼠又红屁股了……前段时间也是红屁股，擦了药刚好，又红了……无奈，买这个药买那个霜，换尿不湿品牌，希望能好转。晚上回家吃饭，看一眼奶奶，更肿了，两个眼睛只剩一条缝，眼睛周围一圈黑的，就像被拳头打了一样，嘴角也有淤青，我跟我妈说不行，明天一定得送医院（后面会有说明为什么是明天）。晚上，洗完脚换完衣服，准备睡觉，小老鼠妈妈来电话了，说小老鼠的屁股不行了，让我把家里之前从土医生那里拿的擦屁股的药拿过去，马上换衣服送过去，在医院睡了一晚。<br>  小老鼠看着是有一点好转了，这里说一下奶奶，我爸爸他们兄弟姐妹 4 个，我爸在宁波给我姐带孩子（为什么是我爸给我姐带孩子，这又是另一桩奇葩的故事了），我妈在家帮我带小老鼠，我大的叔叔单身一个人，身体又不好，很少回家，我姑姑平时也在上班，我姑父虽然不上班，但是年纪有点大了，很多东西不清楚，一个人出去都会走丢，而我小叔也在上班。所以，目前在家能照顾我奶奶的，只有我妈，其他人都是要么上班，要么没法单独照看奶奶，而且能开车的也只有我了，所以，只能周五晚上送去医院，我妈留在那照看奶奶，我回到小老鼠这边照看。<br>&emsp;&emsp;在医院住了一星期，小老鼠终于出院回家了，肚脐也应该正常，就是感染了，放下心来<br>&emsp;&emsp;接下来就是努力长大啦~~</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2020/10/14/1602638793372.html">https://sszsj.com/articles/2020/10/14/1602638793372.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B0%8F%E8%80%81%E9%BC%A0/">小老鼠</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/pic_1707290430480.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2020/10/10/1602293382243.html" title="一往无前"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290714172.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">一往无前</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2020/09/20/1600608317739.html" title="小老鼠惊险诞生记"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290381270.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">小老鼠惊险诞生记</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2020/09/20/1600608317739.html" title="小老鼠惊险诞生记"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290381270.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-20</div><div class="info-item-2">小老鼠惊险诞生记</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2021/09/10/1631271198739.html" title="小老鼠周岁记"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289376096.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-10</div><div class="info-item-2">小老鼠周岁记</div></div><div class="info-2"><div class="info-item-1">   🐭真的很快，小老鼠出生已经一年了感觉过去了很久却感觉很近真的是，时间在不经意之间就过去了小老鼠终于一周岁啦 🐭之前农历生日的时候，给他抓周一开始拿的计算器，然后扔掉抓起算盘抱走继续抓，还是算盘还好，我没把键盘放进去 🐭回想起小老鼠刚出生的时候黄疸，红屁股，感冒到后来肚脐发炎真的是太难了好在之后一直好好的 🐭一开始说他不会抬头后来一样抬的好好的一开始说他不会爬现在爬的那个溜现在，我们要学走路啦 🐭小老鼠一直吃的母乳虽然最近白天不怎么吃奶但是，今天早上称了有22斤多了妥妥的一个小胖几了想想当初刚出来的时候才5斤多 🐭超喜欢看书，虽然只是翻过来翻过去然后就往嘴里塞喜欢开小火车，开起来以后把他掰停超级喜欢绿色，绿色的小汽车以及……家门口绿色的垃圾桶…… 🐭在地上四处乱爬站在围栏边使劲摇坐在学步车里到处乱跑骑着小马四处乱窜每天坐在摇一摇里跟小爷爷散步 🐭有时候希望时间快一点这样就能看到小老鼠长大拉有时候希望时间慢一点美好的时光不想这么快就过去让我们一起长大吧~ </div></div></div></a><a class="pagination-related" href="/articles/2021/12/02/1638423849130.html" title="注定无法安稳的2021"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289136752.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-02</div><div class="info-item-2">注定无法安稳的2021</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2022/09/14/1663152545000.html" title="小老鼠两周岁记"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707286570325.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-14</div><div class="info-item-2">小老鼠两周岁记</div></div><div class="info-2"><div class="info-item-1">   又到了9月11号（因为公司事情太多了，都抽不出时间来写）又到了小老鼠的生日领导早早地订好了生日蛋糕今年是沙滩主题的哈哈哈 看着小老鼠一点点长大真的很开心想当初那么小不点现在秤上也有25斤多了门口比高高有他一点一点长大的印记（每次都要我去拿书比高高） 小老鼠真的超级乖（虽然偶尔也会闹脾气）有时候我出门换好鞋子他自己把我拖鞋拿去放鞋架上了 回想去年的时候还不会走路现在跑得比谁都快跟着小爷爷去村上玩抱着球球滚来滚去 在家门口的斜坡玩车子在玩具房里滑滑梯以及在家门口玩我拎回来的一筐沙子 小老鼠啥都懂洗衣服要来帮忙择菜会去拿篮子（就是不喜欢把玩具收起来hhhh） 我们说啥他什么都知道（就是只喜欢听后面半句）比如说饭饭吃掉我们就出去玩那么就只有出去玩了哈哈哈 只可惜我是一个不称职的爸爸每天晚上回家都快9点了车子挡风玻璃上一直有他在车里玩的手印不舍得擦掉就这样吧希望能有更多时间一起玩吧~ </div></div></div></a><a class="pagination-related" href="/articles/2024/10/24/1729746236.html" title="小老鼠四周岁记"><img class="cover" src="https://tmx.fishpi.cn/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241024131530.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-24</div><div class="info-item-2">小老鼠四周岁记</div></div><div class="info-2"><div class="info-item-1"> hhh，今年也是小汽车蛋糕~~ 忙忙忙，拖延症又犯了本来应该9月份写的硬生生拖了一个多月 小老鼠已经从托班，升到了小班送上学都不要送到学校门口要自己走过去 拿回家的作品也越来越多煎蛋，大树，狮子好多呀~ 夏天的时候也敢下水游泳了（就是没学会……） 每天都有讲不完的话每天都有编不完的故事 最喜欢的故事是屁屁侦探最喜欢的动画是海底小纵队最喜欢的玩具依旧是小汽车 当然，小老鼠也到了狗都嫌烦的年纪开始了四处捣蛋当然，该闹的时候也是闹但是，谁让他是小老鼠呢？ 哈哈哈哈~就这样吧~~ </div></div></div></a><a class="pagination-related" href="/articles/2023/09/25/1695622847.html" title="小老鼠上学记"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707284083773.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-25</div><div class="info-item-2">小老鼠上学记</div></div><div class="info-2"><div class="info-item-1">   因为有些事情，今年写的有点迟了小老鼠在9月初的时候，就已经背上小书包去学校了虽然上的幼儿园托班就是前几天不适应，哭了好久每天都要问“我去上学了爷爷和奶奶会来接我么”好在后面很快就有了好朋友 老师每天会发照片好好吃饭，好好玩耍讲故事，做游戏好好看书，好好睡觉吃完午饭和小朋友一起出去散步和小朋友一起玩滑滑梯虽然还是有些小脾气虽然还是有点胆小 今年有了平衡车和自行车平衡车跑的飞快自行车也能整圈的骑了扭扭车也能向前冲了冲鸭~~ 墙上的有声挂画都不知道学了多少遍了每次喝奶粉就坐在那边点挂图汽车水果颜色古诗只是在挂图上点一点结果那天，他自己一个人坐在那边开始了英文的测验居然都会了！！！好吧，那咱就换一波新的~~ 11号是小老鼠生日今年的蛋糕是小汽车的今年是3根蜡烛了哟加油，继续长高高依旧喜欢小汽车依旧喜欢看书真希望就这样一直下去就这样吧 </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://foreverblog.cn/assets/logo/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://foreverblog.cn/assets/logo/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性"><img src="https://tmx.fishpi.cn/img/20260123131839_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="光与影：33号远征队——论防沉迷的重要性"/></a><div class="content"><a class="title" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性">光与影：33号远征队——论防沉迷的重要性</a><time datetime="2026-01-23T06:36:49.000Z" title="发表于 2026-01-23 14:36:49">2026-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/22/1766414821.html" title="生性凉薄"><img src="https://tmx.fishpi.cn/img/20251130210912_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生性凉薄"/></a><div class="content"><a class="title" href="/articles/2025/12/22/1766414821.html" title="生性凉薄">生性凉薄</a><time datetime="2025-12-22T14:47:01.000Z" title="发表于 2025-12-22 22:47:01">2025-12-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/17/1765948402.html" title="2025 空白页"><img src="https://tmx.fishpi.cn/img/20251211114436_70_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025 空白页"/></a><div class="content"><a class="title" href="/articles/2025/12/17/1765948402.html" title="2025 空白页">2025 空白页</a><time datetime="2025-12-17T05:13:22.000Z" title="发表于 2025-12-17 13:13:22">2025-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人"><img src="https://tmx.fishpi.cn/img/20251010135659_49_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我将注定孤身一人"/></a><div class="content"><a class="title" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人">我将注定孤身一人</a><time datetime="2025-10-10T05:59:22.000Z" title="发表于 2025-10-10 13:59:22">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸"><img src="https://tmx.fishpi.cn/img/pic_1704181062587.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最终幻想4月之归还----又是月亮惹的祸"/></a><div class="content"><a class="title" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸">最终幻想4月之归还----又是月亮惹的祸</a><time datetime="2025-09-22T06:35:36.000Z" title="发表于 2025-09-22 14:35:36">2025-09-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2026 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

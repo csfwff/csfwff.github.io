@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>使用Caddy在非443端口申请SSL证书 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2023/03/07/1678159118000.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '使用Caddy在非443端口申请SSL证书',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707284719058.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">使用Caddy在非443端口申请SSL证书</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">使用Caddy在非443端口申请SSL证书</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-07T03:18:38.000Z" title="发表于 2023-03-07 11:18:38">2023-03-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-07T03:18:38.000Z" title="更新于 2023-03-07 11:18:38">2023-03-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">483</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/pic_1707284719058.png" alt="picture 0"> </p>
+<h2 id="Caddy"><a href="#Caddy" class="headerlink" title="Caddy"></a>Caddy</h2><p>众所周知，Caddy是一个用Go实现的web服务器<br>（虽然我只是拿来当nginx用）<br>而Caddy有一个重要的特性<br>就是会自动帮你申请SSL证书</p>
+<blockquote>
+<p>当符合下面一些合理的标准时，Caddy会自动为所有站点启用HTTPS:</p>
+<ul>
+<li>主机名<ul>
+<li>不为空</li>
+<li>不是localhost</li>
+<li>不是一个IP地址</li>
+<li>不超过一个通配符（*）</li>
+<li>通配符必须是最左边的标签</li>
+</ul>
+</li>
+<li>没有显式指定端口为80</li>
+<li>没有显式指定使用http协议</li>
+<li>TLS没有在站点的定义中被关闭</li>
+<li>不是你自己提供的证书和密钥</li>
+<li>Caddy能够绑定到端口80和443（除非使用DNS验证）</li>
+</ul>
+</blockquote>
+<h2 id="非443端口"><a href="#非443端口" class="headerlink" title="非443端口"></a>非443端口</h2><p>众所周知，https的默认端口是443<br>那如果我准备用别的端口呢？<br>caddy提供了各种dns验证的模块<br><a target="_blank" rel="noopener" href="https://caddyserver.com/docs/modules/">All Modules</a><br>在这里找到相应的dns提供商<br>大部分都有，没有就用<code>lego_deprecated</code><br>我的在dnspod，所以选择<code>dns.providers.dnspod</code></p>
+<h2 id="安装module"><a href="#安装module" class="headerlink" title="安装module"></a>安装module</h2><p>首先安装好caddy</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https</span><br><span class="line">curl -1sLf &#x27;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#x27; | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg</span><br><span class="line">curl -1sLf &#x27;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#x27; | sudo tee /etc/apt/sources.list.d/caddy-stable.list</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install caddy</span><br></pre></td></tr></table></figure>
+<p>然后安装module</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo caddy add-package github.com/caddy-dns/dnspod</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取appid和token"><a href="#获取appid和token" class="headerlink" title="获取appid和token"></a>获取appid和token</h2><p>登陆dnspod，点击右上角头像，选择API密钥<br>选择DNSPod Token<br>创建一个密钥，记下id和token</p>
+<h2 id="Caddyfile"><a href="#Caddyfile" class="headerlink" title="Caddyfile"></a>Caddyfile</h2><p>编辑 <code>/etc/Caddyfile</code><br>在开头写上</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	http_port 1999  # http端口</span><br><span class="line">	https_port 2000  # https端口</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>用于指定端口</p>
+<p>然后创建一个站点，加入一个tls，同时填上appid和token</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test.sszsj.cc &#123;</span><br><span class="line">	reverse_proxy localhost:3001</span><br><span class="line">	tls &#123;</span><br><span class="line"> 		dns dnspod &#123;换成appid&#125;,&#123;换成apptoken&#125;  # 例如 11111,dsadsadassdadsadsa</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动caddy"><a href="#启动caddy" class="headerlink" title="启动caddy"></a>启动caddy</h2><p>执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">caddy start --config /etc/caddy/Caddyfile</span><br></pre></td></tr></table></figure>
+<p>理论上应该能在控制台看到申请证书的过程<br>这时候https访问2000端口，应该就能正常看到页面了</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2023/03/07/1678159118000.html">https://sszsj.com/articles/2023/03/07/1678159118000.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Caddy/">Caddy</a><a class="post-meta__tags" href="/tags/https/">https</a><a class="post-meta__tags" href="/tags/SSL/">SSL</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/pic_1707284719058.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2023/04/12/1681282326000.html" title="折腾后续----OMV的硬盘挂了"><img class="cover" src="https://tmx.fishpi.cn/img/00018-1581855605.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">折腾后续----OMV的硬盘挂了</div></div><div class="info-2"><div class="info-item-1">   前情提要看这里-&gt;周末折腾—-记OMV升级失败那一次手贱升级失败后，被迫换了硬盘重新安装之前还想着没机会再拆开了可惜啊可惜啊，现在又不得不拆开了 全是报错在那之后，我又部署了docker，然后部署了rust desk，ddns等服务，本来没啥事，用着也很顺畅最近不知怎么的，老是挂掉，开盖一看全是这个报错 123ata1.00: status: &#123; DRDY ERR &#125;ata1.00: error:  &#123; UNC &#125;ata1.00: failed command: READ FPDM QUEUED 以及一些IO错误   百度一下以我目前的水平，掉进的坑肯定有前人掉进去过所以，不管怎么说，先百度一下差不多就是因为异常断电导致硬盘坏了仔细想想也雀食是这么一回事，有次断电后就经常出现这个现象 拆机拔硬盘简单想了想，ovm上直接检测坏道之类的用不习惯那就直接拆机拔硬盘吧，反正几个螺丝拧一下顺便可以拆开看看这台笔记本里面的结构《原装正品》主板和硬盘，小巧玲珑的风扇百度了一下，是记忆内存出品的2G内存条（只有一个内存插槽） ...</div></div></div></a><a class="pagination-related" href="/articles/2023/03/06/1678099758000.html" title="使用Mailu搭建自己的域名邮箱"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707284689779.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">使用Mailu搭建自己的域名邮箱</div></div><div class="info-2"><div class="info-item-1">    【活动】送服务器啦！蓝易云征文大赛 1. intro平时用域名邮箱，一般都选择现有的企业邮箱服务，比如阿里的，腾讯的，但是这些免费的只能绑一个域名，腾讯的还得注册企业微信，如果有多个域名，这些就不够用了。当然，如果只是收信，可以选择使用clouflare的转发服务，这里就不细说了。因为我有多个域名邮箱的需求，这里选择自己搭建一个邮箱服务。我搜索对比了MailCow 和 Mailu，种种尝试使用MailCow搭建失败后，最后选择了用Mailu 2. 准备首先，要有一台服务器（废话），然后确认25端口是否打开检查方式是用 telnet 测一下 比如 telnet mx1.qiye.aliyun.com 25(把中间的域名换成你的IP)正常情况下，你会是一直 trying，因为大部分厂商都是把25端口关掉的这时候你需要去控制台提工单或者联系客服开通开通成功后再测试，就会是 12345Trying 140.205.96.211...Connected to mx1.qiye.aliyun.com.Escape character is &#x27;^]&#x27;.220...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://foreverblog.cn/assets/logo/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://foreverblog.cn/assets/logo/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Caddy"><span class="toc-number">1.</span> <span class="toc-text">Caddy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E443%E7%AB%AF%E5%8F%A3"><span class="toc-number">2.</span> <span class="toc-text">非443端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85module"><span class="toc-number">3.</span> <span class="toc-text">安装module</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96appid%E5%92%8Ctoken"><span class="toc-number">4.</span> <span class="toc-text">获取appid和token</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Caddyfile"><span class="toc-number">5.</span> <span class="toc-text">Caddyfile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8caddy"><span class="toc-number">6.</span> <span class="toc-text">启动caddy</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性"><img src="https://tmx.fishpi.cn/img/20260123131839_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="光与影：33号远征队——论防沉迷的重要性"/></a><div class="content"><a class="title" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性">光与影：33号远征队——论防沉迷的重要性</a><time datetime="2026-01-23T06:36:49.000Z" title="发表于 2026-01-23 14:36:49">2026-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/22/1766414821.html" title="生性凉薄"><img src="https://tmx.fishpi.cn/img/20251130210912_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生性凉薄"/></a><div class="content"><a class="title" href="/articles/2025/12/22/1766414821.html" title="生性凉薄">生性凉薄</a><time datetime="2025-12-22T14:47:01.000Z" title="发表于 2025-12-22 22:47:01">2025-12-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/17/1765948402.html" title="2025 空白页"><img src="https://tmx.fishpi.cn/img/20251211114436_70_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025 空白页"/></a><div class="content"><a class="title" href="/articles/2025/12/17/1765948402.html" title="2025 空白页">2025 空白页</a><time datetime="2025-12-17T05:13:22.000Z" title="发表于 2025-12-17 13:13:22">2025-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人"><img src="https://tmx.fishpi.cn/img/20251010135659_49_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我将注定孤身一人"/></a><div class="content"><a class="title" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人">我将注定孤身一人</a><time datetime="2025-10-10T05:59:22.000Z" title="发表于 2025-10-10 13:59:22">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸"><img src="https://tmx.fishpi.cn/img/pic_1704181062587.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最终幻想4月之归还----又是月亮惹的祸"/></a><div class="content"><a class="title" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸">最终幻想4月之归还----又是月亮惹的祸</a><time datetime="2025-09-22T06:35:36.000Z" title="发表于 2025-09-22 14:35:36">2025-09-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2026 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

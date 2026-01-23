@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>八方旅人----活着，就是一场旅行 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="游戏时长镇楼 这个应该是6月初之前古墓丽影崛起打完之后开始的存档时长96小时多，实际时长起码100以上了 八方旅人虽然官方译名叫《歧路旅人》，但是我更喜欢《八方旅人》这个名字八位旅人 ..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2024/11/29/1732855861.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '八方旅人----活着，就是一场旅行',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/octopathtraveler.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">八方旅人----活着，就是一场旅行</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">八方旅人----活着，就是一场旅行</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-29T04:51:01.000Z" title="发表于 2024-11-29 12:51:01">2024-11-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-29T04:51:01.000Z" title="更新于 2024-11-29 12:51:01">2024-11-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%BB%98%E4%B8%96%E9%9A%8F%E6%83%B3%E5%BD%95/">默世随想录</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">4.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/5392640_20241127213345_1.jpg" alt="图 1"><br>游戏时长镇楼</p>
+<p>这个应该是6月初之前古墓丽影崛起打完之后开始的<br>存档时长96小时多，实际时长起码100以上了</p>
+<h2 id="八方旅人"><a href="#八方旅人" class="headerlink" title="八方旅人"></a>八方旅人</h2><p>虽然官方译名叫《歧路旅人》，但是我更喜欢《八方旅人》这个名字<br>八位旅人  八个故事<br>虽然原因不同，目的不同，但是大家都踏上了旅途<br>在旅途中相遇，在旅途中互相帮助<br>（当然剧情中一点没有互相帮助就是了，除了帮忙打架）<br>（以及酒馆中偶尔的小剧场）<br>8个主角的剧情，只能说是中规中矩，明面上互相独立，<br>不过可能也正因为是这样，在完成8位主角的主线后<br>总感觉意犹未尽，冥冥之中有什么能把这些主线关联起来<br>而这时候才发现支线中隐藏着真正的主线<br>由此，将所有人的故事串了起来<br>（克里斯寻父记）<br>（克里斯：坏了，我成主角了）<br>（打隐藏boss前有8个黑影，打完一个就能看一本书，记录了一些细节）<br>（可以看底下的剧透了解完整的剧情）</p>
+<blockquote>
+<p>——活着，就是一场旅行。<br>会前往何处，做些什么，<br>并成为哪个故事的主角呢？<br>全部都交给你了。<br>去吧，在这个<br>自己生存的世界旅行吧——</p>
+</blockquote>
+<p><img src="https://tmx.fishpi.cn/img/Snipaste_2024-11-28_13-28-13.jpg" alt="图 2">  </p>
+<p>8个主线里最喜欢的大概就是盗贼泰里翁了<br>主题便是<strong>信任</strong><br>泰里翁因为好友的背叛，变得不再相信任何人<br>最后在他人的无条件信任中，找回了相信他人的意义</p>
+<p>神官欧菲利亚，是我选的开局角色<br>我觉得主题应该是<strong>温柔</strong><br>温柔对待任何人，但也不放过任何坏人<br>圣火也散发柔和的光芒</p>
+<p>学者塞拉斯，主题应该是<strong>求真</strong><br>冷静分析，探查真相<br>知识，应该分享出去，而不是某些人的收藏</p>
+<p>剑士欧尔贝克，主题应该是<strong>守护</strong><br>因为守护的国家被灭亡了，失去了挥剑的意义<br>在寻找真相的过程中，找回了挥剑的意义<br>只要有守护的人，就有挥剑的意义</p>
+<p>舞娘普利姆罗洁，主题是<strong>复仇</strong><br>emmm，真的是复仇</p>
+<p>商人泰雷莎，主题是<strong>宝藏</strong>？<br>不知道，但是那天真烂漫是真的让人羡慕<br>还有那一眼就能发现有价值的眼力<br>最后发现宝藏不一定都是珠宝宝石<br>而且泰雷莎的英文名字，<strong>Tressa</strong>，跟宝藏英文，<strong>Treasure</strong>，也很像</p>
+<p>药师亚芬，主题是<strong>迷茫</strong><br>发现女药师通过来敛财<br>自己因为救助了恶徒，导致小孩被绑架，<br>一度怀疑自己的信念，<br>好在最后坚持了自己的想法</p>
+<p>猎人海茵特，主题，emmm，没总结出来<br>但是最终救回了师傅</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>画面，emmm，是我喜欢的像素风，而且开创了高清3D像素的这种风格<br>好评（然后果断就被借鉴了）<br>音乐，必须好评，原声带刷了N遍<br>战斗，经典回合制，但是可以看到行动顺序<br>合理规划，效果爆炸<br>猎人的黏着捕网真好用<br>我的回合，下一回合还是我先动，直接破防，嘿嘿<br>药师喷雾真神技，再也不缺BP<br>每个角色，除了自己本身的职业外，还可以另外再学一个副职业<br>这样搭配起来就有各种组合了<br>双学者双神官，伤害爆炸，你还没动，就结束了<br>双舞娘双神官，16支舞疯狂蹦迪，可惜没能刷出来100倍经验<br>（神官大招是指定角色技能能放两遍，跳舞是给随机效果，<br>有几率得到5倍经验，极低概率100倍经验，也有可能直接濒死，再加一个地面爆炸了，<br>满BP一次跳4支，两个舞娘就能跳16支）<br>当然，也有剑士舞娘的神奇组合，emmm，猛男在线蹦迪</p>
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><p>最要吐槽的就是翻译了！！<br>桑兰多（sun land）伍多兰多（wood land）<br>弗洛斯特兰多（frost land）弗拉特兰多（flat land）<br>全是兰多，老老实实翻译成地区不行么<br>最后就是啥地方都记不住，全靠头像<br>头像在哪，就往哪去<br>地点变得毫无意义</p>
+<h2 id="以下剧透"><a href="#以下剧透" class="headerlink" title="以下剧透"></a>以下剧透</h2><p>转载自 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/kamigen/p/14680992.html">https://www.cnblogs.com/kamigen/p/14680992.html</a></p>
+<details>
+<summary>点击展开</summary>
+
+
+<h3 id="最初"><a href="#最初" class="headerlink" title="最初"></a>最初</h3><p>传说世界由十三位神祇共同创造。祂们创造了大陆，护佑着人类繁衍生息，还分别对自己钟爱的职业赐福，大陆上的人们也建造了13个对应的祠堂用以祈福、祭祀。<br>十二位神的力量都是光明而正义的，但第十三神——黑呪（咒）神加尔戴拉（下称魔神）掌握着死亡，为了增强力量，祂想要毁灭人类。<br>好在十二位神不会坐视不管，祂们与黑呪神大战，最终成功将之打入了终结之门。但神们也遭到重创，从此退回了神界。</p>
+<p>为了镇压魔神，远古的人类英雄贝奥武夫王在终结之门上建立了国家——荷鲁布尔古。<br>贝奥武夫王带领魔术师克洛斯佛德，利用威力强大的四颗龙石的力量将加尔戴拉封印，囚禁在终结之门。<br>之后，贝奥武夫王将四龙石赐予信赖的骑士瑞布斯，令其世代守护，防止不轨之徒窃取。<br>目睹了这一圣战的人们建立了圣火教，散布圣火神（十二神之一）的福音。不过，只有圣火教的神官才了解第十三神的故事。<br>为了颂扬神的伟绩，圣火教每三十年就会举行一次圣火仪式，由选中的神官携带圣火前往教会城市巡礼。</p>
+<p>两百年来，人们一直在这片不受威胁的土地上安居乐业。然而，魔神的封印正在慢慢消退——</p>
+<h3 id="前传"><a href="#前传" class="headerlink" title="前传"></a>前传</h3><p>十二神离开人间后，有关祂们的故事被逐渐淡忘。到了八方旅人的时代，十二位神所赐福的职业只剩下八个：<br>神官、学者、商人、剑士、舞女、药师、盗贼、猎人。这也是我们的八位主角所属的职业。<br>另外四个职业，占星师、魔术师、符文师、豪武将已无人继承。但祂们的祠堂仍在，等待着冒险者到来。</p>
+<p>魔神加尔戴拉受困于封印。但加尔戴拉的信徒魔女莉布拉克找到了曾属于祂的祭坛，并与祂取得了联系，暗中活动。<br>守护龙石的瑞布斯家族遭遇不测，龙石遗失。家主蔻蒂莉亚在管家的帮助下勉强支撑，找回了一颗龙石。<br>克洛斯佛德家族也不再担任魔术师，如今的家主格拉墨作为技术精湛的药师远近闻名。</p>
+<h4 id="莉布拉克做了什么"><a href="#莉布拉克做了什么" class="headerlink" title="莉布拉克做了什么"></a>莉布拉克做了什么</h4><p>莉布拉克作为魔神的继承人，首要任务就是打开终结之门，让魔神在人间重生。为此，她策划了5件事。</p>
+<ul>
+<li>偷取《边狱之书》<br>《边狱之书》是“特别书库”藏书，只有学院校长有权阅读。莉布拉克派露西亚接近学者伊冯，唆使他谋杀时任校长，取而代之。<br>随后，露西亚成为校长秘书，控制着伊冯的一举一动。她偷走《边狱之书》并翻译、印刷，秘密地送给心怀邪念的学者，诱使他们学习、使用。书中记录了魔神的黑暗魔法，需要用人的鲜血作为材料，许多无辜平民因此被害。<br>十五年后，学者赛拉斯无意中发现了失窃案，决定出发寻找《边狱之书》。<br><strong>学者的故事，由此开始。</strong></li>
+<li>灭亡荷鲁布尔古<br>终结之门位于荷鲁布尔古的土地上，因此要复活魔神，势必先毁灭荷鲁布尔古，以增强魔神的力量，也消灭可能的抵抗势力。<br>但荷鲁布尔古国王阿尔弗雷德爱民如子，深受爱戴，暗杀他异常困难。莉布拉克需要召集一个团队。<br>莉布拉克收买了一位流浪骑士维尔纳，让他成立佣兵团，壮大声势，并招募到了骑士艾尔哈特。<br>艾尔哈特的家乡在荷鲁布尔古边境，小时候家乡遭到入侵，但阿尔弗雷德王却没有派兵救援，致使城毁人亡。<br>艾尔哈特怀恨在心，一直渴望复仇。他作为间谍加入国王的军队，因剑术高超而被称为烈剑骑士，与钢剑骑士欧尔贝克齐名。<br>等时机成熟，佣兵团发动叛乱，艾尔哈特趁守备空虚，杀死了阿尔弗雷德王，并击败了欧尔贝克，荷鲁布尔古就此覆灭。<br>失去了守护的国王与人民，欧尔贝克迷失了挥剑的意义，踏上了漫无目的的旅程。<br><strong>剑士的故事，由此开始。</strong></li>
+<li>间接建立“黑曜会”<br>大陆的东北地区归贵族领主杰夫利所有。他执政严明，爱护百姓，却也因此结下了不少仇人。<br>其中一位仇人是席米恩。为了推翻杰夫利，他假扮园丁混入杰夫利家中，与杰夫利的女儿普利姆罗洁成为朋友。<br>莉布拉克找到席米恩，给了他金钱、权力、佣兵，帮助他成立恐怖组织黑曜会。<br>在魔神的支持下，黑曜会发展壮大，杰夫利探听到了黑曜会背后的魔神力量，并因此被黑曜会灭口。<br>普利姆罗洁亲眼目睹了父亲的死亡，躲在暗处逃过一劫。她记住了凶手的标志：乌鸦刺青。她决心为父亲复仇。<br>她来到大城市桑谢德，成为酒馆的一名舞女，借此收集情报，寻找仇人。<br><strong>舞女的故事，由此开始。</strong></li>
+<li>偷取四颗龙石<br>我们遇到莉布拉克时她并未持有龙石，因此无从得知偷取龙石是不是她所为（也可能是她吸收龙石的力量后就将其丢弃了）。<br>但龙石确实被盗，得到龙石的是一个庞大的盗贼团伙，他们权势很大，甚至控制了一座城市作为窝点，肆意妄为。<br>此外，大陆还有一位著名的独行盗贼，名叫泰里翁，偷盗无数，从未失手。而且他有自己的正义，并不是无底线的小贼。<br>瑞布斯家的管家希斯柯特用一枚龙石作为诱饵，布下天罗地网，终于抓到了泰里翁。<br>作为自由的交换，泰里翁不得不答应帮忙寻找剩余三枚龙石。<br><strong>盗贼的故事，由此开始。</strong></li>
+<li>诱骗克洛斯佛德家族成员，复活魔神<br>这是莉布拉克做的最后一件事，在游戏中我们偶遇莉布拉克时，她正是在大陆上四处寻找“命中注定”之人，来复活魔神。<br>她首先找到了格拉墨，但由于计划不够严密，格拉墨逃走，复活失败了。具体故事可见下文“格拉墨做了什么”。<br>但莉布拉克不打算放弃。她已经筹划了几百年，魔神必须复活。</li>
+</ul>
+<p>此外，在活动的早期，莉布拉克遇到了神官马提亚斯。<br>马提亚斯所在的村庄因火灾而遭灭顶之灾，他绝望地日夜祈祷，却毫无作用。而莉布拉克利用魔神的力量让马提亚斯长生不死。<br>得到好处的马提亚斯加入了莉布拉克。他在一个瘟疫流行的村庄中创办黑炎教，展示自己不老不死的能力，取得了村民的信仰。<br>恰逢此时，教会举办“定年奉火”仪式，由大主教的女儿莉安娜承担，马提亚斯想取得圣火，将圣火中的力量献给魔神，获得更强大的力量。<br>马提亚斯派人向大主教下毒，致使大主教病逝。这样就能借“复活父亲”骗取莉安娜的信任，夺走圣火。<br>但马提亚斯没有想到，大主教的养女、莉安娜的好友欧菲莉亚偷偷拿到圣火，决定代替莉安娜执行仪式。<br><strong>神官的故事，由此开始。</strong></p>
+<h4 id="格拉墨做了什么"><a href="#格拉墨做了什么" class="headerlink" title="格拉墨做了什么"></a>格拉墨做了什么</h4><p>格拉墨的妻子突然染上罕见的重病，药材十分稀有，需要天狗鹫的羽毛。为了救治妻子，格拉墨踏上旅程。<br>跨越了半个大陆后，格拉墨终于制成了药。为了尽快回到妻子身边，格拉墨搭乘了一艘商船，并将自己的旅行日记留在船上，作为船票。<br>偶然地，出自商人世家的女孩特蕾莎也登上了这艘船。她发现了旅行日记，决心继承这本日记，踏上自己的商人之旅。<br><strong>商人的故事，由此开始。</strong></p>
+<p>不幸的是，在格拉墨回到家之前，他的妻子就因病去世了。<br>悲痛万分的格拉墨在大陆上四处流浪，成了一名旅行药师。药到病除，救人无数。但他无时无刻不在思念妻子。<br>在河边的小村庄，格拉墨遇到了名叫亚芬的男孩，他的病与逝去的妻子一模一样。格拉墨毫不犹豫地将药全部送给了男孩。<br><strong>药师的故事，由此开始。</strong></p>
+<p>但格拉墨的旅程还没完。一位叫莉布拉克的神秘女子找到他，自称能复活他的妻子。<br>而且，格拉墨的妻子就在终结之门等着他。<br>格拉墨是大魔术师的后代，他的血脉让他有能力成为魔神重生的容器，从而令魔神重返世界。<br>对此一无所知的格拉墨去了终结之门，仪式启动。但他觉察到异样，在仪式完成前挣脱了控制，重创莉布拉克而逃走。</p>
+<p>魔神没能复活，可此时的格拉墨已经不再是人形，而是一个通体焦黑、双目血红的怪物。<br>他经常失控袭击人类，被他凝视的人则会石化。人们惊恐不已，称他为“红眼”。<br>为了保护人们，圣火骑士团雇佣了最强猎人闪达，准备猎杀红眼。闪达与红眼狭路相逢，遭到石化。<br>得知消息后，闪达的弟子海茵特为救师父，也踏上征程。<br><strong>猎人的故事，由此开始。</strong></p>
+<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><p>在游戏过程中，八人之间几乎没有完整的联系。真相隐藏在一个支线BOSS（难得变态）背后，以致很多玩家压根没有察觉。<br>这里简单介绍一下八人分别做了什么：<br><strong>学者</strong>赛拉斯：<br>由一起普通的图书失窃案，发现《边狱之书》失踪 → 帮助前辈破获居民失踪案，将学习《边狱之书》黑魔法的学者绳之以法 → 前往伊冯校长老家，打败发动黑魔法而暴走的伊冯 → 前往露西亚的据点，打败暴走的露西亚，研究《边狱之书》（以对抗不轨学者）。<br><strong>剑士</strong>欧尔贝克：<br>救出被强盗劫持的男孩，从强盗首领口中听说艾尔哈特的下落并出发 → 前往斗技场，战胜黑骑士古斯塔夫，得知艾尔哈特的具体位置 → 与艾尔哈特并肩对抗蜥蜴人，了解他的苦衷，二人共同寻找幕后凶手 → 二人与起义军一起打败维尔纳，解放城市，重拾挥剑的意义。<br><strong>舞女</strong>普利姆罗洁：<br>跟踪酒馆管理人发现“左腕”（左腕有乌鸦刺青），杀死管理人，追寻“左腕” → 杀死“左腕”，破坏黑曜馆，追寻“右腕” → 与父亲的老友合力杀死“右腕”，解放家乡，被“后颈”席米恩偷袭而险些丧命 → 在剧院重温童年，坚定信念，杀死席米恩复仇，开始新生活。<br><strong>盗贼</strong>泰里翁：<br>偷蓝龙石失败，与希斯柯特定下协议，寻找其余三枚龙石 → 打败走火入魔的学者奥立克，夺回赤龙石 → 在黑市取得绿龙石，却被昔日兄弟、盗团首领达留斯抢走 → 打败达留斯，夺回绿龙石、黄龙石，重获自由，继续旅行。<br><strong>神官</strong>欧菲莉亚：<br>打败守护者，取得圣火，告别大主教和莉安娜，开启巡礼之行 → 在巡礼城市奉火，并解开了三个孩子的矛盾 →奉火，救出被挟做人质的莉安娜，却反被下药偷走圣火 → 点醒莉安娜，打败并阻止马提亚斯举行仪式，回教会继续履行神官的职责。<br><strong>商人</strong>特蕾莎：<br>设计打败海盗，夺回村民们的财产，踏上旅途 → 在矿业城市打败欺骗矿工的大地主，偶遇商人阿里，二人约定参加大拍卖会 → 得到藏宝图，找到大海盗失传的“宝物”秘石 → 参加大拍卖会，日记被抢，夺回日记后将其送给大富豪之女诺雅，与她成为挚友。<br><strong>药师</strong>亚芬：<br>打败毒蛇，用毒液制药救活好基友的妹妹，决心做旅行药师 → 到达疾病流行的村庄，识破黑心药师的诡计，打败药师后将药免费送给村民 → 救治佣兵米格尔，其恢复后却劫持村民，亚芬又打败了米格尔 → 药师欧根患上与亚芬同样的重病，亚芬打败天狗鹫治愈欧根，继续旅行。<br><strong>猎人</strong>海茵特:<br>打败祸害森林的基萨鲁玛，遇到师父的魔狼哈根，启程寻找师父 → 遇到师父的老友娜塔莉亚，在附近的幻影之森找到被红眼石化的师父 →在占卜师苏珊娜指点下取得防止石化的芸香药草，启程狩猎红眼 → 与讨伐队一起打败红眼，拯救被石化的人们和师父，师徒共同踏上旅程。</p>
+<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>当八人结束自己的旅程之时，魔女莉布拉克也将格拉墨的儿子克里斯骗到了终结之门，成功复活了魔神。<br>只有玩家完成了规定的支线任务，才能开启通往终结之门的道路。<br>门内囚禁着曾被我们击败的8个boss灵魂，其中有些因贪欲而归附魔神（马提亚斯、席米恩、伊冯、维尔纳），有些则本就邪恶（猛毒虎、龙、米格尔、达留斯）。<br>每个灵魂被击败后都会留下一小段文本，讲述隐藏的真相（文本的内容已经被我结合到了前传中）。<br>最终，莉布拉克融入魔神体内，八位主角兵分两路，迎战魔神加尔戴拉的头部和身体。<br>这两场战斗还是非常精（困）彩（难）的，BGM也很有史诗感，不妨来听：<a target="_blank" rel="noopener" href="http://music.163.com/song?id=865857598&userid=300039393">魔神の血を継ぐ者</a><br>激战过后，莉布拉克死亡，魔神战败，又一次被封入终结之门。八方旅人的故事，告一段落。</p>
+</details>
+
+<h2 id="最后来点截图"><a href="#最后来点截图" class="headerlink" title="最后来点截图"></a>最后来点截图</h2><p><img src="https://tmx.fishpi.cn/img/5392640_20240603183451_1.jpg" alt="图 3"><br><img src="https://tmx.fishpi.cn/img/5392640_20240603223254_1.jpg" alt="图 4"><br><img src="https://tmx.fishpi.cn/img/5392640_20240604125329_1.jpg" alt="图 5"><br><img src="https://tmx.fishpi.cn/img/5392640_20240607130954_1.jpg" alt="图 6"><br><img src="https://tmx.fishpi.cn/img/5392640_20240620125845_1.jpg" alt="图 7"><br><img src="https://tmx.fishpi.cn/img/5392640_20240710125212_1.jpg" alt="图 8"><br><img src="https://tmx.fishpi.cn/img/5392640_20240713131707_1.jpg" alt="图 9"><br><img src="https://tmx.fishpi.cn/img/5392640_20240716131716_1.jpg" alt="图 10"><br><img src="https://tmx.fishpi.cn/img/5392640_20240719125937_1.jpg" alt="图 11"><br><img src="https://tmx.fishpi.cn/img/5392640_20240729130204_1.jpg" alt="图 12"><br><img src="https://tmx.fishpi.cn/img/5392640_20240805124849_1.jpg" alt="图 13"><br><img src="https://tmx.fishpi.cn/img/5392640_20240816235849_1.jpg" alt="图 14"><br><img src="https://tmx.fishpi.cn/img/5392640_20240821132508_1.jpg" alt="图 15"><br><img src="https://tmx.fishpi.cn/img/5392640_20240904180434_1.jpg" alt="图 16"><br><img src="https://tmx.fishpi.cn/img/5392640_20240912123819_1.jpg" alt="图 17"><br><img src="https://tmx.fishpi.cn/img/5392640_20240912131538_1.jpg" alt="图 18"><br><img src="https://tmx.fishpi.cn/img/5392640_20241125133201_1.jpg" alt="图 19"><br><img src="https://tmx.fishpi.cn/img/5392640_20241127134258_1.jpg" alt="图 20"><br><img src="https://tmx.fishpi.cn/img/5392640_20241127213405_1.jpg" alt="图 21">  </p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2024/11/29/1732855861.html">https://sszsj.com/articles/2024/11/29/1732855861.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a><a class="post-meta__tags" href="/tags/%E5%85%AB%E6%96%B9%E6%97%85%E4%BA%BA/">八方旅人</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/octopathtraveler.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2024/12/13/1734065533.html" title="2024 Nothing"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1734065443906.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2024 Nothing</div></div><div class="info-2"><div class="info-item-1">   2024好快，又一年过去了，说实话，完全不记得今年做什么了总感觉自己老是这样，什么也没有(反正明年也还是这样) 翻翻相册年初下了一场雪，已经好久没有这样大的雪了2024 年的第一场雪不知道这个冬天还会不会继续下3 月，终于狠下心来买了 SD（其实是因为上家拖欠的工资要回来了）所以今年玩了好几个游戏，真棒然后带小老鼠去了科技馆emmm 过段时间又可以去玩玩了又去拍花了，可惜没得技术，只会自动去山上夺笋4 月准备养向日葵 🌻，可惜最后凉凉，啥也没种出来【慢直播】向日葵成长记最终瓜子也没能嗑上5 月装了一辆车，还给小老鼠做了个恐龙衣服哦，还做了一辆消防车 🚒消防车有个新任务，咿呀咿呀呦6 月把之前搁置了几年的花轿完工了十里红妆—-花轿之前种的百合也开花咯买了画板却永远在吃灰8 月全家出门到山里避暑，差不多是今年最开心的时刻了哦，还一起去了牛头山一起去海洋馆看鱼可惜之后就难得有开心的事了小老鼠要买的仓鼠，本来想买兔子的，希望能坚持到明年吧 游戏得益于有了 SD，终于，勉强，可以愉快地打游戏了  虚构世界（Figment） 古墓丽影 9（Tomb...</div></div></div></a><a class="pagination-related" href="/articles/2024/10/24/1729746236.html" title="小老鼠四周岁记"><img class="cover" src="https://tmx.fishpi.cn/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241024131530.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">小老鼠四周岁记</div></div><div class="info-2"><div class="info-item-1"> hhh，今年也是小汽车蛋糕~~ 忙忙忙，拖延症又犯了本来应该9月份写的硬生生拖了一个多月 小老鼠已经从托班，升到了小班送上学都不要送到学校门口要自己走过去 拿回家的作品也越来越多煎蛋，大树，狮子好多呀~ 夏天的时候也敢下水游泳了（就是没学会……） 每天都有讲不完的话每天都有编不完的故事 最喜欢的故事是屁屁侦探最喜欢的动画是海底小纵队最喜欢的玩具依旧是小汽车 当然，小老鼠也到了狗都嫌烦的年纪开始了四处捣蛋当然，该闹的时候也是闹但是，谁让他是小老鼠呢？ 哈哈哈哈~就这样吧~~ </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2017/07/05/1533348408121.html" title="所以，这有什么用？吃屎吧"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293587612.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">所以，这有什么用？吃屎吧</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348409230.html" title="游戏人生"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293371923.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">游戏人生</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348412480.html" title="雨血——这场雨何时能停"><img class="cover" src="https://tmx.fishpi.cn/img/20210104103054692.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">雨血——这场雨何时能停</div></div><div class="info-2"><div class="info-item-1">雨血系列雨血1：迷镇是用RPG Maker 做的，真的被吸引了，不一样的画风，剧情也很棒，就放几张图     雨血2：烨城由回合制改成半回合制，继续雨血1的剧情  雨血前传：蜃楼讲述之前的故事   最后就是氪金手游影之刃了已经弃了有段时间了，找了点以前的截图  至少不是像现在大部分手游那样要么是卡牌要么是页游品质的，打斗界面没有截图，可以去找视频看看 最后，其实我的头像就是其中一个主角  再最后，自己画的主角的剑，渣渣水平 </div></div></div></a><a class="pagination-related" href="/articles/2020/03/13/1584081025904.html" title="光明旅者Hyper Light Drifter"><img class="cover" src="https://tmx.fishpi.cn/img/20210104172951365.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-03-13</div><div class="info-item-2">光明旅者Hyper Light Drifter</div></div><div class="info-2"><div class="info-item-1"> 一开始玩的时候，一脸懵逼，游戏没有中文，剧情全靠动画和插图，虽然开场很震撼，但是有点不知道剧情是什么。主角一直在吐血，大地被黑暗吞没。而后面了解了，才发现游戏的制作人患有先天性心脏病，在生命是一个不可控的倒计时状态下，选择为自己，为世界留下一部属于他自己的作品。 游戏分为东南西北四个方向，四个区域，每个区域特色鲜明，东边的水域，南边的荒漠，西边的红树林，北方的雪山。看似一片生机盎然，实则建立在一片废土之上。仔细观察各个场景，到处各种骷髅。另外每个区域入口都有一个守卫石像，每个区域都有一个融入场景的巨人（骷髅） 每个区域都有8个碎片，玩家通过不断探索，收集碎片，打败boss，升起这一方的石柱，每当有柱子升起的时候，主角都回忆起在黑暗中苦苦挣扎缺不得解脱。升起了4方的柱子，就可以回到中心城镇，坐电梯打败这一切的罪魁祸首，&#x3D; &#x3D; 好吧 这个boss我打了7...</div></div></div></a><a class="pagination-related" href="/articles/2020/03/13/1584076243624.html" title="夜勤人----不会开店的勇者不是好村民"><img class="cover" src="https://tmx.fishpi.cn/img/20210104172649787.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-03-13</div><div class="info-item-2">夜勤人----不会开店的勇者不是好村民</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/articles/2020/03/12/1584020754749.html" title="摸🐟玩家在线卑微"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290303398.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-03-12</div><div class="info-item-2">摸🐟玩家在线卑微</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://foreverblog.cn/assets/logo/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://foreverblog.cn/assets/logo/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E6%96%B9%E6%97%85%E4%BA%BA"><span class="toc-number">1.</span> <span class="toc-text">八方旅人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">2.</span> <span class="toc-text">其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%90%E6%A7%BD"><span class="toc-number">3.</span> <span class="toc-text">吐槽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E5%89%A7%E9%80%8F"><span class="toc-number">4.</span> <span class="toc-text">以下剧透</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%88%9D"><span class="toc-number">4.1.</span> <span class="toc-text">最初</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E4%BC%A0"><span class="toc-number">4.2.</span> <span class="toc-text">前传</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%89%E5%B8%83%E6%8B%89%E5%85%8B%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88"><span class="toc-number">4.2.1.</span> <span class="toc-text">莉布拉克做了什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E6%8B%89%E5%A2%A8%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88"><span class="toc-number">4.2.2.</span> <span class="toc-text">格拉墨做了什么</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E7%89%87"><span class="toc-number">4.3.</span> <span class="toc-text">正片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BE%E5%A3%B0"><span class="toc-number">4.4.</span> <span class="toc-text">尾声</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E6%9D%A5%E7%82%B9%E6%88%AA%E5%9B%BE"><span class="toc-number">5.</span> <span class="toc-text">最后来点截图</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性"><img src="https://tmx.fishpi.cn/img/20260123131839_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="光与影：33号远征队——论防沉迷的重要性"/></a><div class="content"><a class="title" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性">光与影：33号远征队——论防沉迷的重要性</a><time datetime="2026-01-23T06:36:49.000Z" title="发表于 2026-01-23 14:36:49">2026-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/22/1766414821.html" title="生性凉薄"><img src="https://tmx.fishpi.cn/img/20251130210912_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生性凉薄"/></a><div class="content"><a class="title" href="/articles/2025/12/22/1766414821.html" title="生性凉薄">生性凉薄</a><time datetime="2025-12-22T14:47:01.000Z" title="发表于 2025-12-22 22:47:01">2025-12-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/17/1765948402.html" title="2025 空白页"><img src="https://tmx.fishpi.cn/img/20251211114436_70_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025 空白页"/></a><div class="content"><a class="title" href="/articles/2025/12/17/1765948402.html" title="2025 空白页">2025 空白页</a><time datetime="2025-12-17T05:13:22.000Z" title="发表于 2025-12-17 13:13:22">2025-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人"><img src="https://tmx.fishpi.cn/img/20251010135659_49_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我将注定孤身一人"/></a><div class="content"><a class="title" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人">我将注定孤身一人</a><time datetime="2025-10-10T05:59:22.000Z" title="发表于 2025-10-10 13:59:22">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸"><img src="https://tmx.fishpi.cn/img/pic_1704181062587.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最终幻想4月之归还----又是月亮惹的祸"/></a><div class="content"><a class="title" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸">最终幻想4月之归还----又是月亮惹的祸</a><time datetime="2025-09-22T06:35:36.000Z" title="发表于 2025-09-22 14:35:36">2025-09-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2026 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

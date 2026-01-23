@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>爱殇 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="   说故事的人，都是故事里的人，过去之所以是过去，就是因为回不去了，那曾经是我的天堂，如今却永远到不了了。 唯有你是我的天堂       暮色起看天边斜阳 恍惚想起你的脸庞毕竟回想 难免徒增感伤 轻叹息 我们那些好时光夜未央繁星落眼眶 拾一段柔软的光芒清风过 曳烛光 独舞无人欣赏..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2017/07/05/1533348409511.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '爱殇',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707293325772.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">爱殇</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">爱殇</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-07-04T16:34:55.000Z" title="发表于 2017-07-05 00:34:55">2017-07-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-05T08:33:35.000Z" title="更新于 2021-01-05 16:33:35">2021-01-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%9D%8F%E6%8E%89%E7%9A%84Radio/">坏掉的Radio</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">370</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/pic_1707293325772.png" alt="picture 0">  </p>
+<p>说故事的人，都是故事里的人，过去之所以是过去，就是因为回不去了，那曾经是我的天堂，如今却永远到不了了。</p>
+<p>唯有你是我的天堂</p>
+<span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32957786&auto=1&height=66"></iframe>
+
+<blockquote>
+</blockquote>
+<p>暮色起看天边斜阳 恍惚想起你的脸庞<br>毕竟回想 难免徒增感伤 轻叹息 我们那些好时光<br>夜未央繁星落眼眶 拾一段柔软的光芒<br>清风过 曳烛光 独舞无人欣赏 留花瓣随风飘荡<br>&emsp;<br>我要将过往都储藏 编一段美好的梦想<br>也许幻象 到最后会更伤 假欢畅 又何妨 无人共享<br>你曾经是我的边疆 抵抗我所有的悲伤<br>西风残 故人往 如今被爱流放 困在了眼泪中央<br>&emsp;<br>啊……..啊…….啊…….啊………<br>&emsp;<br>（轻解霓裳 咽泪换笑妆 等你戎装 去呼啸沧桑<br>过往终究止不住流淌 去御剑飞翔 也许会飞出这感伤）<br>&emsp;<br>暮色起看天边斜阳 夜未央星河独流淌<br>天晴朗 好风光 若你不在身旁 能上苍穹又怎样<br>&emsp;<br>船过空港 将寂寞豢养 旷野霜降 低垂了泪光<br>（是谁陨落了我的太阳 是你的模样 带走我所有的光芒）<br>&emsp;<br>扬帆远航 亦不过彷徨 奈何流放 敌不过苍凉<br>（我要潜入回忆的汪洋 寻你的模样 唯有你是我的天堂）<br>唯有你是我的天堂<br>&emsp;<br>&nbsp;</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2017/07/05/1533348409511.html">https://sszsj.com/articles/2017/07/05/1533348409511.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%AD%8C%E6%9B%B2/">歌曲</a><a class="post-meta__tags" href="/tags/%E7%88%B1%E6%AE%87/">爱殇</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/pic_1707293325772.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2017/07/05/1533348410464.html" title="画烟雨"><img class="cover" src="https://tmx.fishpi.cn/img/20210104111831146.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">画烟雨</div></div><div class="info-2"><div class="info-item-1"> 生命中不可能百分比完美，也许留有遗憾才叫人生。 触不到的才是最真。   http://music.163.com/#/song?id=34338185   我提笔而相思难寄窗外雨在酝酿结局旧巷里惹尽了苔绿我想你又多了一季梨花雪染白我发髻你的美如水起了涟漪风吹绿回忆而你却婉转别离我在原地等你归期画烟雨泼墨爱被写意泪水晕开了我们过去看惆怅落满地为谁残宵唏嘘而这一切都只为爱你画烟雨泼墨留白距离遇见你我等岁月同意看柳絮化雪泥心事颠沛流离我留足迹只为等到你 &nbsp; &nbsp; 只为等到你 </div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348404855.html" title="何生枷锁"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293934391.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">何生枷锁</div></div><div class="info-2"><div class="info-item-1"> ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2017/07/05/1533348407105.html" title="坏掉のRadio"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293692471.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">坏掉のRadio</div></div><div class="info-2"><div class="info-item-1">   壊れかけのRadio壊れかけのRadio是日本歌手德永英明的作品，德永英明，出生于1961年2月27日，日本流行曲歌手及作曲家，出道20多年，被称为歌坛常青树，并有“日本情歌王子”之称。1986年德永英明正式出道时正是日本的乐团全盛时期，当时所有媒体无论是电视还是平面媒体都把焦点放在乐团，对于刚出道的德永英明来说有似乎点生不逢时。但是就是在这样的“困境中”，德永英明还是凭借自己的实力打出了一片天下。德永英明有着许多被广为传唱的作品，张学友、谭咏麟、王杰、郑伊健、李克勤、吕方、张信哲、姜育恒等人都曾翻唱过他的歌。   大学时偶然随便听听听到了他的歌，与众不同的声线，以及令人沉醉的历尽沧桑的音色，让我立刻开始下载他的所有专辑，至今硬盘里仍然存着他的歌。 Radio，收音机，很久以前，用收音机听歌，需要调频，能听到一首喜欢的歌并不容易，或许用坏掉のRadio当音乐分享类别名称再合适不过~ 还是不习惯写东西，不多说，听歌~      何も聞こえない 何も聞かせてくれない什么都听不到 什么都不让我听到僕の身体が昔より...</div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348402527.html" title="プラネタリウム（星象仪）中文版"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707293507568.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">プラネタリウム（星象仪）中文版</div></div><div class="info-2"><div class="info-item-1">   单曲循环了n久的一首歌，也许是因为过去的某些经历吧，有种要被唱哭的感觉。 记得《东邪西毒》里有一句：“当你不能够再拥有，你唯一可做的，就是令自己不要忘记。”过去的就已经过去了，是的，再也回不来了。不再拥有，只希望将来拥有她的人能好好珍惜她。虽然我相信时间会抹平一切伤痕，但是总会留下一点痕迹。也许将来当我再遇见她时，我可以淡然地和她打招呼，又或者已经成为再也不会有交集的陌生人，我只希望她一切安好。   好了，以上都是瞎扯  （原曲未上传）  &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;歌词&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  夕阳的背后 月儿探出头 舍不得踏上 归途的孩童遥远的天空 这片宇宙的尽头 是否会有你静静在等候夏天的最后 只属于你我的 公园那角落仰望着星空 许下了个承诺 是否还记得作证的 是哪一个星座&emsp;会えなくても 记忆をたどって 同じ幸せを见たいんだあの香りとともに 花火がぱっと开く日文翻译：即使无法相会...</div></div></div></a><a class="pagination-related" href="/articles/2017/07/05/1533348410464.html" title="画烟雨"><img class="cover" src="https://tmx.fishpi.cn/img/20210104111831146.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-05</div><div class="info-item-2">画烟雨</div></div><div class="info-2"><div class="info-item-1"> 生命中不可能百分比完美，也许留有遗憾才叫人生。 触不到的才是最真。   http://music.163.com/#/song?id=34338185   我提笔而相思难寄窗外雨在酝酿结局旧巷里惹尽了苔绿我想你又多了一季梨花雪染白我发髻你的美如水起了涟漪风吹绿回忆而你却婉转别离我在原地等你归期画烟雨泼墨爱被写意泪水晕开了我们过去看惆怅落满地为谁残宵唏嘘而这一切都只为爱你画烟雨泼墨留白距离遇见你我等岁月同意看柳絮化雪泥心事颠沛流离我留足迹只为等到你 &nbsp; &nbsp; 只为等到你 </div></div></div></a><a class="pagination-related" href="/articles/2019/12/25/1577271679077.html" title="心墓"><img class="cover" src="https://tmx.fishpi.cn/img/20210104120359083.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-12-25</div><div class="info-item-2">心墓</div></div><div class="info-2"><div class="info-item-1">                打着旧伞 走在老街上无数车辆 正来来往往我却停在 马路中央不怕死亡  喜欢下雨，喜欢下雨天尤其喜欢夏天的下雨天想要尽情地淋雨 放弃，也许是最好的选择彷徨迷茫，随便他吧马路中间，所有的都是陌路 心里有一座坟葬着的就是自己对这个世界早已麻木 最后附上歌词  天色欲暗 与一波波云浪弥漫了整个空 与我心上滴滴答答雨点 打在墓上似扑灭胸膛里 赤焰奔放也像诉说世界 此后荒凉以为会 有无数言语痛畅以为会 思绪翻涌敞开回想却不曾想是 无声无息与眼神迷茫像落入深海 瞬间的溺亡&emsp;打着旧伞 走在老街上无数车辆 正来来往往我却停在 马路中央不怕死亡擦肩面容 陌生还匆忙恍惚却觉 有些相似样不知为何 刻尽荒唐而答案发慌&emsp;昏灯照耀 走入老厅堂黑白照片 就在老地方熟悉笑容 让心滚烫喉似涩痒未细想时 已盖下深藏欲将续写 暂未归的谎不知为何 写尽荒唐而答案发慌&emsp;微勾嘴角 绘春日里笑样却着了魔越笑声越扬人的羁绊 可否跨越阴阳还是落叶般泯灭过往  </div></div></div></a><a class="pagination-related" href="/articles/2019/08/09/1565357654227.html" title="梨花雨"><img class="cover" src="https://tmx.fishpi.cn/img/Ds6_109951163109385969-e187ee77.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-08-09</div><div class="info-item-2">梨花雨</div></div><div class="info-2"><div class="info-item-1">　   雨过天青，河岸桥边，梨花树下姑娘撑着油纸伞，款款而行梨花飘落，回眸幡然醒悟 不知是那年姑娘罗裙衣袂缓缓而过撩了心弦还是那年离去时姑娘在檐下的欲留未留反正此后黄粱一梦是你，南柯一梦是你，始料未及是你可陌路相逢，却再不是你奈何奈何  绵绵烟雨几多河岸落桥一座姑娘曼裙轻罗缓缓而过 隐隐星点灯火勾画街巷轮廓檐下伊人缄默几番斟酌 新雨濯 柳梢末旧时诺 轻言过蔓青萝 红线错缘喜成祸 拈花何惹心虽有责目已阖经年后两地相隔谁梦南柯 烟台近侧弦悲歌 烛色浅搁? 月满窗阁心头涩 难消片刻情怎奈何  </div></div></div></a><a class="pagination-related" href="/articles/2019/03/26/1553603002975.html" title="湫之灵"><img class="cover" src="https://tmx.fishpi.cn/img/20210104110418646.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-26</div><div class="info-item-2">湫之灵</div></div><div class="info-2"><div class="info-item-1">   你在记忆的罅隙里搜寻着他的影子，却忘了他虽久别，却从不曾老去。我最后悔的事那晚我没有紧紧的抱住你。 我从小没有爸妈，奶奶把我带大。我天不怕地不怕，最怕让你受苦；我喜欢看你吃东西的样子，你吃东西的样子很好看。我看过你很多样子，伤心的样子、开心的样子、尴尬的样子，你什么样子都很好看。 你以为你接受的是谁的爱?你接受的是一个天神的爱!他将背叛所有的神灵去爱你!为你忍受一切痛苦!以此带给你快乐！  所有的痛，我来承受所有的苦，我来忍受也许我是个傻瓜但这不重要，只要你好也许我是孤独的，但是只要有你 我会化作人间的风雨，永远陪伴在你身边。从此以后，八千年为椿，八千年为湫永不相见，以鲲为见，化为风雨，椿还鲲命，谁还湫情？ 也许，你我都是湫，但是我们无怨无悔   还自那年 跨越天之际我从未曾相信 会失去你沦落飘雪的夏季狂风暴雨我将随你行 随你去冒大不韪之忌&emsp;漫天狂沙 遮蔽不住眼睛我害怕看见你 奋不顾身远去洪荒席卷的来临乘势将万象汇聚想念你哭泣 想念你任性想念你的脾气&emsp;为你背叛神明 为了你 伤自己独自灼伤黑暗的黎明为你逆转奇迹 为了你...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://foreverblog.cn/assets/logo/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://foreverblog.cn/assets/logo/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性"><img src="https://tmx.fishpi.cn/img/20260123131839_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="光与影：33号远征队——论防沉迷的重要性"/></a><div class="content"><a class="title" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性">光与影：33号远征队——论防沉迷的重要性</a><time datetime="2026-01-23T06:36:49.000Z" title="发表于 2026-01-23 14:36:49">2026-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/22/1766414821.html" title="生性凉薄"><img src="https://tmx.fishpi.cn/img/20251130210912_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生性凉薄"/></a><div class="content"><a class="title" href="/articles/2025/12/22/1766414821.html" title="生性凉薄">生性凉薄</a><time datetime="2025-12-22T14:47:01.000Z" title="发表于 2025-12-22 22:47:01">2025-12-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/17/1765948402.html" title="2025 空白页"><img src="https://tmx.fishpi.cn/img/20251211114436_70_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025 空白页"/></a><div class="content"><a class="title" href="/articles/2025/12/17/1765948402.html" title="2025 空白页">2025 空白页</a><time datetime="2025-12-17T05:13:22.000Z" title="发表于 2025-12-17 13:13:22">2025-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人"><img src="https://tmx.fishpi.cn/img/20251010135659_49_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我将注定孤身一人"/></a><div class="content"><a class="title" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人">我将注定孤身一人</a><time datetime="2025-10-10T05:59:22.000Z" title="发表于 2025-10-10 13:59:22">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸"><img src="https://tmx.fishpi.cn/img/pic_1704181062587.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最终幻想4月之归还----又是月亮惹的祸"/></a><div class="content"><a class="title" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸">最终幻想4月之归还----又是月亮惹的祸</a><time datetime="2025-09-22T06:35:36.000Z" title="发表于 2025-09-22 14:35:36">2025-09-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2026 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

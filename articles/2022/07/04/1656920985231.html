@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>蓝易云----可靠的云服务厂商 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" ..."><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2022/07/04/1656920985231.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '蓝易云----可靠的云服务厂商',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707286216741.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">蓝易云----可靠的云服务厂商</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">蓝易云----可靠的云服务厂商</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-04T07:49:45.000Z" title="发表于 2022-07-04 15:49:45">2022-07-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-23T08:06:42.812Z" title="更新于 2026-01-23 16:06:42">2026-01-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">777</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/pic_1707286216741.png" alt="picture 0">  </p>
+<p>因为个人需要，得买个服务器，同时因为个人原因，不准备备案，所以只能买香港的，正好，<a target="_blank" rel="noopener" href="https://fishpi.cn/">摸鱼派</a>接入了蓝易云的高防CDN，扛住了几波攻击，那我必然要支持下蓝易云，遂购入一年，目前使用下来，体验良好，<br>所以有了这篇软文（我真的没有被蓝易云的老板拿枪顶着）</p>
+<h2 id="最新活动"><a href="#最新活动" class="headerlink" title="最新活动"></a>最新活动</h2><p>香港CN2服务器29元一个月，10M大带宽。<br>官网： <a target="_blank" rel="noopener" href="https://www.tsyvps.com/aff/DXBBYSXD">https://www.tsyvps.com/aff/DXBBYSXD</a><br>香港云服务器无需备案哦！<br>高性能KVM架构，稳定，安全，灵活！<br>持证企业许可证号：B1-20222080<br>官网最新活动，买服务器送U盘，还有团购活动哦！</p>
+<h2 id="简单介绍下"><a href="#简单介绍下" class="headerlink" title="简单介绍下"></a>简单介绍下</h2><p>蓝易云服务器香港CN2 GIA云服务器出自九龙数据中心，该产品三网CN2 GIA回程优化，采用SSD硬盘+RAID50阵列，KVM架构！1核1G内存套餐27.55元&#x2F;月，2核2G内存开始支持Windows系统。<br>蓝易云计算是国人商家，隶属于成都蓝易云网络科技有限公司 ，专注于香港、美国海外云服务器的产品，有多年的运维维护经验。世界这么大 靠谱最重，我们7*24H为您提供服务，贴心售后服务，安心、省事儿、稳定、靠谱。<br>（以上复制的）<br>对于个人开发者来说，已经够用的，CN2国内访问延迟也不高，最重要的是在香港免除了备案<br>相对于阿里云香港，腾讯云香港来说，价格足够良心<br><img src="https://tmx.fishpi.cn/img/lypping.png" alt="ping.png"><br><img src="https://tmx.fishpi.cn/img/lyyio.png" alt="io.png"></p>
+<h2 id="高防CDN"><a href="#高防CDN" class="headerlink" title="高防CDN"></a>高防CDN</h2><p>江湖上永远少不了恶人，就像我们摸鱼派，不知怎么就被打了，导致服务无法访问<br>这时候感谢蓝易云的帮助，摸鱼派及时切换到蓝易云高防CDN，抗下了一波又一波的攻击，保证了摸鱼派的正常运行<br>可以点<a target="_blank" rel="noopener" href="https://fishpi.cn/article/1656322254033">这里</a>查看攻击记录<br>必要的时候，要学会保护自己，隐藏自己<br>另外，蓝易云的CDN支持WebSocket，这也是我们摸鱼派选择蓝易云的重要原因<br>(以下复制的)<br>蓝易云不仅仅只是防御市面上常见的CC攻击。<br>还能轻松防御各类穿墙CC攻击以及 “高度定制化” CC攻击，恶意流量滴水不漏。<br>业务流量畅通无阻，知己知彼，从容应对！<br>蓝易云CDN安全盾人机识别算法（无感验证，5秒盾，点击验证，验证码识别，302跳转等）拥有体验好，安全性高，对抗性强等优点。<br>自定义防护策略，流量灵活阻断or加白，CC攻击防护，无感验证，5秒盾一招制敌!<br>不过这个5秒盾雀食牛皮，亲测</p>
+<h2 id="就这样吧"><a href="#就这样吧" class="headerlink" title="就这样吧"></a>就这样吧</h2><p>觉得可以，记得点<a target="_blank" rel="noopener" href="https://www.tsyvps.com/aff/DXBBYSXD">这里</a>注册哟<br>有问题，联系我直接找蓝易云老板锤爆👊<br>还是不是很喜欢复制那些个文案，就这样吧<br>哈哈哈哈，我这怕是拿不到老板的推广费了（本来也没有）</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2022/07/04/1656920985231.html">https://sszsj.com/articles/2022/07/04/1656920985231.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><a class="post-meta__tags" href="/tags/CDN/">CDN</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/pic_1707286216741.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2022/07/18/1658109426.html" title="蓝易云----买服务器送U盘"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707286271337.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">蓝易云----买服务器送U盘</div></div><div class="info-2"><div class="info-item-1">关于蓝易云“蓝易云”为成都天上云网络科技有限公司旗下运营，是旗下的云计算服务品牌，专注为个人开发者用户、中小型企业用户、大型企业用户提供一站式核心网络云端部署服务，促使用户云端部署化简为零，轻松快速运用云计算。提供云服务器、云虚拟主机、云数据库、云存储、域名、SSL证书、服务器租用托管等服务。蓝易云创建于2020年，致力于个人及企业上云服务，在数据安全方面提供三层存储技术，保障数据安全及可用性；在网络连接方面使用BGP线路，解决了南北互联互通的问题。同时自身具有容灾性，保障线路安全稳定；在硬件配置方面，搭建纯SSD架构的高性能企业级云服务器，同时采用Intel Haswell CPU、高频DDR4内存、高速Sas3...</div></div></div></a><a class="pagination-related" href="/articles/2022/06/08/16546694444.html" title="GreenDao数据库升级实践"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707287552716.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">GreenDao数据库升级实践</div></div><div class="info-2"><div class="info-item-1">GreenDao是Android中常用的数据库管理框架使用起来雀食方便高效但是他有一个问题，就是在升级数据库的时候比如加个字段，加个表之类的他会删除原来的数据，删表重建所以一般的解决方案都是创建一个临时表储存数据升级完了再覆盖回去虽然可行，但是操作实在过于麻烦 既然原生的SQL可以实现不删库加字段按理说GreenDao应该不支持毕竟使用量这么大的库，这个问题肯定有考虑的在参考前人的文章后，终于找到合适的方案不删库升级数据库，增加字段 首先，我们来看为什么会删库在GreenDao make project后生成的DaoMaster.java里有一个DevOpenHelper 1234567891011121314151617/** WARNING: Drops all table on Upgrade! Use only during development. */public static class DevOpenHelper extends OpenHelper &#123;    public DevOpenHelper(Context context, String...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2022/07/18/1658109426.html" title="蓝易云----买服务器送U盘"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707286271337.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-18</div><div class="info-item-2">蓝易云----买服务器送U盘</div></div><div class="info-2"><div class="info-item-1">关于蓝易云“蓝易云”为成都天上云网络科技有限公司旗下运营，是旗下的云计算服务品牌，专注为个人开发者用户、中小型企业用户、大型企业用户提供一站式核心网络云端部署服务，促使用户云端部署化简为零，轻松快速运用云计算。提供云服务器、云虚拟主机、云数据库、云存储、域名、SSL证书、服务器租用托管等服务。蓝易云创建于2020年，致力于个人及企业上云服务，在数据安全方面提供三层存储技术，保障数据安全及可用性；在网络连接方面使用BGP线路，解决了南北互联互通的问题。同时自身具有容灾性，保障线路安全稳定；在硬件配置方面，搭建纯SSD架构的高性能企业级云服务器，同时采用Intel Haswell CPU、高频DDR4内存、高速Sas3...</div></div></div></a><a class="pagination-related" href="/articles/2021/07/26/1627266387130.html" title="服务搬迁公告"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289247761.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-26</div><div class="info-item-2">服务搬迁公告</div></div><div class="info-2"><div class="info-item-1">   时间很快，在良心云买的服务器，3年半，马上就到期期间磕磕绊绊，最开始是iis放静态页，后来搭了solo再因为种种原因我们独立出来了bolo后面自己有用node写了一个服务端，专门放自己的一些定时任务和静态页因为这个服务器，学习了不少，nginx，cdn，koa等等等等终于，要说再见了因为某些原因，不准备继续续费了（还不是因为没钱）服务器没了，备案也准备注销了，所以以后cdn云存储都没了…… 前段时间，把文章都迁移到hexo了，放在github pages上加上了自动部署，以后只需要推markdown上去就行了图床最终嫖的github（不是我不想付费，国内没有域名用不了）只是，这么操作下了之前积攒的评论就没有了不过，没有就没有吧，又是新的开始兜兜转转，最终还是回到了hexo也许，这次可以长久进行下去了吧但愿吧 </div></div></div></a><a class="pagination-related" href="/articles/2025/06/23/1750659999.html" title="服务器攻击记录"><img class="cover" src="https://tmx.fishpi.cn/img/20250623142727.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-06-23</div><div class="info-item-2">服务器攻击记录</div></div><div class="info-2"><div class="info-item-1">00身为一个半路出家的前端，本来让我写后端已经够高估我了，磕磕绊绊总算写完上线完了还得部署上去，服务器这块玩的是真的少然后没两天，阿里云就连接数报警了，直接几万个连接然后服务器看着又一切正常，nginx日志看着也没毛病问鸡皮提 top netstat ss 啥的都没有异常反正找了半天没找到 01最后总算是发现了，用的conntrackconntrack -L | awk &#39;&#123;print $5&#125;&#39; | cut -d= -f2 | cut -d&#39; &#39; -f1 | sort | uniq -c | sort -nr | head直接列出了ip 和 连接数那就好办了，直接iptables封禁iptables -I INPUT -s 192.168.1.1 -j DROPiptables -I FORWARD -s 192.168.1.1 -j DROP然后断开链接conntrack -D -s 192.168.1.1保存下iptablesiptables-save &gt;...</div></div></div></a><a class="pagination-related" href="/articles/2022/12/10/1670657901000.html" title="使用Clouflare和Backblaze搭建图床服务"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707287215046.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-10</div><div class="info-item-2">使用Clouflare和Backblaze搭建图床服务</div></div><div class="info-2"><div class="info-item-1">   因为业务需求，需要用到一个图床服务，大概搜索了一下，最终决定使用ClouFlare和Backblaze原因嘛，当然是因为免费的10G空间啦参考链接  把cloudflare变成你的专属免费图床 Free Image Hosting With Cloudflare Transform Rules and Backblaze B2(人家官方都给文档介绍怎么弄了，不怪咱白嫖)  注册Backblaze传送门-&gt;Backblaze我们只需要用到B2 Cloud Storage注册完成后，新建一个Bucket，任意命名然后通过网页传一个文件，点击文件信息就能看到链接地址访问打开，没得问题这里我们需要记下Friendly URL 上传大量文件我们有可能需要上传大量文件用网页传明显不现实，正常都是使用ftp但是，常用的ftp软件都不支持B2这里我们使用Cyberduckemmm，就是下面这只鸭子安装完成后，点击新建链接选择Backblaze B2需要Account ID or Key ID我们回Backblaze网页在左下角App...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">156</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://foreverblog.cn/assets/logo/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://foreverblog.cn/assets/logo/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E6%96%B0%E6%B4%BB%E5%8A%A8"><span class="toc-number">1.</span> <span class="toc-text">最新活动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E4%B8%8B"><span class="toc-number">2.</span> <span class="toc-text">简单介绍下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E9%98%B2CDN"><span class="toc-number">3.</span> <span class="toc-text">高防CDN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%B1%E8%BF%99%E6%A0%B7%E5%90%A7"><span class="toc-number">4.</span> <span class="toc-text">就这样吧</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性"><img src="https://tmx.fishpi.cn/img/20260123131839_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="光与影：33号远征队——论防沉迷的重要性"/></a><div class="content"><a class="title" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性">光与影：33号远征队——论防沉迷的重要性</a><time datetime="2026-01-23T06:36:49.000Z" title="发表于 2026-01-23 14:36:49">2026-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/22/1766414821.html" title="生性凉薄"><img src="https://tmx.fishpi.cn/img/20251130210912_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生性凉薄"/></a><div class="content"><a class="title" href="/articles/2025/12/22/1766414821.html" title="生性凉薄">生性凉薄</a><time datetime="2025-12-22T14:47:01.000Z" title="发表于 2025-12-22 22:47:01">2025-12-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/12/17/1765948402.html" title="2025 空白页"><img src="https://tmx.fishpi.cn/img/20251211114436_70_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025 空白页"/></a><div class="content"><a class="title" href="/articles/2025/12/17/1765948402.html" title="2025 空白页">2025 空白页</a><time datetime="2025-12-17T05:13:22.000Z" title="发表于 2025-12-17 13:13:22">2025-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人"><img src="https://tmx.fishpi.cn/img/20251010135659_49_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我将注定孤身一人"/></a><div class="content"><a class="title" href="/articles/2025/10/10/1760075962.html" title="我将注定孤身一人">我将注定孤身一人</a><time datetime="2025-10-10T05:59:22.000Z" title="发表于 2025-10-10 13:59:22">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸"><img src="https://tmx.fishpi.cn/img/pic_1704181062587.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最终幻想4月之归还----又是月亮惹的祸"/></a><div class="content"><a class="title" href="/articles/2025/09/22/1758522936.html" title="最终幻想4月之归还----又是月亮惹的祸">最终幻想4月之归还----又是月亮惹的祸</a><time datetime="2025-09-22T06:35:36.000Z" title="发表于 2025-09-22 14:35:36">2025-09-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2026 By 唐墨夏</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
