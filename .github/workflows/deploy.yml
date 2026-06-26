@@ -16,14 +16,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Set up SSH
         env:
@@ -36,4 +33,4 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
       - name: Deploy
-        run: npx hexo deploy --generate
+        run: bunx hexo deploy --generate
