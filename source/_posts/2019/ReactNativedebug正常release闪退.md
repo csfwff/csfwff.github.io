@@ -1,3 +1,4 @@
+---
 title: React Native debug正常，release闪退
 date: '2019-03-14 20:35:49'
 updated: '2021-01-05 16:39:41'

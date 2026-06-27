@@ -1,3 +1,4 @@
+---
 title: 使用Caddy在非443端口申请SSL证书
 date: '2023-03-07 11:18:38'
 updated: '2023-03-07 11:18:38'
@@ -8,7 +9,6 @@ categories:
 - 菜鸡修炼手册
 --- 
 ![picture 0](https://tmx.fishpi.cn/img/pic_1707284719058.png) 
-
 ## Caddy
 众所周知，Caddy是一个用Go实现的web服务器
 （虽然我只是拿来当nginx用）
@@ -26,7 +26,6 @@ categories:
 > - TLS没有在站点的定义中被关闭
 > - 不是你自己提供的证书和密钥
 > - Caddy能够绑定到端口80和443（除非使用DNS验证）
-
 ## 非443端口
 众所周知，https的默认端口是443
 那如果我准备用别的端口呢？
@@ -35,7 +34,6 @@ caddy提供了各种dns验证的模块
 在这里找到相应的dns提供商
 大部分都有，没有就用`lego_deprecated`
 我的在dnspod，所以选择`dns.providers.dnspod`
-
 ## 安装module
 首先安装好caddy
 ```
@@ -49,12 +47,10 @@ sudo apt install caddy
 ```
  sudo caddy add-package github.com/caddy-dns/dnspod
 ```
-
 ## 获取appid和token
 登陆dnspod，点击右上角头像，选择API密钥
 选择DNSPod Token
 创建一个密钥，记下id和token
-
 ## Caddyfile
 编辑 `/etc/Caddyfile`
 在开头写上
@@ -65,7 +61,6 @@ sudo apt install caddy
 }
 ```
 用于指定端口
-
 然后创建一个站点，加入一个tls，同时填上appid和token
 ```
 test.sszsj.cc {
@@ -75,7 +70,6 @@ test.sszsj.cc {
 	}
 }
 ```
-
 ## 启动caddy
 执行命令
 ```
@@ -83,4 +77,3 @@ caddy start --config /etc/caddy/Caddyfile
 ```
 理论上应该能在控制台看到申请证书的过程
 这时候https访问2000端口，应该就能正常看到页面了
-

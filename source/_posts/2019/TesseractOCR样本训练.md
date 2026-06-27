@@ -1,3 +1,4 @@
+---
 title: Tesseract-OCR样本训练
 date: '2019-08-06 21:01:27'
 updated: '2021-01-06 10:49:56'

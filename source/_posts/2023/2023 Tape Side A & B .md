@@ -9,10 +9,7 @@ top_img: https://tmx.fishpi.cn/img/pic_1707286043339.png
 cover: https://tmx.fishpi.cn/img/pic_1707286043339.png
 --- 
 ![picture 0](https://tmx.fishpi.cn/img/pic_1707286043339.png)  
-
-
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1924062187&auto=0&height=66"></iframe>
-
 大概，也许，以后应该也就是这样了吧
 不出意外的话
 明年的年终总结跟今年也差不多？
@@ -24,7 +21,6 @@ cover: https://tmx.fishpi.cn/img/pic_1707286043339.png
 主打的就是一个
 我命由天不由我
 不管怎么说，还是简单过一下
-
 ## Tape Side A
 说实话，我一时不知道写什么
 所以我也去简单翻了下相册
@@ -57,7 +53,6 @@ cover: https://tmx.fishpi.cn/img/pic_1707286043339.png
 跟小伙伴联机了MC，一起开火车
 短暂的找回了10几年前跟朋友一起打网游的感觉
 就这样吧
-
 <details>
 <summary>Tape Side B</summary>
 浑浑噩噩，一年就过去了<br/>

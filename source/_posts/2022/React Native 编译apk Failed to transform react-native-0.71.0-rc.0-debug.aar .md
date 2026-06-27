@@ -1,3 +1,4 @@
+---
 title: React Native 编译apk Failed to transform react-native-0.71.0-rc.0-debug.aar 
 date: '2022-12-10 11:30:20'
 updated: '2022-12-10 11:30:20'

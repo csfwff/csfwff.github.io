@@ -1,3 +1,4 @@
+---
 title: Gradle编译 Faile to resolve:support-media-compat
 date: '2019-04-09 13:41:48'
 updated: '2021-01-05 16:41:02'
