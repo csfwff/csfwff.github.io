@@ -803,8 +803,8 @@ CDN:
     instantpage: https://tmx.fishpi.cn/cdn/instantpage.min.js
     typed: https://tmx.fishpi.cn/cdn/typed.min.js
 
-    fancybox_css: https://tmx.fishpi.cn/cdn/jquery.fancybox.min.css
-    fancybox: https://tmx.fishpi.cn/cdn/jquery.fancybox.min.js
+    fancybox_css: https://tmx.fishpi.cn/cdn/fancybox.css
+    fancybox: https://tmx.fishpi.cn/cdn/fancybox.umd.js
     medium_zoom: https://tmx.fishpi.cn/cdn/medium-zoom.min.js
 
     snackbar_css: https://tmx.fishpi.cn/cdn/snackbar.min.css
