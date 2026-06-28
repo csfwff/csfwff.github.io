@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>鼠标滚轮坏了？用轻舟代替 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="滚轮滚轮是鼠标上极其常用的一个部件（妙控鼠标：？）偏偏滚轮又很容易坏这不，刚换了个公司，鼠标滚轮没两天就坏了看着小米mimo那个用不完的额度一个想法冒出头来 整理一下说干就干，让deepseek整理需求，我们要的是一个全局的悬浮窗他有向上向下两个箭头，点击向上就是滚轮往上然后可以拖动位置然后为了方便，再加一个中键摁住拖动向上就是向上（中键？哪来的中键？）没错！滚轮是可以摁下去的，那个就是中键！然">
+<meta property="og:type" content="article">
+<meta property="og:title" content="鼠标滚轮坏了？用轻舟代替">
+<meta property="og:url" content="https://sszsj.com/articles/2026/06/10/1781067333.html">
+<meta property="og:site_name" content="鼠鼠在碎觉">
+<meta property="og:description" content="滚轮滚轮是鼠标上极其常用的一个部件（妙控鼠标：？）偏偏滚轮又很容易坏这不，刚换了个公司，鼠标滚轮没两天就坏了看着小米mimo那个用不完的额度一个想法冒出头来 整理一下说干就干，让deepseek整理需求，我们要的是一个全局的悬浮窗他有向上向下两个箭头，点击向上就是滚轮往上然后可以拖动位置然后为了方便，再加一个中键摁住拖动向上就是向上（中键？哪来的中键？）没错！滚轮是可以摁下去的，那个就是中键！然">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tmx.fishpi.cn/img/20260610132144.jpg">
+<meta property="article:published_time" content="2026-06-10T04:55:33.000Z">
+<meta property="article:modified_time" content="2026-06-10T04:55:33.000Z">
+<meta property="article:author" content="唐墨夏">
+<meta property="article:tag" content="整活">
+<meta property="article:tag" content="鼠标">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tmx.fishpi.cn/img/20260610132144.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "鼠标滚轮坏了？用轻舟代替",
+  "url": "https://sszsj.com/articles/2026/06/10/1781067333.html",
+  "image": "https://tmx.fishpi.cn/img/20260610132144.jpg",
+  "datePublished": "2026-06-10T04:55:33.000Z",
+  "dateModified": "2026-06-10T04:55:33.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "唐墨夏",
+      "url": "https://sszsj.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2026/06/10/1781067333.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fancybox.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js?v=4.13.0',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '鼠标滚轮坏了？用轻舟代替',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      if ($loadingBox.classList.contains('loaded')) return
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+
+  if (document.readyState === 'complete') {
+    preloader.endLoading()
+  } else {
+    window.addEventListener('load', preloader.endLoading)
+    document.addEventListener('DOMContentLoaded', preloader.endLoading)
+    // Add timeout protection: force end after 7 seconds
+    setTimeout(preloader.endLoading, 7000)
+  }
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">168</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">161</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/20260610132144.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">鼠标滚轮坏了？用轻舟代替</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">鼠标滚轮坏了？用轻舟代替</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-10T04:55:33.000Z" title="发表于 2026-06-10 12:55:33">2026-06-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-10T04:55:33.000Z" title="更新于 2026-06-10 12:55:33">2026-06-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/20260610132144.jpg"></p>
+<h2 id="滚轮"><a href="#滚轮" class="headerlink" title="滚轮"></a>滚轮</h2><p>滚轮是鼠标上极其常用的一个部件<br>（妙控鼠标：？）<br>偏偏滚轮又很容易坏<br>这不，刚换了个公司，鼠标滚轮没两天就坏了<br>看着小米mimo那个用不完的额度<br>一个想法冒出头来</p>
+<h2 id="整理一下"><a href="#整理一下" class="headerlink" title="整理一下"></a>整理一下</h2><p>说干就干，让deepseek整理需求，<br>我们要的是一个全局的悬浮窗<br>他有向上向下两个箭头，点击向上就是滚轮往上<br>然后可以拖动位置<br>然后为了方便，再加一个中键摁住拖动<br>向上就是向上<br>（中键？哪来的中键？）<br>没错！滚轮是可以摁下去的，那个就是中键！<br>然后还要一个开机自启，再来一个滚动行数可配置<br>当然，一步到位直接覆盖3端<br>齐活，整理完了，让deepseek输出提示词<br>顺便起了个名字</p>
+<h2 id="提示词"><a href="#提示词" class="headerlink" title="提示词"></a>提示词</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">请帮我用 Flutter 开发一个桌面软件（同时支持 Windows、macOS、Linux）。</span><br><span class="line"></span><br><span class="line">【软件名称】</span><br><span class="line">轻舟 / Skiff</span><br><span class="line"></span><br><span class="line">【核心功能】</span><br><span class="line">鼠标滚轮坏了的时候，用来模拟滚轮滚动。</span><br><span class="line"></span><br><span class="line">【功能一：悬浮双区域按钮】</span><br><span class="line">一个圆角矩形的悬浮条，分成上下两个独立区域：</span><br><span class="line"></span><br><span class="line">┌─────────┐</span><br><span class="line">│    ▲    │  ← 点击向上滚动</span><br><span class="line">├─────────┤</span><br><span class="line">│    ▼    │  ← 点击向下滚动</span><br><span class="line">└─────────┘</span><br><span class="line"></span><br><span class="line">设计要求：</span><br><span class="line">- 整体尺寸：宽50px，高80px，圆角12px</span><br><span class="line">- 背景色：半透明深灰色（rgba(40,40,40,0.7)）</span><br><span class="line">- 鼠标悬停时背景变亮（rgba(60,60,60,0.8)）</span><br><span class="line">- 两个区域之间有细分割线</span><br><span class="line">- 图标：上区域显示向上箭头（Icons.arrow_upward），下区域显示向下箭头（Icons.arrow_downward）</span><br><span class="line">- 整体可拖拽移动位置</span><br><span class="line">- 拖拽时不会误触发点击滚动</span><br><span class="line"></span><br><span class="line">滚动行为：</span><br><span class="line">- 每次点击滚动3行</span><br><span class="line">- 滚动平滑自然</span><br><span class="line"></span><br><span class="line">【功能二：中键手势滚动（新逻辑）】</span><br><span class="line">操作方式：</span><br><span class="line">1. 按住鼠标中键</span><br><span class="line">2. 向上移动鼠标（移动距离超过阈值，例如20像素）</span><br><span class="line">3. 松开中键 → 触发一次向上滚动</span><br><span class="line">4. 同理，按住中键向下移动超过阈值 → 松开后触发一次向下滚动</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">- 是“移动+松开”触发一次滚动，不是连续滚动</span><br><span class="line">- 需要设置移动距离阈值，避免轻微抖动就触发</span><br><span class="line">- 移动未超过阈值就松开，不触发任何滚动</span><br><span class="line">- 需要全局监听（软件在后台也能用）</span><br><span class="line"></span><br><span class="line">【系统托盘】</span><br><span class="line">- 软件启动后只在系统托盘显示图标，不显示主窗口</span><br><span class="line">- 右键点击托盘图标弹出菜单：显示/隐藏悬浮按钮、退出软件</span><br><span class="line">- 悬浮按钮默认显示在屏幕右下角</span><br><span class="line">- 启动时默认显示悬浮按钮</span><br><span class="line"></span><br><span class="line">【跨平台要求】</span><br><span class="line">- 同时支持 Windows、macOS、Linux</span><br><span class="line">- 打包成独立可执行文件，用户无需安装环境</span><br><span class="line"></span><br><span class="line">【macOS特别说明】</span><br><span class="line">- 需要辅助功能权限才能全局监听鼠标事件</span><br><span class="line">- 请在代码中包含权限检测和引导申请</span><br><span class="line"></span><br><span class="line">【技术实现建议】</span><br><span class="line">- 悬浮窗口：使用 Overlay 或独立的无边框窗口（window_manager）</span><br><span class="line">- 全局鼠标监听：mouse_listener 或 flutter_global_hotkey</span><br><span class="line">- 模拟滚动：robotjs 或 native_toolchain_c</span><br><span class="line">- 系统托盘：tray_manager</span><br><span class="line">- 手势阈值判断：记录中键按下位置，松开时计算位移差</span><br><span class="line"></span><br><span class="line">【代码要求】</span><br><span class="line">- 提供完整的项目代码结构</span><br><span class="line">- 包含所有必要的配置文件（pubspec.yaml、platform相关配置）</span><br><span class="line">- 添加详细注释</span><br><span class="line">- 提供打包命令说明</span><br><span class="line"></span><br><span class="line">【兼容性说明】</span><br><span class="line">- 滚轮模拟功能在所有场景下都能正常工作，包括：</span><br><span class="line">  - 浏览器中按住Ctrl+滚轮缩放图片/页面时</span><br><span class="line">  - 地图、设计软件、图片查看器等支持滚轮缩放的应用</span><br><span class="line">  - 游戏、远程桌面等</span><br><span class="line">- 原理：模拟的是原生系统级滚轮事件，目标应用收到的是真实滚轮信号</span><br><span class="line"></span><br><span class="line">【中键手势冲突处理】</span><br><span class="line">- 按住中键→移动→松开 触发滚动的功能，可能与部分软件的中键原生功能冲突</span><br><span class="line">  - 冲突场景：Figma/Blender（中键拖拽平移）、浏览器（中键开新标签页）、IDE（中键多光标）</span><br><span class="line">- 请添加一个托盘菜单开关：☑ 启用中键手势</span><br><span class="line">- 默认开启，用户遇到冲突时可关闭，仅使用悬浮按钮</span><br><span class="line"></span><br><span class="line">【实现建议】</span><br><span class="line">- 模拟滚动使用 robotjs 的 scrollMouse 方法</span><br><span class="line">- 中键手势监听时，注意判断当前焦点窗口，避免在特定应用中自动禁用（可选高级功能）</span><br></pre></td></tr></table></figure>
+
+<h2 id="开干"><a href="#开干" class="headerlink" title="开干"></a>开干</h2><p>建好项目，丢给小米<br>慢慢蹬吧<br>当然没可能一把出<br>遇到的问题有，点击页面不滚动<br>悬浮窗抢焦点，拖拽卡顿<br>中键没效果等等<br>特别是抢焦点这个，mimo来来回回改了8版解决不了<br>最后使用 X11 Input Shape Passthrough — 临时将悬浮窗的输入区域设为空，<br>让鼠标事件穿透到下层窗口<br>中键也是，一致检测不到<br>最后XQueryPointer 轮询，每 10ms 检查<br>因为一开始只设计了上下两个箭头，事件冲突，所以拖拽卡顿<br>最后再加了一个按钮专门负责拖拽<br>勉强凑合能用，<br>具体修改可以看仓库里的文档<br>最后写好自动构建，推送完事</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>请前往<a target="_blank" rel="noopener" href="https://github.com/csfwff/skiff">仓库地址查看</a><br>不过我只测试了ubuntu，win和mac 大概率都是有问题<br>（逃~）<br>测试完了，win和mac都有问题，弃疗了<br>毕竟有这需求的大概只有我一人<br>建议直接买个鼠标，谢谢</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2026/06/10/1781067333.html">https://sszsj.com/articles/2026/06/10/1781067333.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%BC%A0%E6%A0%87/">鼠标</a><a class="post-meta__tags" href="/tags/%E6%95%B4%E6%B4%BB/">整活</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/20260610132144.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articels/2026/06/27/1782528683.html" title="墨流 ---- 针对 hexo+github pages 的写作客户端"><img class="cover" src="https://file.fishpi.cn/2026/06/202606270949462938-98d6dcbd.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">墨流 ---- 针对 hexo+github pages 的写作客户端</div></div><div class="info-2"><div class="info-item-1"> 墨流，是一款针对hexo+github pages的写作客户端目标是支持web，linux，win，mac，android（iOS：？先等等吧）本应用支持从github同步文章，编辑，发布，草稿，图床支持全流程 使用本应用的前提是，你已经在github上创建了账号，创建了仓库，并在仓库里配置好了hexo的自动部署，并且当前能够正常访问 本应用不负责搭建Hexo以及配置自动部署！！！本应用不负责搭建Hexo以及配置自动部署！！！本应用不负责搭建Hexo以及配置自动部署！！！ 如有需要，请阅读这里的这些教程 Hexo 博客搭建教程（一）——搭建篇使用hexo框架在github.io上搭建博客网站. 关于自动部署，你可以直接跟AI说： 1帮我写一个github action的workflow，自动部署hexo到github pages  使用步骤配置github打开应用，点击右上角齿轮进入设置，切换到github设置页填入token，token获取方式如下  访问这里 点击fine-grained personal access tokens 右侧的 generate new tok...</div></div></div></a><a class="pagination-related" href="/articles/2026/05/06/1778038310.html" title="五一咕咕咕"><img class="cover" src="https://tmx.fishpi.cn/img/113539_988.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">五一咕咕咕</div></div><div class="info-2"><div class="info-item-1">难得五一，可是因为小桃子刚出生俩月，自然是没法到远方去（其实也好久没有出去玩了）好在之前与咕咕约好了忙里偷闲，4号下午带着小老鼠跟咕咕碰头 湖海塘公园下午距离咕咕的车到站还早，可是小老鼠已经吵着要出门了那就直接让小老鼠带上小飞机，到湖海塘公园玩一会恰逢2026浙江省城市足球联赛与门口的大足球合个影 咕咕咕玩了一会时间差不多了，出发去车站接他完事直奔万佛塔。虽然作为一个金华人，万佛塔也路过好多次但我却是一次都没上去过这次正好去看看 万佛塔随便拍拍，还是挺高的进门先去了地宫恰逢赶上讲解，了解了下地宫还是挺庞大的，各种壁画，木雕，还有佛像小老鼠很喜欢，上去之后还要下来看 登顶说是登顶，坐电梯只能到13楼然后步行爬楼到15层挂着一口大钟出门远眺整个金华尽收眼底万达👆古子城，五百滩视野是真的好！顺便跟咕咕合个影   干饭！这怎么能少了干饭环节下塔后直奔世贸城市广场先在-1层带小老鼠玩了会钓鱼抓娃娃打僵尸然后上楼找吃的不得不说咕咕是真的能吃肉都能拿好几轮，下了一锅又一锅 离别相聚的时间总是短暂的吃完饭就送咕咕去火车站当然，告别的时候少不了鱼排线下真实的时候特殊打卡方式了hhh 我的怎么这么...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">168</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">161</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://foreverblog.cn/assets/logo/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://foreverblog.cn/assets/logo/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BB%9A%E8%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">滚轮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8B"><span class="toc-number">2.</span> <span class="toc-text">整理一下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">3.</span> <span class="toc-text">提示词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%B9%B2"><span class="toc-number">4.</span> <span class="toc-text">开干</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">使用</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articels/2026/06/27/1782528683.html" title="墨流 ---- 针对 hexo+github pages 的写作客户端"><img src="https://file.fishpi.cn/2026/06/202606270949462938-98d6dcbd.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="墨流 ---- 针对 hexo+github pages 的写作客户端"/></a><div class="content"><a class="title" href="/articels/2026/06/27/1782528683.html" title="墨流 ---- 针对 hexo+github pages 的写作客户端">墨流 ---- 针对 hexo+github pages 的写作客户端</a><time datetime="2026-06-27T02:51:23.000Z" title="发表于 2026-06-27 10:51:23">2026-06-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/06/10/1781067333.html" title="鼠标滚轮坏了？用轻舟代替"><img src="https://tmx.fishpi.cn/img/20260610132144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="鼠标滚轮坏了？用轻舟代替"/></a><div class="content"><a class="title" href="/articles/2026/06/10/1781067333.html" title="鼠标滚轮坏了？用轻舟代替">鼠标滚轮坏了？用轻舟代替</a><time datetime="2026-06-10T04:55:33.000Z" title="发表于 2026-06-10 12:55:33">2026-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/05/06/1778038310.html" title="五一咕咕咕"><img src="https://tmx.fishpi.cn/img/113539_988.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="五一咕咕咕"/></a><div class="content"><a class="title" href="/articles/2026/05/06/1778038310.html" title="五一咕咕咕">五一咕咕咕</a><time datetime="2026-05-06T03:31:50.000Z" title="发表于 2026-05-06 11:31:50">2026-05-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/03/16/1773637776.html" title="小桃子诞生记"><img src="https://tmx.fishpi.cn/img/20260316130711_159_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小桃子诞生记"/></a><div class="content"><a class="title" href="/articles/2026/03/16/1773637776.html" title="小桃子诞生记">小桃子诞生记</a><time datetime="2026-03-16T05:09:36.000Z" title="发表于 2026-03-16 13:09:36">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性"><img src="https://tmx.fishpi.cn/img/20260123131839_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="光与影：33号远征队——论防沉迷的重要性"/></a><div class="content"><a class="title" href="/articles/2026/01/23/1769150209.html" title="光与影：33号远征队——论防沉迷的重要性">光与影：33号远征队——论防沉迷的重要性</a><time datetime="2026-01-23T06:36:49.000Z" title="发表于 2026-01-23 14:36:49">2026-01-23</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2017 - 2026 By 唐墨夏</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，截图，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://tmx.fishpi.cn/cdn/fancybox.umd.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"avatar":"monsterid","requiredFields":"nick,mail","visitor":false,"locale":{"placeholder":"记得留下你的昵称和邮箱....可以快速收到回复（评论需要审核哟，不要着急）"}}
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
