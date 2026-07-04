@@ -141,10 +141,10 @@
     #   avatar: https://gitee.com/lanweixiao/Blogpbed/raw/master/img/header.jpg
     #   descr: 你在想什么
 
-    # - name: ghostsf
-    #   link: https://ghostsf.com
-    #   avatar: https://ghostsf.com/logo
-    #   descr: Do what i love and just do it !
+    - name: ghostsf
+      link: https://ghostsf.com
+      avatar: https://ghostsf.com/logo
+      descr: Do what i love and just do it !
 
     - name: ncc的个人网站
       link: https://www.zqcnc.cn
@@ -161,10 +161,10 @@
     #   avatar: http://xiaoheiwa.com.cn/zb_users/upload/2022/08/202208231661248821151662.jpg
     #   descr: 从小梦想做一部动画片，不知不觉几十年过去了，一直没放下，终于决定，现在开始动工了。希望和每位追梦人成为朋友！
 
-    # - name: Anjhon’s Blog
-    #   link: https://www.anjhon.top/
-    #   avatar: https://cdn.jsdelivr.net/gh/An-Jhon/image_bed/202402231446700.png
-    #   descr: 但知行好事，莫要问前程
+    - name: Anjhon’s Blog
+      link: https://www.anjhon.top/
+      avatar: https://cdn.jsdelivr.net/gh/An-Jhon/image_bed/202402231446700.png
+      descr: 但知行好事，莫要问前程
 
     # - name: WenderFeng
     #   link: https://wenderfeng.top/
