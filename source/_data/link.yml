@@ -6,6 +6,11 @@
       avatar: https://fishpi.cn/images/favicon.png
       descr: 专为程序员打造的摸鱼社区
 
+    - name: Yui
+      link: https://yuis.cc/
+      avatar: https://file.fishpi.cn/2023/07/124527d9kfoo995f6u041ba8d4357bd467530e-7750ef4a.gif
+      descr: 会点代码，就是浪。
+
     - name: 贼拉正经的技术博客
       link: https://www.stackoverflow.wiki
       avatar: https://avatars1.githubusercontent.com/u/6754458?v=4
@@ -30,11 +35,6 @@
       link: https://my.hancel.org/
       avatar: https://my.hancel.org/media/logo.jpg
       descr: 人生而自由，却无往不在枷锁之中。
-
-    - name: Yui
-      link: https://www.lingmx.com/
-      avatar: https://file.fishpi.cn/2023/07/124527d9kfoo995f6u041ba8d4357bd467530e-7750ef4a.gif
-      descr: 会点代码，就是浪。
 
     - name: stillwarter
       link: https://stillwarter.github.io/
