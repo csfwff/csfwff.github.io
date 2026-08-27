@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>butter knife 常用注解记录 | 鼠鼠在碎觉</title><meta name="author" content="唐墨夏"><meta name="copyright" content="唐墨夏"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="OnTextChanged老是记不住，抄的作业，找地方存着而已 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182public cla">
+<meta property="og:type" content="article">
+<meta property="og:title" content="butter knife 常用注解记录">
+<meta property="og:url" content="https://sszsj.com/articles/2019/11/14/1573698361728.html">
+<meta property="og:site_name" content="鼠鼠在碎觉">
+<meta property="og:description" content="OnTextChanged老是记不住，抄的作业，找地方存着而已 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182public cla">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tmx.fishpi.cn/img/pic_1707292844018.png">
+<meta property="article:published_time" content="2019-11-14T02:26:02.000Z">
+<meta property="article:modified_time" content="2021-01-05T08:52:11.000Z">
+<meta property="article:author" content="唐墨夏">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="butterknife">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tmx.fishpi.cn/img/pic_1707292844018.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "butter knife 常用注解记录",
+  "url": "https://sszsj.com/articles/2019/11/14/1573698361728.html",
+  "image": "https://tmx.fishpi.cn/img/pic_1707292844018.png",
+  "datePublished": "2019-11-14T02:26:02.000Z",
+  "dateModified": "2021-01-05T08:52:11.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "唐墨夏",
+      "url": "https://sszsj.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://tmx.fishpi.cn/image/favicon.png"><link rel="canonical" href="https://sszsj.com/articles/2019/11/14/1573698361728.html"><link rel="preconnect"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fontawesomall.min.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/fancybox.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FFP00RKZ"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-L2FFP00RKZ')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-L2FFP00RKZ', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js?v=4.13.0',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'butter knife 常用注解记录',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({"id":"Jefs4FLXvLS3oCAK","ck":"Jefs4FLXvLS3oCAK"})</script><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/iconfont.css"><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/style.css"><script src="https://tmx.fishpi.cn/cdn/click.min.js"></script><script src="https://tmx.fishpi.cn/cdn/sakura-original.js"></script><script src="https://tmx.fishpi.cn/cdn/jquery.min.js"></script><script src="https://tmx.fishpi.cn/cdn/colorful-tag.js"></script><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="鼠鼠在碎觉" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="鼠鼠在碎觉" type="application/rss+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      if ($loadingBox.classList.contains('loaded')) return
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+
+  if (document.readyState === 'complete') {
+    preloader.endLoading()
+  } else {
+    window.addEventListener('load', preloader.endLoading)
+    document.addEventListener('DOMContentLoaded', preloader.endLoading)
+    // Add timeout protection: force end after 7 seconds
+    setTimeout(preloader.endLoading, 7000)
+  }
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">169</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tmx.fishpi.cn/img/pic_1707292844018.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鼠鼠在碎觉</span></a><a class="nav-page-title" href="/"><span class="site-name">butter knife 常用注解记录</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">butter knife 常用注解记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-11-14T02:26:02.000Z" title="发表于 2019-11-14 10:26:02">2019-11-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-05T08:52:11.000Z" title="更新于 2021-01-05 16:52:11">2021-01-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%8F%9C%E9%B8%A1%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/">菜鸡修炼手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">460</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://tmx.fishpi.cn/img/pic_1707292844018.png" alt="picture 0">  </p>
+<p><code>OnTextChanged</code>老是记不住，抄的作业，找地方存着而已</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//ButterKnife可以在activity，fragment , adapter中使用</span></span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Nullable</span> <span class="comment">//为了防止异常没有id</span></span><br><span class="line">    <span class="meta">@BindView(R.id.tv_text)</span></span><br><span class="line">    TextView tv_text;</span><br><span class="line">    <span class="meta">@BindView(R.id.yzs)</span></span><br><span class="line">    TextView yzs;</span><br><span class="line">    <span class="meta">@BindView(R.id.wzs)</span></span><br><span class="line">    TextView wzs;</span><br><span class="line">    <span class="meta">@BindViews(&#123;R.id.b1 , R.id.b2 , R.id.b3&#125;)</span> <span class="comment">//绑定viewID</span></span><br><span class="line">    List&lt;Button&gt; buttons;</span><br><span class="line">    <span class="meta">@BindString(R.string.app_name)</span> <span class="comment">//绑定资源ID</span></span><br><span class="line">    String appname;</span><br><span class="line">    <span class="meta">@BindView(value = R.id.et_edittext)</span></span><br><span class="line">    EditText edt;</span><br><span class="line">    <span class="meta">@BindView(R.id.list)</span></span><br><span class="line">    ListView list;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"> </span><br><span class="line">        ButterKnife.bind(<span class="built_in">this</span>); <span class="comment">//注释使用</span></span><br><span class="line">        tv_text.setText(<span class="string">&quot;BindView&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i= <span class="number">0</span> ; i &lt; buttons.size() ; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">ii</span> <span class="operator">=</span> i + i;</span><br><span class="line">            buttons.get(i).setText(<span class="string">&quot;bt&quot;</span> + ii);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        String [] items = &#123;<span class="string">&quot;1&quot;</span> , <span class="string">&quot;2&quot;</span> , <span class="string">&quot;3&quot;</span> , <span class="string">&quot;4&quot;</span>&#125;;</span><br><span class="line">        ArrayAdapter&lt;String&gt; adapter = <span class="keyword">new</span> <span class="title class_">ArrayAdapter</span>&lt;String&gt;(<span class="built_in">this</span> , R.layout.support_simple_spinner_dropdown_item , items);</span><br><span class="line">        list.setAdapter(adapter);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@OnClick(R.id.b1)</span> <span class="comment">//绑定监听</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">bt1click</span><span class="params">()</span>&#123;</span><br><span class="line">        Toast.makeText(<span class="built_in">this</span>, <span class="string">&quot;这是点击按钮1&quot;</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@OnLongClick(R.id.b2)</span> <span class="comment">//长按监听</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">bt2longclick</span><span class="params">(Button bt2)</span>&#123;</span><br><span class="line">        bt2.setText(<span class="string">&quot;这是按钮2的长按事件&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@OnTouch(R.id.b3)</span> <span class="comment">//触摸事件</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">bt3ontouch</span><span class="params">(View view , MotionEvent event)</span> &#123;</span><br><span class="line">        Toast.makeText(<span class="built_in">this</span>, <span class="string">&quot;触摸事件&quot;</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//监听edittext的变化</span></span><br><span class="line">    <span class="meta">@OnTextChanged(value = R.id.et_edittext , callback = OnTextChanged.Callback.BEFORE_TEXT_CHANGED)</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">beforeTextChanged</span><span class="params">(CharSequence s , <span class="type">int</span> start , <span class="type">int</span> count , <span class="type">int</span> after)</span>&#123;</span><br><span class="line">        Log.i(<span class="string">&quot;mydate&quot;</span> , s.toString() + <span class="string">&quot; -- &quot;</span> + start + <span class="string">&quot; -- &quot;</span> + count + <span class="string">&quot; -- &quot;</span> + after);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@OnTextChanged(value = R.id.et_edittext , callback = OnTextChanged.Callback.TEXT_CHANGED)</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">onTextChanged</span><span class="params">(CharSequence s , <span class="type">int</span> start , <span class="type">int</span> before , <span class="type">int</span> count)</span> &#123;</span><br><span class="line">        <span class="comment">//已输入的字数</span></span><br><span class="line">        yzs.setText(s.length() + <span class="string">&quot;&quot;</span>);</span><br><span class="line">        <span class="comment">//剩余字数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">z</span> <span class="operator">=</span> <span class="number">50</span> - s.length();</span><br><span class="line">        wzs.setText(z + <span class="string">&quot;&quot;</span>);</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@OnTextChanged(value = R.id.et_edittext , callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">afterTextChanged</span><span class="params">(Editable s)</span>&#123;</span><br><span class="line">        Log.i(<span class="string">&quot;mydate&quot;</span> , s.toString());</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//item点击监听</span></span><br><span class="line">    <span class="meta">@OnItemClick(R.id.list)</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">onItemClick</span><span class="params">(<span class="type">int</span> position)</span> &#123;</span><br><span class="line">        Toast.makeText(<span class="built_in">this</span>, position + <span class="string">&quot;&quot;</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>版权声明：遵循 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-sa/4.0/">CC 4.0 BY-SA</a> 版权协议，转载请附上原文出处链接和本声明。<br>原文地址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38261174/article/details/79821093">https://blog.csdn.net/qq_38261174&#x2F;article&#x2F;details&#x2F;79821093</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sszsj.com">唐墨夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sszsj.com/articles/2019/11/14/1573698361728.html">https://sszsj.com/articles/2019/11/14/1573698361728.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sszsj.com" target="_blank">鼠鼠在碎觉</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Android/">Android</a><a class="post-meta__tags" href="/tags/butterknife/">butterknife</a></div><div class="post-share"><div class="social-share" data-image="https://tmx.fishpi.cn/img/pic_1707292844018.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/share.min.css" media="print" onload="this.media='all'"><script src="https://tmx.fishpi.cn/cdn/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tmx.fishpi.cn/image/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://tmx.fishpi.cn/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://tmx.fishpi.cn/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/articles/2019/11/25/1574680383245.html" title="呐~现在开始要放晴了哦"><img class="cover" src="https://tmx.fishpi.cn/img/20210104115150989.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">呐~现在开始要放晴了哦</div></div><div class="info-2"><div class="info-item-1"> 也许，我们都很渺小，妄图靠自己改变世界殊不知，我是为了你而改变了世界即使离去，我也要看着你 可是，凭什么一定要牺牲自己，这并不是你的错你选择世界，我选择你，因为你是我的全世界（Hello World!） 世界毁灭，与我何干，我只是想和你在一起 我特别喜欢帆高在发现阳菜牺牲自己后，不顾一切，疯狂跑过去，想要找回阳菜时的背景音乐，又有多少人能做到这样不顾一切呢？  愛にできることはまだあるかい还有爱能够做到的事吗？僕にできることはまだあるかい还有我能够做到的事吗？   也许，我们早就被神明放弃了也许，命运早已忘记了我们也许，我们会选择逃避也许，我们勇敢面对 我们总是陷入各种各样的选择，却总会被各种各样的原因而影响遵循自己的内心，做出自己想要的选择 呐现在开始要下雨了哦 </div></div></div></a><a class="pagination-related" href="/articles/2019/11/06/1573019191477.html" title="Auto.js自动评选赛复杂食用教程"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707292881755.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Auto.js自动评选赛复杂食用教程</div></div><div class="info-2"><div class="info-item-1">   &emsp;&emsp;前几天写了一个自动点击器简单食用教程，然后有人推荐我使用Auto.js，🆗，那就去瞅一瞅。百度一番，发现目前只有pro版的安装包，开源版的被下架了，其他人打包的不放心，那就fork一份自己打包，顺便再来个教程。&emsp;&emsp;本来准备打包成apk的，但是一直找不到打包插件的仓库地址，么的编译，而且考虑到可能会有修改坐标的需求，就不打包了 安装apk点这里下载apk并安装，注意浏览器劫持，不要下错了!安装后如图   设置权限，开启无障碍打开APP会自动弹窗，打开相应权限。然后设置无障碍，点击去设置，选择Auto.js，打开开关。       新建项目，导入文件，运行脚本首先，点这里下载需要的脚本文件，然后解压，共5个文件 点击右下角加号，选择项目，差不多这么写，内容随便来     创建完成后点击进入，点击右下角，依次导入刚刚加压的5个文件     完成后如图，最后点击这个三角形运行脚本，会出现如下弹窗     然后打开游戏到这个页面，点击对应的选项就行（也可以先开游戏再运行脚本）   最终的效果是自动进入相应的两个评选赛，完成点评，领取奖励后...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/articles/2022/05/04/1651629967000.html" title="记一次坑爹的读卡器debug"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707286164647.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-04</div><div class="info-item-2">记一次坑爹的读卡器debug</div></div><div class="info-2"><div class="info-item-1">DaDaDaDaDa众所周知，刷卡需要读取卡号，而一般的ic卡，或者m1卡，用手机NFC或者读卡器都能读到8位16进制的uid你可以直接使用这个8位的作为卡号，但是一般的操作是按67 45 23 01的顺序转换一下，然后转为10进制作为卡号例如，读到的是41ef5664，然后两两翻转41 ef 56 64 -&gt; 64 56 ef 41最后转为10进制，也就是1683418945 DiDaDaDaDa这时候，客户的需求来了，客户要求读取32位卡号，那这个32位卡号哪里来呢众所周知，一般的ic卡，有16个扇区，每个扇区有4个块而这个32位的uid，就在0扇区的0块上，出厂的时候就已经写进去了，而前8位就是我们之前读到的那个卡号其他的包含厂商信息之类的那么我们只需要读取0扇区0块的数据就可以了大概就是这样而每个扇区的最后一个块，前6个字节是A密钥，中间4个字节是访问控制，最后6个字节是密钥B每个扇区可以分别控制，互不影响，以适用各种场景 DiDiDaDaDa众所周知，一般读卡器，厂商会附带个开发包，demo啥的，然后一般的卡，密钥A密钥B都是FFFFFFFFFFFF验证密钥，读卡...</div></div></div></a><a class="pagination-related" href="/articles/2020/11/30/1606702808004.html" title="一款用着还不错的屏幕扩展软件SpaceDesk"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290637178.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-30</div><div class="info-item-2">一款用着还不错的屏幕扩展软件SpaceDesk</div></div><div class="info-2"><div class="info-item-1">   现在手机更新换代很快，淘汰下来的旧手机也越来越多，就比如我，手头淘汰下来的就有红米note4，荣耀8，苹果6，3台闲置机子，除了偶尔拿来当测试机用一下，基本吃灰，红米note4我自己基本准备就是拿来当作智能音响项目的测试机了（虽然目前就实现了个时钟显示），荣耀8配置其实不赖，950跑跑一般的游戏都足够，1080p的分辨率也不差（比我自己笔记本还高1366*768），然后赶上活动99换了一块电池（虽然原价也就140……）好了，不扯了，回到主题，手机多了，就想着能不能把手机屏幕当作电脑的第二个屏幕，毕竟双屏爽啊。虽然之前也用过iDisplay之类的软件，但是体验不是特别好，前几天又搜了一下，发现一个叫SpaceDesk，体验还不错 STEP 00准备一部旧手机，和电脑连接在同一个局域网内 STEP 01安装软件，百毒谷歌搜索进入官网（找官网我jio得不需要我教），下载pc端软件，一路确定安装手机打开google play搜索安装 STEP 03打开电脑端的软件，会显示本机ip，可能用不到，反正先记着 然后打开手机端，如果列表有显示，就直接连接，没有就点击加号添加，输入ip，点击...</div></div></div></a><a class="pagination-related" href="/articles/2022/01/05/1641367808000.html" title="使用bat同时在多台设备安装应用"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707287255771.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-05</div><div class="info-item-2">使用bat同时在多台设备安装应用</div></div><div class="info-2"><div class="info-item-1">   现在公司在调试一款Android设备，平时都是adb远程连上去，然后在Android Stuido里直接运行就行了但是，现在一排设备摆在那里，要安装的时候，我得一个一个连上，然后一个一个安装，就很麻烦或者我打好包，再到每个设备上安装，就很不优雅百度一番，结合自己情况稍微修改一下，完美解决 先上jio本adb_connect.bat 123456adb connect 192.168.1.51::adb connect 192.168.1.52adb connect 192.168.1.53adb connect 192.168.1.54adb connect 192.168.1.55::adb connect 192.168.1.56  multi.bat 1234567891011121314151617@echo offecho --------------------------------------------------------echo Get devicesadb devices &gt; devices.txttype devices.txtecho -...</div></div></div></a><a class="pagination-related" href="/articles/2021/12/12/1639292768000.html" title="CRC16计算"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707289682721.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-12</div><div class="info-item-2">CRC16计算</div></div><div class="info-2"><div class="info-item-1">   因为最近在调试一款串口设备，发送数据需要用16进制，然后还要算CRC16的校验码然后问题来了，这玩意怎么算，一脸懵逼，只能百度copy一份省的找…… 说实话，我看了这个还是没懂怎么算……但是至少可以算出来这大概就是半路出家的痛处吧有空是得好好补一补了（问题就是没空啊…… 原文地址-&gt;JAVA CRC16校验码计算 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778/** * @author lwt * @date 2018-06-26 * * CRC16校验码计算 * &lt;p&gt; * (1)．预置1个16位的寄存器为十六进制FFFF（即全为1），称此寄存器为CRC寄存器； * (2)．把第一个8位二进制数据（既通讯信息帧的第一个字节）与16位的CRC寄存器的低 * 8位相异或，把结果放于CRC寄存器； * (3)．把CR...</div></div></div></a><a class="pagination-related" href="/articles/2022/12/10/1670643020000.html" title="React Native 编译apk Failed to transform react-native-0.71.0-rc.0-debug.aar"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707287497463.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-10</div><div class="info-item-2">React Native 编译apk Failed to transform react-native-0.71.0-rc.0-debug.aar</div></div><div class="info-2"><div class="info-item-1">   一个老项目，突然要修改图标和名称，只能打开重新打包打包的时候报错了Failed to transform react-native-0.71.0-rc.0-debug.aar如图   搜索一番发现是react native版本太旧了指定回旧版本即可 修改android\build.gradle在开头加入 1def REACT_NATIVE_VERSION = new File([&#x27;node&#x27;, &#x27;--print&#x27;,&quot;JSON.parse(require(&#x27;fs&#x27;).readFileSync(require.resolve(&#x27;react-native/package.json&#x27;), &#x27;utf-8&#x27;)).version&quot;].execute(null, rootDir).text.trim())  在allprojects中加入 123456configurations.all &#123;      resolutionStrategy &#123;     ...</div></div></div></a><a class="pagination-related" href="/articles/2020/07/03/1593752646951.html" title="解决Android Studio控制台乱码"><img class="cover" src="https://tmx.fishpi.cn/img/pic_1707290001581.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-03</div><div class="info-item-2">解决Android Studio控制台乱码</div></div><div class="info-2"><div class="info-item-1">   最近升级了AS，突然发现控制台的中文乱码了，搜了下解决方案，记录下省的再找。  依次点开 Help-&gt;Edit Custom VM Options… 在编辑器中输入-Dfile.encoding=UTF-8 重启AS，输出正常中文 </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://tmx.fishpi.cn/image/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">唐墨夏</div><div class="author-info-description">鼠鼠在碎觉，请勿打扰~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">169</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/csfwff"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/csfwff" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:csfwff@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://music.163.com/#/user/home?id=40898262" target="_blank" title="网易云"><i class="iconfont icon-netease-cloud-music-fill"></i></a><a class="social-icon" href="tencent://message/?uin=873997011" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://tmx.fishpi.cn/image/add_weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><small><center><br/></center></small><small><center>世界并没有变，变的只有我自己。</center></small><link rel="stylesheet" href="https://tmx.fishpi.cn/cdn/APlayer.min.css"><script src="https://tmx.fishpi.cn/cdn/APlayer.min.js"></script><script src="https://tmx.fishpi.cn/cdn/Meting.min.js"></script><meting-js server="netease" type="song" id="1381202055"></meting-js><small><center>如果你觉得我们聊得来</center></small><small><center>可以请我吃个果冻~</center></small><small><center>如果有机会</center></small><small><center>我会请你喝可乐~</center></small><center><img src="https://tmx.fishpi.cn/image/reward1.png" width="240"/></center><center><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://foreverblog.cn/assets/logo/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a></center><center><a href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="https://foreverblog.cn/assets/logo/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a></center><center><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a></center></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articels/2026/08/27/1787812582.html" title="关于我为什么又写了一个蓝牙调试工具"><img src="https://tmx.fishpi.cn/blogimg/2026/1787815295594_4444.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于我为什么又写了一个蓝牙调试工具"/></a><div class="content"><a class="title" href="/articels/2026/08/27/1787812582.html" title="关于我为什么又写了一个蓝牙调试工具">关于我为什么又写了一个蓝牙调试工具</a><time datetime="2026-08-27T06:36:22.000Z" title="发表于 2026-08-27 14:36:22">2026-08-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articels/2026/06/27/1782528683.html" title="墨流 ---- 针对 hexo+github pages 的写作客户端"><img src="https://file.fishpi.cn/2026/06/202606270949462938-98d6dcbd.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="墨流 ---- 针对 hexo+github pages 的写作客户端"/></a><div class="content"><a class="title" href="/articels/2026/06/27/1782528683.html" title="墨流 ---- 针对 hexo+github pages 的写作客户端">墨流 ---- 针对 hexo+github pages 的写作客户端</a><time datetime="2026-06-27T02:51:23.000Z" title="发表于 2026-06-27 10:51:23">2026-06-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/06/10/1781067333.html" title="鼠标滚轮坏了？用轻舟代替"><img src="https://tmx.fishpi.cn/img/20260610132144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="鼠标滚轮坏了？用轻舟代替"/></a><div class="content"><a class="title" href="/articles/2026/06/10/1781067333.html" title="鼠标滚轮坏了？用轻舟代替">鼠标滚轮坏了？用轻舟代替</a><time datetime="2026-06-10T04:55:33.000Z" title="发表于 2026-06-10 12:55:33">2026-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/05/06/1778038310.html" title="五一咕咕咕"><img src="https://tmx.fishpi.cn/img/113539_988.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="五一咕咕咕"/></a><div class="content"><a class="title" href="/articles/2026/05/06/1778038310.html" title="五一咕咕咕">五一咕咕咕</a><time datetime="2026-05-06T03:31:50.000Z" title="发表于 2026-05-06 11:31:50">2026-05-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2026/03/16/1773637776.html" title="小桃子诞生记"><img src="https://tmx.fishpi.cn/img/20260316130711_159_245.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小桃子诞生记"/></a><div class="content"><a class="title" href="/articles/2026/03/16/1773637776.html" title="小桃子诞生记">小桃子诞生记</a><time datetime="2026-03-16T05:09:36.000Z" title="发表于 2026-03-16 13:09:36">2026-03-16</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2017 - 2026 By 唐墨夏</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div><div class="footer_custom_text">我是不慎落入世界的一滴水墨<br/><a href="https://icp.gov.moe/?keyword=20211205" target="_blank">萌ICP备20211205号</a><br/>所有图片来自自己拍摄，绘画，截图，或<a target="_blank" rel="noopener" href="https://pixabay.com/">免费免版税图片库pixabay</a><br/><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;flex-direction:row;align-items:center;justify-content:center">本网站由<img src="https://tmx.fishpi.cn/image/又拍云_logo6.png" width="60">提供CDN加速/云存储服务</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://tmx.fishpi.cn/cdn/fancybox.umd.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"avatar":"monsterid","requiredFields":"nick,mail","visitor":false,"locale":{"placeholder":"记得留下你的昵称和邮箱....可以快速收到回复（评论需要审核哟，不要着急）"}}
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.sszsj.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://tmx.fishpi.cn/cdn/waline.css')
+        .then(() => import('https://tmx.fishpi.cn/cdn/waline.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script>(function(){var div = document.createElement("div"); div.id = "web_bg";document.body.appendChild(div);})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
